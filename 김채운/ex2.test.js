@@ -44,3 +44,4 @@ assert.deepStrictEqual(
 );
 
 console.log(range(1, 2, 0.1));
+console.log(range(-5))
