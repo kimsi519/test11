@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="h-screen">
+    <div class="w-full h-16 shadow flex px-5 items-center justify-between">
+      <div>
+        <a
+          class="text-2xl bg-slate-200/30 hover:bg-slate-400/30 rounded px-3 py-1 font-bold text-green-500 flex items-center transition-colors cursor-pointer"
+          ><ion-icon name="bookmarks-outline"></ion-icon> BookMark</a
+        >
+      </div>
+      <div class="flex-none flex space-x-3 items-center">
+        <a
+          href="https://github.com/magae1/test11"
+          target="_blank"
+          class="hover:underline"
+          >Githup Repo.</a
+        >
+        <img
+          src="http://www.gravatar.com/avatar/magae1?d=identicon&s=32"
+          class="w-8 h-8 rounded-full ring-2 ring-offset-2 ring-purple-500/50 hover:ring-purple-600 cursor-pointer transition-all"
+        />
+      </div>
+    </div>
+    <main class="mx-auto flex flex-col w-full h-[calc(100%-64px)]">
+      <div
+        class="flex-1 grid grid-cols-2 gap-3 p-1 border-b border-b-slate-300/50"
+      >
+        <div class="h-full bg-slate-400/50 rounded p-2">
+          <p class="text-3xl font-bold truncate pl-3 mb-5">BookMark BookMark</p>
+          <div id="bookmark-bookmark" class="flex flex-col space-y-3"></div>
+          <div class="mt-3 flex justify-end">
+            <button
+              class="bg-black text-white px-4 py-2 flex items-center rounded-lg"
+            >
+              <ion-icon
+                name="add-outline"
+                style="--ionicon-stroke-width: 60px"
+              ></ion-icon>
+              <span class="font-semibold">Add Mark</span>
+            </button>
+          </div>
+        </div>
+        <div class="h-full bg-slate-400/50 rounded p-2">
+          <p class="text-3xl font-bold truncate pl-3 mb-5 text-center">Study</p>
+          <div id="study-bookmark" class="flex flex-col space-y-3"></div>
+          <div class="mt-3 flex justify-end">
+            <button
+              class="bg-black text-white px-4 py-2 flex items-center rounded-lg"
+            >
+              <ion-icon
+                name="add-outline"
+                style="--ionicon-stroke-width: 60px"
+              ></ion-icon>
+              <span class="font-semibold">Add Mark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p class="text-center text-sm text-gray-500/70">©Hanaro 2024</p>
+      </footer>
+    </main>
+  </body>
+  <script>
+    const bookmarks = [
+      {
+        imgURL: "https://s.pstatic.net/static/www/nFavicon96.png",
+        title: "네이버",
+        subtitle: "네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요",
+      },
+      {
+        imgURL: "https://t1.daumcdn.net/top/favicon.ico",
+        title: "다음",
+        subtitle:
+          "이용자 선택권을 강화한 뉴스, 세상의 모든 정보를 연결하는 검색. Daum에서 나의 관심 콘텐츠를 즐겨보세요.",
+      },
+      {
+        imgURL: "https://www.kakaocorp.com/page/favicon.ico",
+        title: "Kakao",
+        subtitle: "기술과 사람으로 더 나은 세상을 만듭니다",
+      },
+      {
+        imgURL:
+          "https://www.youtube.com/s/desktop/536ed9a8/img/favicon_96x96.png",
+        title: "Youtube",
+        subtitle:
+          "YouTube에서 마음에 드는 동영상과 음악을 감상하고, 직접 만든 콘텐츠를 업로드하여 친구, 가족뿐 아니라 전 세계 사람들과 콘텐츠를 공유할 수 있습니다.",
+      },
+    ];
+    const studyBookmarks = [
+      {
+        imgURL: "https://tailwindcss.com/favicons/safari-pinned-tab.svg?v=3",
+        title:
+          "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
+        subtitle:
+          "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+      },
+      {
+        imgURL: "https://nextjs.org/favicon.ico",
+        title: "Next.js by Vercel - The React Framework",
+        subtitle:
+          "Next.js by Vercel is the full-stack React framework for the web.",
+      },
+    ];
+    function BookMark(imgURL, title, subtitle) {
+      return `
+          <div class="w-full flex border-2 border-slate-100 rounded py-5 px-3 space-x-3">
+            <div class="flex-initial">
+              <img src=${imgURL} class="w-10 h-10 rounded" />
+            </div>
+            <div class="w-[calc(100%-100px)]">
+              <p class="truncate font-semibold text-lg">${title}</p>
+              <p class="truncate text-sm text-gray-500">${subtitle}</p>
+            </div>
+            <div class="flex-initial">
+              <ion-icon name="settings-outline" size="large"></ion-icon>
+            </div>
+          </div>
+        `;
+    }
+    bookmarks.forEach((b) => {
+      document.getElementById("bookmark-bookmark").innerHTML += BookMark(
+        b.imgURL,
+        b.title,
+        b.subtitle
+      );
+    });
+    studyBookmarks.forEach((b) => {
+      document.getElementById("study-bookmark").innerHTML += BookMark(
+        b.imgURL,
+        b.title,
+        b.subtitle
+      );
+    });
+  </script>
+</html>

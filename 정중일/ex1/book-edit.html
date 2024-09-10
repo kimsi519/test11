@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="h-screen">
+    <div class="w-full h-16 shadow flex px-5 items-center justify-between">
+      <div>
+        <a
+          class="text-2xl bg-slate-200/30 hover:bg-slate-400/30 rounded px-3 py-1 font-bold text-green-500 flex items-center transition-colors cursor-pointer"
+          ><ion-icon name="bookmarks-outline"></ion-icon> BookMark</a
+        >
+      </div>
+      <div class="flex-none flex space-x-3">
+        <a
+          href="https://github.com/magae1/test11"
+          target="_blank"
+          class="hover:underline"
+          >Githup Repo.</a
+        >
+        <a href="./register.html">SignUp</a>
+        <a>SignIn</a>
+      </div>
+    </div>
+    <main class="mx-auto flex flex-col w-full h-[calc(100%-64px)]">
+      <div class="flex-1 flex p-1 border-b border-b-slate-300/50">
+        <div class="w-60 h-full bg-slate-400/50 flex flex-col items-center p-3">
+          <input class="w-full py-2 pl-1 rounded-lg" />
+          <div class="w-full">
+            <label class="text-sm">
+              <input type="checkbox" />
+              이동 시 자동 삭제
+            </label>
+          </div>
+          <div class="w-full flex justify-end space-x-3 mt-3">
+            <button
+              class="bg-white rounded h-10 w-10 flex justify-center items-center"
+            >
+              <ion-icon name="reload-outline" class="text-lg"></ion-icon>
+            </button>
+            <button
+              class="bg-white rounded h-10 w-10 flex justify-center items-center"
+            >
+              <ion-icon name="save-outline" class="text-lg"></ion-icon>
+            </button>
+          </div>
+          <p class="text-center text-sm text-gray-500 mt-3">
+            There are no marks.
+          </p>
+        </div>
+        <div class="flex-1 p-3">
+          <button
+            class="bg-black text-white px-4 py-2 flex items-center rounded-lg"
+          >
+            <ion-icon
+              name="add-outline"
+              style="--ionicon-stroke-width: 60px"
+            ></ion-icon>
+            <span class="font-semibold">Add Book</span>
+          </button>
+        </div>
+      </div>
+      <footer>
+        <p class="text-center text-sm text-gray-500/70">©Hanaro 2024</p>
+      </footer>
+    </main>
+  </body>
+</html>
