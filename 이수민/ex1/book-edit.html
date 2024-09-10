@@ -4,6 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="output.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <!-- 내브바 컴포넌트 -->
+    <nav class="flex justify-between border-b-2 h-16 px-8 py-1">
+      <!-- 북마크 로고 -->
+      <div
+        id="bookmark-logo"
+        class="flex justify-center bg-gray-100 rounded p-3"
+      >
+        <img
+          src="static/bookmark_logo.svg"
+          class="w-6 h-6 self-center"
+          alt=""
+        />
+        <a
+          href="javascript:location.reload()"
+          class="font-semibold text-2xl self-center"
+          >BookMark</a
+        >
+      </div>
+      <!-- 북마크 로고 끝 -->
+      <div class="flex w-1/4 justify-between">
+        <!-- 깃허브 레포 -->
+        <div id="github-repo" class="self-center">Github Repo</div>
+        <!-- 깃허브 레포 끝 -->
+        <!-- 회원가입/로그인 -->
+        <div class="flex gap-2">
+          <button id="sign-up">SignUp</button>
+          <p class="self-center">|</p>
+          <button id="sign-in">SignIn</button>
+        </div>
+        <!-- 회원가입/로그인 끝 -->
+      </div>
+    </nav>
+    <!-- 내브바 컴포넌트 끝 -->
+
+    <!-- 메인 콘텐츠 영역 -->
+    <div id="main-contents-area" class="grid grid-cols-4 gap-4">
+      <div class="max-h-max bg-red-600">01</div>
+    </div>
+    <!-- 메인 콘텐츠 영역 끝 -->
+
+    <!-- 푸터 영역 -->
+    <footer></footer>
+    <!-- 푸터 영역 끝 -->
+  </body>
 </html>
