@@ -8,31 +8,34 @@ const LABEL_SIZE = 6;
 const PRICE_SIZE = 7;
 
 function bill(tableNo) {
-  const ordered = [];
-  const tot = { price: 0, tax: 0 };
+  let ordered = [];
+  let tot = { price: 0, tax: 0 };
+
+  function order(item) {
+    ordered.push(item);
+    const { price, taxfree } = MENU[item];
+    tot.price += price;
+    tot.tax += taxfree ? 0 : calcTax(price);
+  }
+
+  function printBill() {
+    console.log(`\n\nTable. ${tableNo}`);
+    printLine();
+    for (const item of ordered) {
+      const { price, taxfree } = MENU[item];
+      console.log('*', item);
+      f`공급가액: ${price}원`;
+      f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
+      printLine('-');
+    }
+    f`주문합계: ${tot.price}원`;
+    f`주문합계: ${tot.tax}원`;
+    printLine();
+  }
 
   return {
-    order(item) {
-      ordered.push(item);
-      const { price, taxfree } = MENU[item];
-      tot.price += price;
-      tot.tax += taxfree ? 0 : calcTax(price);
-    },
-
-    printBill() {
-      console.log(`\n\nTable. ${tableNo}`);
-      printLine();
-      for (const item of ordered) {
-        const { price, taxfree } = MENU[item];
-        console.log('*', item);
-        f`공급가액: ${price}원`;
-        f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
-        printLine('-');
-      }
-      f`주문합계: ${tot.price}원`;
-      f`주문합계: ${tot.tax}원`;
-      printLine();
-    },
+    order,
+    printBill,
   };
 }
 
