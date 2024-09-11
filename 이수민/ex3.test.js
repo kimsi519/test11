@@ -8,11 +8,11 @@ const users = [lee, hong, kim];
 
 assert.deepStrictEqual(users.sortBy('id'), [hong, kim, lee]);
 assert.deepStrictEqual(users.sortBy('name:desc'), [lee, kim, hong]);
-assert.deepStrictEqual(users.sortBy('dept:desc,city:asc'), [hong, lee, kim]);
+assert.deepStrictEqual(users.sortBy('dept:desc,city:asc'), [lee, kim, hong]);
 assert.deepStrictEqual(users.sortBy('dept:desc,city:desc'), [kim, lee, hong]);
 assert.deepStrictEqual(users.sortBy('name:desc,id:,dept:desc'), [
-  kim,
   lee,
+  kim,
   hong,
 ]);
-assert.deepStrictEqual(users.sortBy('dept:desc,id'), [hong, kim, lee]);
+assert.deepStrictEqual(users.sortBy('dept:desc,id'), [kim, lee, hong]);
