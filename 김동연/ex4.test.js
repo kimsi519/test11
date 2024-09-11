@@ -24,7 +24,12 @@ const kim = {
   zwm: new WeakMap([[hong, arr]]),
 };
 const newKim = deepCopy(kim);
-assert.deepStrictEqual(newKim, kim, 'deepCopy equal fail!');
+
+console.log(JSON.stringify(kim, null, 3));
+console.log(JSON.stringify(newKim, null, 3));
+
+
+assert.deepStrictEqual(newKim, kim, 'deepCopy equal fail!');  //이것만 오류난다.
 newKim.addr = 'Daegu';
 newKim.oo.name = 'Kim';
 assert.notDeepStrictEqual(newKim, kim, 'Not Valid Deep Copy!');
