@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tailwind CSS 적용 */
+        .main-container {
+            height: calc(100vh - 10vh);
+            /* 전체 높이에서 footer 높이(10vh)를 제외한 값 */
+            box-sizing: border-box;
+            background-color: plum;
+            /* background-color: rgb(226, 229, 231);
+            border-radius: 30%; */
+        }
+
+        footer {
+            height: 10vh;
+            /* footer의 높이 */
+        }
+
+        .rounded-box {
+            width: 60%;
+            /* 가로 크기 */
+            max-width: 500px;
+            /* 최대 가로 크기 */
+            height: 90%;
+            /* 세로 크기 */
+            max-height: 600px;
+            /* 최대 세로 크기 */
+            background-color: white;
+            border-radius: 20px;
+            /* 둥근 모서리 */
+            box-shadow: 0 9px 20px rgba(0, 0, 0, 0.2);
+            /* 그림자 효과 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .input-group input {
+            margin-bottom: 10px;
+            /* 입력 필드와 다음 레이블 사이의 간격 */
+            padding: 7px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 입력 필드 둥글게 */
+        }
+
+        .button-register {
+            width: 60%;
+            /* 가로 크기 */
+            max-width: 150px;
+            /* 최대 가로 크기 */
+            height: 90%;
+            /* 세로 크기 */
+            max-height: 40px;
+            /* 최대 세로 크기 */
+            background-color: gray;
+            border-radius: 20px;
+            /* 둥근 모서리 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* 그림자 효과 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="p-4 flex justify-between items-center">
+        <div class="left">image넣기</div>
+        <div class="right flex items-center">
+            <button class="mr-2">SignUp</button>
+            <span>|</span>
+            <button class="ml-2">SignIn</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container flex items-center justify-center">
+        <div class="rounded-box">
+            <h1 class="text-3xl font-bold text-center py-10">Sign Up</h1>
+            <div class="input-group">
+                <label>Nickname</label>
+                <input style="border-color: gray;" placeholder="nickname...">
+                <label>Email</label>
+                <input style="border-color: gray;" placeholder="email...">
+                <label>Password</label>
+                <input style="border-color: gray;" placeholder="password...">
+                <label>Password Confirm</label>
+                <input style="border-color: gray;" placeholder="password confirm...">
+            </div>
+            <button class="button-register">Register</button>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center flex items-center justify-center">
+        footer
+    </footer>
+</body>
+
+</html>
