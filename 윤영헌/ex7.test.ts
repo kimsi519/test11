@@ -3,7 +3,7 @@ import { getPosts } from './ex7';
 
 async function test(userId: string | number) {
   const posts = await getPosts(userId);
-
+ 
   assert.strictEqual(posts?.length, 10);
   assert.strictEqual(posts?.at(-1)?.comments?.length, 5);
   assert.deepStrictEqual(posts[0], {
