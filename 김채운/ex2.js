@@ -23,17 +23,17 @@ const range = (start, end, step = start > end ? -1 : 1) => {
     );
 
     // 정밀도를 가진 step, start, end를 위한 수치
-    const factor = Math.pow(10, precision);
-    start = Math.round(start * factor);
-    end = Math.round(end * factor);
-    step = Math.round(step * factor);
+    const x = Math.pow(10, precision);
+    start = Math.round(start * x);
+    end = Math.round(end * x);
+    step = Math.round(step * x);
 
     // step이 양수일 때
     if (step > 0) {
         if (start <= end) {
             for (let i = start; i <= end; i += step) {
                 // 결과를 원하는 precision으로 반올림
-                result.push(parseFloat((i / factor).toFixed(precision)));
+                result.push(parseFloat((i / x).toFixed(precision)));
             }
         }
     } 
@@ -42,7 +42,7 @@ const range = (start, end, step = start > end ? -1 : 1) => {
         if (start >= end) {
             for (let i = start; i >= end; i += step) {
                 // 결과를 원하는 precision으로 반올림
-                result.push(parseFloat((i / factor).toFixed(precision)));
+                result.push(parseFloat((i / x).toFixed(precision)));
             }
         }
     }
