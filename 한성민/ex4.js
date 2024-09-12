@@ -35,17 +35,8 @@ function deepCopy(obj, seen = new WeakMap()) {
         return copy;
     }
 
-    // WeakSet은 복사하지 않음 (참조 기반이므로 복사 X)
-    if (obj instanceof WeakSet) {
-        return obj;
-    }
-
-    // WeakMap도 복사하지 않음 (참조 기반이므로 복사 X)
-    if (obj instanceof WeakMap) {
-        return obj;
-    }
-
-    if (obj instanceof Function) {
+    // 참조 기반인 WeakSet, WeakMap, 함수는 그대로 반환
+    if (obj instanceof WeakSet || obj instanceof WeakMap || typeof obj === 'function') {
         return obj;
     }
 
