@@ -16,16 +16,16 @@ const debounce_ = (cb: (a: number) => void, delay: number) => {
 
 // 쓰로틀
 const throttle_ = (cb: (a: number) => void, delay: number) => {
-    let timer: ReturnType<typeof setTimeout> | null = null;
+    let timer: number;
 
     return (i: number) => {
-        if (!timer) {
-            cb(i);
-            timer = setTimeout(() => {
-                timer = null;
-            }, delay);
+        const now = (new Date()).getTime();
+        if (now - timer < delay) {
+            return;
         }
-    };
+        timer = now;
+        cb(i);
+    }
 }
 
 // function throttle...
