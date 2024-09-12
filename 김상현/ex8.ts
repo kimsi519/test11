@@ -1,11 +1,29 @@
-// dummy(mock)입니다. 올바르게 수정하세요.
-const debounce = (cb: any, delay: number) => (i: number) => {};
-const throttle = (cb: any, delay: number) => (i: number) => {};
 
-// function throttle...
+const debouncesh = (cb: any, delay: number) => {
+  let timer: NodeJS.Timeout | undefined;
 
-const debo = debounce((a: number) => console.log(a + 1), 500);
-for (let i = 10; i < 15; i++) debo(i); // 15 출력
+  return function (this: any, ...args: any[]) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => cb.apply(this, args), delay);
+  };
+};
 
-const thro = throttle((a: number) => console.log(a + 1), 500);
-for (let i = 10; i < 15; i++) thro(i); // 11 출력
+const throttlesh = (cb: any, delay: number) => {
+    let lastCall = 0;
+  
+    return function (this: any, ...args: any[]) {
+      const now = Date.now();
+      if (now - lastCall >= delay) {
+        lastCall = now;
+        cb.apply(this, args);
+      }
+    };
+  };
+
+const debosh = debouncesh((a: number) => console.log(a + 1), 500);
+for (let i = 10; i < 15; i++) debosh(i); // 15 출력
+
+const throsh = throttlesh((a: number) => console.log(a + 1), 500);
+for (let i = 10; i < 15; i++) throsh(i); // 11 출력
