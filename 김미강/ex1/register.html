@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white p-4 shadow-md flex justify-between items-center">
+      <h1
+        class="text-2xl font-bold cursor-pointer text-green-600 flex items-center"
+        onclick="window.location.href='book-edit.html';"
+      >
+        <img
+          src="https://img.icons8.com/?size=100&id=51513&format=png&color=16a34a"
+          alt="BookMark Logo"
+          class="w-8 h-8 mr-2"
+        />
+        <!-- 로고 이미지 -->
+        BookMark
+      </h1>
+      <nav class="ml-auto flex items-center space-x-6">
+        <a
+          href="https://github.com/"
+          class="text-gray-600 hover:text-gray-800 font-bold"
+          >GitHub Repo.</a
+        >
+        <button
+          onclick="window.location.href='register.html';"
+          class="text-gray-600 hover:text-gray-800 font-bold"
+        >
+          Sign up
+        </button>
+        <!-- 수직선 추가 -->
+        <span class="text-gray-300">|</span>
+        <button onclick="" class="text-gray-600 hover:text-gray-800 font-bold">
+          Sign in
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex">
+      <div class="flex items-center flex-grow justify-center">
+        <div class="max-w-md w-full rounded p-6">
+          <div class="mb-4">
+            <h1 class="text-4xl font-bold text-center text-green-600 mb-2">
+              Sign Up
+            </h1>
+          </div>
+          <form id="registerForm">
+            <div class="mb-4">
+              <label for="nickname" class="block text-gray-600 font-bold"
+                >Nickname</label
+              >
+              <input
+                type="text"
+                id="nickname"
+                placeholder="nickname..."
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-600 font-bold"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                placeholder="email..."
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="password" class="block text-gray-600 font-bold"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                placeholder="password..."
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="passwordConfirm" class="block text-gray-600 font-bold"
+                >Password Confirm</label
+              >
+              <input
+                type="password"
+                id="passwordConfirm"
+                placeholder="password confirm..."
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+            <button
+              type="button"
+              onclick="window.location.href='index.html';"
+              class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-gray-100 text-gray-500 text-center p-2 text-sm shadow-inner w-full"
+    >
+      &copy; Hanaro 2024
+    </footer>
+  </body>
+</html>

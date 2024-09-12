@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body class="bg-white flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white p-4 shadow-md flex justify-between items-center">
+      <div class="flex items-center">
+        <h1
+          class="text-2xl font-bold cursor-pointer text-green-600 flex items-center"
+          onclick="window.location.href='book-edit.html';"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=51513&format=png&color=16a34a"
+            alt="BookMark Logo"
+            class="w-8 h-8 mr-2"
+          />
+          <!-- 로고 이미지 -->
+          BookMark
+        </h1>
+      </div>
+      <nav class="ml-auto flex items-center space-x-4">
+        <a
+          href="https://github.com/"
+          class="text-gray-600 hover:text-gray-800 font-bold"
+          >GitHub Repo.</a
+        >
+        <img
+          src="https://i.pinimg.com/236x/e0/7a/7a/e07a7ae13886414118a1ad089b11b433.jpg"
+          alt="Profile"
+          class="w-9 h-9 rounded-full cursor-pointer"
+        />
+        <!-- 프로필 이미지 -->
+      </nav>
+    </header>
+    <main class="flex-1 flex">
+      <div class="flex-grow flex items-center justify-center">
+        <div class="flex items-center p-4 space-x-4" style="height: 95%">
+          <!-- Left Column: Bookmarks -->
+          <div
+            class="w-1/2 bg-green-50 p-4 rounded-lg shadow-lg"
+            style="height: 100%"
+          >
+            <h2 class="text-xl font-bold mb-4 text-green-600 text-center">
+              BookMark
+            </h2>
+
+            <!-- Bookmark Item -->
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://indiflex.kr/';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzc0V6lldp6kDNznJTDtDKEg5mCv281G-0-g&s"
+                  alt="Icon"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    55BookMark Bookmark
+                  </p>
+                  <p class="text-gray-500 text-xs">55만의 북마크만의 스타일</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- More Bookmark Items (Repeat as necessary) -->
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://www.naver.com';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://littledeep.com/wp-content/uploads/2020/09/naver-icon-style.png"
+                  alt="Naver"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    네이버
+                  </p>
+                  <p class="text-gray-500 text-xs">
+                    네이버 메인에서 다양한 정보
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://www.kakaocorp.com/page/';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://cs.kakao.com/images/icon/img_kakaocs.png"
+                  alt="Naver"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    KAKAO
+                  </p>
+                  <p class="text-gray-500 text-xs">
+                    더 나은 세상을 만드는 카카오 서비스
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://wwwhttps://www.youtube.com/?app=desktop&hl=ko&gl=KR';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                  alt="Youtube_logo"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    Youtube
+                  </p>
+                  <p class="text-gray-500 text-xs">
+                    친구, 가족을 비롯해 전 세계 사람들과 동영상 공유.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Mark Button -->
+            <button
+              class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
+              onclick="window.location.href='book-edit.html';"
+            >
+              + Add Mark
+            </button>
+          </div>
+
+          <!-- Right Column: Study -->
+          <div
+            class="w-1/2 bg-green-50 p-4 rounded-lg shadow-lg"
+            style="height: 100%"
+          >
+            <h2 class="text-xl font-bold mb-4 text-green-600 text-center">
+              Study
+            </h2>
+
+            <!-- Study Item -->
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://tailwindcss.com/';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://www.drupal.org/files/project-images/screenshot_361.png"
+                  alt="Tailwind CSS"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    Tailwind CSS
+                  </p>
+                  <p class="text-gray-500 text-xs">
+                    Tailwind CSS is a utility-first framework...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- More Study Items (Repeat as necessary) -->
+            <div
+              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://nextjs.org/';"
+            >
+              <div class="flex items-center space-x-3">
+                <img
+                  src="https://velog.velcdn.com/images/wish/post/07d03513-209f-4eab-99cb-658bf6e02fab/image.png"
+                  alt="Next.js"
+                  class="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p
+                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    Create Next App
+                  </p>
+                  <p class="text-gray-500 text-xs">
+                    Generated by create next app...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Mark Button -->
+            <button
+              class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
+              onclick="window.location.href='book-edit.html';"
+            >
+              + Add Mark
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-gray-100 text-gray-500 text-center p-2 text-sm shadow-inner w-full"
+    >
+      &copy; Hanaro 2024
+    </footer>
+  </body>
+</html>
