@@ -1,5 +1,5 @@
 function convertInitialsToHangul(initials) {
-  // 초성 유니코드 문자와 초성 유니코드의 매핑
+  // 초성 유니코드 문자 <-> 유니코드의 매핑
   const initialMap = {
     'ᄀ': 'ㄱ', 'ᄁ': 'ㄲ', 'ᄂ': 'ㄴ', 'ᄃ': 'ㄷ', 'ᄄ': 'ㄸ',
     'ᄅ': 'ㄹ', 'ᄆ': 'ㅁ', 'ᄇ': 'ㅂ', 'ᄈ': 'ㅃ', 'ᄉ': 'ㅅ',
@@ -25,9 +25,9 @@ function getInitials(arr) { // 초성만 파싱
   return convertInitialsToHangul(initials); // 변환된 초성 문자를 한글 초성 문자로 반환
 }
 
-// 여러 문자열에서 초성 추출하는 함수
+// 초성 추출 함수
 function extractInitials(data) {
-  return data.map(getInitials); // 각 문자열의 초성을 배열로 반환
+  return data.map(getInitials); // 초성을 배열로 반환
 }
 
 module.exports = {
@@ -37,7 +37,7 @@ module.exports = {
     // 각 데이터의 초성을 추출하여 비교
     const initialsData = extractInitials(data); // 데이터를 초성으로 변환한 배열
 
-    // 입력받은 firstSounds로부터 정규표현식 생성
+    // firstSounds로부터 정규표현식 생성
     const pattern = firstSounds.split('').map(c => {
       if (/[ㄱ-ㅎ]/.test(c)) {
         return c; // 한글 초성일 경우 그대로 사용

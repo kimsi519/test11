@@ -7,6 +7,119 @@
   <title>Document</title>
 </head>
 <body>
+    <!-- 네비게이션 바 -->
+    <nav class="bg-white border-b border-gray-200">
+      <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="./book-edit.html" class="flex items-center space-x-1 rounded">
+          <img src="https://www.hanafn.com:8002/assets/img/ko/info/img-hana-symbol.png" class="h-9 pt-2" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold px-3 py-3 text-black-500">Digital-Hana</span>
+        </a>
+        <div class="flex space-x-8 items-center">
+          <a href="https://github.com/commaengddongyeon/test11" class="text-gray-900 hover:text-blue-700">GitHub Repo</a>
+          <img src="https://cdn-icons-png.flaticon.com/512/1361/1361876.png" alt="User Avatar" class="h-10 w-10 rounded-full">
+        </div>
+      </div>
+    </nav>
+  <!-- 메인 -->
+  <section class="max-w-screen-xl mx-auto mt-8 p-4">
+    <div class="grid grid-cols-2 gap-8">
 
+      <!-- Bookmarks -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">BookMark</h2>
+        <div class="space-y-4">
+          
+          <!-- 카드1 -->
+          <div class="flex items-center bg-gray-100 p-4 rounded-md shadow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumEnA4kC-FwpmPOBziyV9BYTanrxOZmOwiA&s" alt="Logo" class="h-10 mr-4">
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold">BookMark B...</h3>
+              <p class="text-gray-500 text-sm">나만의 북마크</p>
+            </div>
+            <button class="text-gray-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!--카드2 -->
+          <div class="flex items-center bg-gray-100 p-4 rounded-md shadow">
+            <img src="https://i.namu.wiki/i/p_1IEyQ8rYenO9YgAFp_LHIAW46kn6DXT0VKmZ_jKNijvYth9DieYZuJX_E_H_4GkCER_sVKhMqSyQYoW94JKA.svg" alt="Logo" class="h-10 mr-4">
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold">네이버</h3>
+              <p class="text-gray-500 text-sm">네이버 메인에서 다양한 경험을</p>
+            </div>
+            <button class="text-gray-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!--카드3-->
+          <div class="flex items-center bg-gray-100 p-4 rounded-md shadow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaxjjhD2-y8CkDcJ_5bQ_2lEG_9NJb7sjjrA&s" alt="Logo" class="h-10 mr-4">
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold">Kakao</h3>
+              <p class="text-gray-500 text-sm">기술과 사람으로 더 나 세상을</p>
+            </div>
+            <button class="text-gray-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- ADD버튼 -->
+          <button class="bg-teal-700   text-white font-bold py-2 px-6 rounded-lg">
+            Add Book
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- Study Bookmarks -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Study</h2>
+        <div class="space-y-4">
+
+          <!-- 카드1 -->
+          <div class="flex items-center bg-gray-100 p-4 rounded-md shadow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU-mspyndicMBTk-KdKp96OZiaD2rkYLYzFQ&sg" alt="Logo" class="h-10 mr-4">
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold">Tailwind CSS</h3>
+              <p class="text-gray-500 text-sm">Tailwind CSS is a util</p>
+            </div>
+            <button class="text-gray-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 카드2 -->
+          <div class="flex items-center bg-gray-100 p-4 rounded-md shadow">
+            <img src="https://static-00.iconduck.com/assets.00/nextjs-icon-2048x1234-pqycciiu.png" alt="Logo" class="h-10 mr-4">
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold">Next JS</h3>
+              <p class="text-gray-500 text-sm">Generated by create</p>
+            </div>
+            <button class="text-gray-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- ADD버튼 -->
+          <button class="bg-teal-700   text-white font-bold py-2 px-6 rounded-lg">
+            Add Book
+          </button>
+
+        </div>
+
+        
 </body>
 </html>

@@ -8,5 +8,4 @@ Array.prototype.sortBy = function (sortProp = '') {
     }
     return 0;
   });
-
 };
