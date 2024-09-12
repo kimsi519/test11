@@ -30,40 +30,43 @@ type CommentResponse = {
   body: string;
 };
 
-async function getComments(postId: number | string): Promise<Comment[]> {
-  try {
-    const { data } = await axios.get(`${POST_URL}/${postId}/comments`);
-    const comments: Comment[] = data.map((comment: CommentResponse) => {
-      const { name, ...rest } = comment;
-      return rest;
-    });
-    return comments;
-  } catch (error) {
-    const message = error instanceof Error ? error.message : error;
-    console.log(JSON.stringify(message));
-    return [];
+class ApiClient {
+  static async fetch<T>(url: string): Promise<T> {
+    try {
+      const { data } = await axios.get<T>(`${POST_URL}${url}`);
+      return data;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unknown error";
+      console.error(`API Request Failed: ${message}`);
+      throw error;
+    }
   }
 }
 
-export async function getPosts(userId: number | string): Promise<Post[]> {
+const transformPost = async (post: PostResponse): Promise<Post> => {
+  const { id: postId, title } = post;
+
+  const commentsData = await ApiClient.fetch<CommentResponse[]>(
+    `/${postId}/comments`
+  );
+  const comments = commentsData.map(transformComment);
+
+  return { postId, title, comments };
+};
+
+const transformComment = (comment: CommentResponse): Comment => {
+  const { name, ...rest } = comment;
+  return rest;
+};
+
+export const getPosts = async (userId: number | string): Promise<Post[]> => {
   try {
-    const { data } = await axios.get(`${POST_URL}?userId=${userId}`);
-    const posts: Post[] = await Promise.all(
-      data.map(async (post: PostResponse) => {
-        const { id: postId, title } = post;
-        const comments = await getComments(postId);
-        return { postId, title, comments };
-      })
+    const postsData = await ApiClient.fetch<PostResponse[]>(
+      `?userId=${userId}`
     );
-    return posts;
+    return await Promise.all(postsData.map(transformPost));
   } catch (error) {
-    const message = error instanceof Error ? error.message : error;
-    console.log(JSON.stringify(message));
+    console.error(`Failed to fetch posts: ${error}`);
     return [];
   }
-}
-
-// 결과를 출력하려면 `getPosts` 호출 시 await을 사용해야 합니다.
-// getPosts(1)
-//   .then((posts) => console.log(posts))
-//   .catch((error) => console.error(error));
+};
