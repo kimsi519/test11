@@ -10,5 +10,3 @@ Array.prototype.sortBy = function (sortProp = '') {
   });
 
 };
-
-// default 값은 asc

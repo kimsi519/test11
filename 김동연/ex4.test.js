@@ -23,6 +23,7 @@ const kim = {
   zm: new Map([[hong, arr]]),
   zwm: new WeakMap([[hong, arr]]),
 };
+
 const newKim = deepCopy(kim);
 
 console.log(JSON.stringify(kim, null, 3));
