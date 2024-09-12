@@ -1,5 +1,21 @@
-// dummy(mock)입니다. 올바르게 수정하세요.
-const debounce = (cb: any, delay: number) => (i: number) => {};
+// function debounce(func, delay) {
+//     let timer;
+//     return function(...args) {
+//         clearTimeout(timer);
+//         timer = setTimeout(() => func.apply(this, args), delay);
+//     };
+// }
+
+// const searchBox = document.getElementById('searchBox');
+
+// searchBox.oninput = debounce(() => {
+//     const query = searchBox.value;
+//     console.log(new Date().toISOString(), 'search>>', query);
+// }, 500);
+
+const debounce = (cb: any, delay: number) => (i: number) => {
+
+};
 const throttle = (cb: any, delay: number) => (i: number) => {};
 
 // function throttle...
