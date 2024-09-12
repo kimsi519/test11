@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="55BookMark BookMark" />
+    <meta property="og:description" content="55나만의 북마크나만의 북마크" />
+    <meta property="og:image" content="../assets/image1.jpg" />
     <link href="./output.css" rel="stylesheet" />
     <!-- fontawsome -->
     <script
@@ -10,82 +13,111 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="h-screen">
+  <body class="h-dvh flex flex-col">
     <header
-      class="flex justify-between items-center px-4 py-6 border-b-2 border-gray-200"
+      class="h-14 flex justify-between items-center px-4 border-b-2 border-gray-200"
     >
       <div class="flex items-center space-x-1">
-        <i class="text-xl fa-brands fa-facebook"></i>
-        <span>BookMark</span>
+        <i class="text-xl fa-solid fa-book"></i>
+        <span class="font-extrabold text-xl">
+          <a href="./book-edit.html">BookMark</a>
+        </span>
       </div>
-      <div class="flex space-x-4">
-        <span>Github Repo.</span>
-        <i class="text-xl fa-brands fa-facebook"></i>
+      <div class="flex items-center space-x-4">
+        <span
+          ><a href="https://github.com/heon-kim/test11">Github Repo.</a>
+        </span>
+        <div
+          class="flex justify-center items-center w-8 h-8 rounded-full bg-blue-200"
+        >
+          <i class="text-xl fa-solid fa-user-tie"></i>
+        </div>
       </div>
     </header>
     <main class="h-full flex bg-white">
-      <section class="h-full w-full bg-gray-200 mx-4 my-2 p-2">
-        <h3 class="text-2xl text-center font-bold py-2 truncate">
-          BookMark BookMark
-        </h3>
+      <section class="w-full bg-gray-200 mx-4 my-2 p-2">
+        <header class="flex justify-center">
+          <h3
+            class="w-1/3 max-w-58 text-center text-2xl font-bold py-2 truncate"
+          >
+            BookMark BookMark
+          </h3>
+        </header>
+
         <div class="flex flex-col gap-2">
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
                 src="../assets/image1.jpg"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">55BookMark BookMark</p>
+                <p class="truncate text-gray-500 text-sm">
+                  55나만의 북마크나만의 북마크
+                </p>
               </div>
             </div>
 
-            <i class="text-xl fa-brands fa-facebook"></i>
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
-                src="../assets/image1.jpg"
+                src="../assets/naver.png"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">네이버</p>
+                <p class="truncate text-gray-500 text-sm">www.naver.com</p>
               </div>
             </div>
-            <i class="text-xl fa-brands fa-facebook"></i>
+
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
-                src="../assets/image1.jpg"
+                src="../assets/nike.png"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">nike</p>
+                <p class="truncate text-gray-500 text-sm">신상 조던 출시!</p>
               </div>
             </div>
-            <i class="text-xl fa-brands fa-facebook"></i>
+
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
-                src="../assets/image1.jpg"
+                src="../assets/youtube.png"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">YouTube</p>
+                <p class="truncate text-gray-500 text-sm">
+                  최신 동영상 | 런닝맨 Ep.124 숲속 퀴즈쇼
+                </p>
               </div>
             </div>
-            <i class="text-xl fa-brands fa-facebook"></i>
+
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
+
           <div class="flex justify-between">
             <div></div>
             <button class="rounded-md bg-black text-white px-4 py-3">
@@ -94,38 +126,51 @@
           </div>
         </div>
       </section>
-      <section class="h-full w-full bg-gray-200 mx-4 my-2 p-2">
-        <h3 class="text-2xl text-center font-bold py-2 truncate">
-          BookMark BookMark
-        </h3>
+      <section class="w-full bg-gray-200 mx-4 my-2 p-2">
+        <header class="flex justify-center">
+          <h3
+            class="w-1/3 max-w-58 text-center text-2xl font-bold py-2 truncate"
+          >
+            Others
+          </h3>
+        </header>
         <div class="flex flex-col gap-2">
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
-                src="../assets/image1.jpg"
+                src="../assets/google.png"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">Google</p>
+                <p class="truncate text-gray-500 text-sm">
+                  googlgooglinggooglgoogling
+                </p>
               </div>
             </div>
-            <i class="text-xl fa-brands fa-facebook"></i>
+
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
           <article class="flex justify-between border-2 border-white p-2">
-            <div class="flex gap-2">
+            <div class="w-full flex gap-2">
               <img
                 class="size-14 rounded-md"
-                src="../assets/image1.jpg"
+                src="../assets/facebook.png"
                 alt="image"
               />
-              <div>
-                <p>55BookMark BookMark</p>
-                <p>55나만의 북마크나만의 북마크</p>
+              <div style="width: calc(100% - 4rem)">
+                <p class="truncate font-semibold">Facebook</p>
+                <p class="truncate text-gray-500 text-sm">얼굴책얼굴책얼굴책</p>
               </div>
             </div>
-            <i class="text-xl fa-brands fa-facebook"></i>
+
+            <div class="w-4">
+              <i class="text-xl fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
           <div class="flex justify-between">
             <div></div>
@@ -136,5 +181,6 @@
         </div>
       </section>
     </main>
+    <footer class="h-14 border-t p-3 text-center">&copy Hanaro 2024</footer>
   </body>
 </html>
