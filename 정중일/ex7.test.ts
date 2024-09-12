@@ -68,3 +68,5 @@ async function test(userId: string | number) {
 }
 
 test(1);
+
+console.log("ex7 test complete!");

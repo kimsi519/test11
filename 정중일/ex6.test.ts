@@ -22,3 +22,5 @@ import { promiseAllSettled, randTime } from "./ex6";
     ])
   );
 })();
+
+console.log("ex6 test complete!");

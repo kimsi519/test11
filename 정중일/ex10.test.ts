@@ -76,3 +76,5 @@ assert.deepStrictEqual(alist.removeByIndex(1), {
 alist.clear();
 assert.deepStrictEqual(alist.isEmpty, true);
 assert.deepStrictEqual(alist.peek, undefined);
+
+console.log("ex10 test complete!");

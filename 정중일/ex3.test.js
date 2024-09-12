@@ -16,3 +16,5 @@ assert.deepStrictEqual(users.sortBy("name:desc,id:,dept:desc"), [
   hong,
 ]);
 assert.deepStrictEqual(users.sortBy("dept:desc,id"), [kim, lee, hong]);
+
+console.log("ex3 test complete!");

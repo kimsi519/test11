@@ -38,3 +38,5 @@ assert.notStrictEqual(
   newKim.oo.addr.city,
   "Not Pass3: city가 다르지 않아요!"
 );
+
+console.log("ex4 test complete!");
