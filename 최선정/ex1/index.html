@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .pastel-filter {
+            filter: brightness(0) saturate(100%) invert(77%) sepia(15%) saturate(497%) hue-rotate(175deg) brightness(92%) contrast(90%);
+        }
+        .hover-blue:hover {
+            background-color: #3B82F6; 
+            color: white; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md border-b" id="header">
+        <div class="flex items-center cursor-pointer" onclick="location.href='book-edit.html'">
+            <img src="img/book.png" alt="Book Icon" class="w-6 h-6 mr-2 pastel-filter">
+            <div class="text-2xl font-bold text-blue-400">BookMark</div> 
+        </div>
+        <div class="flex items-center space-x-4" id="nav-links">
+            <span class="text-gray-500">Github Repo.</span>
+            <img src="img/pro.jpg" alt="Profile" class="w-10 h-10 rounded-full"> 
+        </div>
+    </header>
+
+    <main class="flex-grow p-8 flex space-x-6">
+        <div class="w-1/2 bg-white shadow-lg rounded-lg p-6">
+            <h2 class="font-bold text-xl mb-4 text-blue-400">BookMark BookMar...</h2> 
+            <ul class="space-y-4">
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/ex1.jpg" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">55BookMark Book...</p>
+                        <p class="text-gray-500 text-sm">55년만의 북마크나만의...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/naver.png" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">네이버</p>
+                        <p class="text-gray-500 text-sm">네이버 메인에서 다양한...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/kakao.png" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">Kakao</p>
+                        <p class="text-gray-500 text-sm">기술과 사람으로 더 나은...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/youtube.png" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">YouTube</p>
+                        <p class="text-gray-500 text-sm">YouTube에서 마음에 ...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+            </ul>
+            <div class="flex justify-end mt-6">
+                <button class="w-1/2 bg-blue-100 text-blue-500 py-3 rounded-lg shadow hover-blue transition">+ Add Mark</button>
+            </div>
+        </div>
+
+        <div class="w-1/2 bg-white shadow-lg rounded-lg p-6">
+            <h2 class="font-bold text-xl mb-4 text-blue-400">Study</h2>
+            <ul class="space-y-4">
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/ex2.jpg" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">Tailwind CSS - ...</p>
+                        <p class="text-gray-500 text-sm">Tailwind CSS is a ut...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+                <li class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition">
+                    <img src="img/ex3.jpg" class="mr-4 w-10 h-10 rounded-full" alt="Logo">
+                    <div class="flex-grow">
+                        <p class="text-gray-700 font-semibold">Create Next App - ...</p>
+                        <p class="text-gray-500 text-sm">Generated by creat...</p>
+                    </div>
+                    <button class="ml-auto text-gray-400 hover:text-blue-400 transition">⚙️</button>
+                </li>
+            </ul>
+            <div class="flex justify-end mt-6">
+                <button class="w-1/2 bg-blue-100 text-blue-500 py-3 rounded-lg shadow hover-blue transition">+ Add Mark</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative bottom-0 w-full bg-white text-center p-4 border-t shadow-md rounded-t-lg">
+        &copy; Hanaro 2024
+    </footer>
+</body>
+</html>
