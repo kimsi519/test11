@@ -1,5 +1,3 @@
-import { title } from "process";
-
 const POST_URL = 'https://jsonplaceholder.typicode.com/posts';
 export type CommentResponse = {
     postId: number;
@@ -35,7 +33,7 @@ export async function getPosts(userId: number | string):Promise<Post[]> {
   
   const postsByUserID: Post[] = [];
   for(const res of resList){
-    const commentsres:CommentResponse[] = await fetch(`${POST_URL}/${res.id}/comments`, {method: "GET"})
+    const commentsres:CommentResponse[] = await fetch(`${POST_URL}/${res.postId}/comments`, {method: "GET"})
       .then((response) => response.json()) as CommentResponse[];
     
     const comments:Comment[] = commentsres.map((res)=>{return {

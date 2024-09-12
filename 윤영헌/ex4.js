@@ -27,7 +27,7 @@ function deepCopy(obj, seen = new WeakMap()) {
 
     if (obj instanceof WeakMap) {
       const weakMapCopy = new WeakMap();
-      seen.set(obj, weakMapCopy); // 순환 참조 방지용
+      seen.set(obj, weakMapCopy);
       return weakMapCopy;
     }
   
@@ -42,7 +42,7 @@ function deepCopy(obj, seen = new WeakMap()) {
   
     if (obj instanceof WeakSet) {
       const weakSetCopy = new WeakSet();
-      seen.set(obj, weakSetCopy); // 순환 참조 방지용
+      seen.set(obj, weakSetCopy);
       return weakSetCopy;
     }
   
@@ -63,7 +63,7 @@ function deepCopy(obj, seen = new WeakMap()) {
     }
   
     const objCopy = {};
-    seen.set(obj, objCopy); // 순환 참조 방지용
+    seen.set(obj, objCopy);
     for (const key of Object.keys(obj)) {
       objCopy[key] = deepCopy(obj[key], seen);
     }
