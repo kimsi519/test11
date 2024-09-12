@@ -3,7 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BookMark</title>
+    <link href="output.css" rel="stylesheet" />
+    <style>
+      #main-contents-area {
+        height: 80vh; /* 80%의 화면 높이 */
+        overflow-y: auto; /* 콘텐츠가 넘칠 경우 스크롤 추가 */
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="min-h-screen flex flex-col">
+    <!-- 내브바 컴포넌트 -->
+    <nav class="flex justify-between border-b-2 h-16 px-8 py-1">
+      <!-- 북마크 로고 -->
+      <div
+        id="bookmark-logo"
+        class="flex justify-center bg-gray-100 rounded p-3"
+      >
+        <img src="static/bookmark.svg" class="w-6 h-6 self-center" alt="" />
+        <a
+          href="javascript:location.reload()"
+          class="font-semibold text-2xl self-center text-green-500"
+          >BookMark</a
+        >
+      </div>
+      <!-- 북마크 로고 끝 -->
+      <div class="flex w-1/4 justify-between">
+        <!-- 깃허브 레포 -->
+        <div id="github-repo" class="self-center w-full">Github Repo.</div>
+        <!-- 깃허브 레포 끝 -->
+        <!-- 프로필 사진 -->
+        <div class="flex justify-end">
+          <img src="static/indiflex.jpg" class="rounded-full" alt="" />
+        </div>
+        <!-- 프로필 사진 끝 -->
+      </div>
+    </nav>
+    <!-- 내브바 컴포넌트 끝 -->
+
+    <!-- 메인 콘텐츠 영역 -->
+    <div id="main-contents-area" class="grid grid-cols-5 gap-4 p-1">
+      <!-- BookMark BookMark 창 -->
+      <div class="bg-gray-300 rounded p-3">
+        <!-- 제목 창 -->
+        <div class="w-full max-w-xs mb-3">
+          <p class="text-xl font-bold text-center truncate">
+            BookMark BookMark BookMark BookMark
+          </p>
+        </div>
+        <!-- 제목창 끝 -->
+        <!-- 북마크 개별 컴포넌트 -->
+        <!-- 인디플렉스 -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/indiflex.jpg"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">55BookMark BookMark BookMark</p>
+            <p class="truncate">55BookMark 나만의 북마크나만의 북마크</p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <!-- 네이버 -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/naver.png"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">네이버</p>
+            <p class="truncate">네이버 메인에서 다양한</p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <!-- 유튜브 -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/youtube.png"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">55BookMark BookMark BookMark</p>
+            <p class="truncate">55BookMark 나만의 북마크나만의 북마크</p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <!-- 카카오 -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/kakao.png"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">55BookMark BookMark BookMark</p>
+            <p class="truncate">55BookMark 나만의 북마크나만의 북마크</p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <div class="flex justify-end">
+          <button class="bg-gray-800 text-gray-50 p-3 rounded-lg w-1/2">
+            + Add Mark
+          </button>
+        </div>
+        <!-- 북마크 개별 컴포넌트 끝 -->
+      </div>
+      <!-- BookMark BookMark 창 끝 -->
+      <!-- Study 창 -->
+      <div class="bg-gray-300 rounded p-3">
+        <!-- 제목 창 -->
+        <div class="w-full max-w-xs mb-3">
+          <p class="text-xl font-bold text-center truncate">Study</p>
+        </div>
+        <!-- 제목창 끝 -->
+        <!-- 북마크 개별 컴포넌트 -->
+        <!-- tailwind -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/tailwind.png"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">Tailwind CSS - Tailwind CSS</p>
+            <p class="truncate">
+              Tailwind CSS is a utility-first CSS framework
+            </p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <!-- next js -->
+        <div
+          class="flex min-h-20 min-w-full p-3 cursor-pointer h-12 border-2 border-white mb-3 gap-3"
+        >
+          <img
+            src="static/nextjs.png"
+            alt="indiflex"
+            class="w-12 h-12 rounded"
+          />
+          <div class="flex flex-col max-w-full overflow-hidden">
+            <p class="font-bold truncate">Create Next.js App</p>
+            <p class="truncate">
+              This free interactive course will guide you through how to get
+            </p>
+          </div>
+          <img src="static/settings.svg" alt="" class="w-6 h-6" />
+        </div>
+        <div class="flex justify-end">
+          <button class="bg-gray-800 text-gray-50 p-3 rounded-lg w-1/2">
+            + Add Mark
+          </button>
+        </div>
+        <!-- 북마크 개별 컴포넌트 끝 -->
+      </div>
+      <!-- Study 창 옆 끝 -->
+    </div>
+    <!-- 메인 콘텐츠 영역 끝 -->
+    <hr />
+    <!-- 푸터 영역 -->
+    <footer></footer>
+    <!-- 푸터 영역 끝 -->
+  </body>
 </html>
