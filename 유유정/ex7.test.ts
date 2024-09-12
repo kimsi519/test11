@@ -64,7 +64,8 @@ async function test(userId: string | number) {
     ],
   });
 
-  // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts.every(post => post.comments && post.comments.length > 0), true);
+  assert.strictEqual(posts[0].comments?.some(comment => comment.email === 'Eliseo@gardner.biz'), true);
 }
 
 test(1);

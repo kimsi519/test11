@@ -66,6 +66,63 @@ class Stack<T> extends Collection<T> {}
 class Queue<T> extends Collection<T> {}
 
 // ArrayList 클래스를 작성하세요.
-class ArrayList<T> extends Collection<T> {}
+class ArrayList<T> extends Collection<T> {
+  add(value: T, index?: number): void {
+    if (index === undefined) {
+      this.push(value);
+    } else {
+      if (index < 0 || index > this.length) {
+        throw new Error("Index out of bounds");
+      }
+      this._arr.splice(index, 0, value);
+    }
+  }
+
+  get(index: number): T {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of bounds");
+    }
+    return this._arr[index];
+  }
+
+  // remove(value: T): boolean {
+  //   const index = this.indexOf(value);
+  //   if (index !== -1) {
+  //     this.removeByIndex(index);
+  //     return true;
+  //   }
+  //   return false;
+  // }
+
+  removeByIndex(index: number): void {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of bounds");
+    }
+    this._arr.splice(index, 1);
+  }
+
+  set(index: number, value: T): void {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of bounds");
+    }
+    this._arr[index] = value;
+  }
+
+  contains(value: T): boolean {
+    return this.indexOf(value) !== -1;
+  }
+
+  indexOf(value: T): number {
+    return this._arr.indexOf(value);
+  }
+
+  size(): number {
+    return this.length;
+  }
+
+  toString(): string {
+    return `<ArrayList: [${this.toArray()}]>`;
+  }
+}
 
 export { Stack, Queue, ArrayList };
