@@ -1,7 +1,7 @@
 
 // 디바운스
 const debounce_ = (cb: (a: number) => void, delay: number) => {
-    let timer: ReturnType<typeof setTimeout> | null = null;
+    let timer: ReturnType<typeof setTimeout> | null = null; // setTimeout의 타입 
 
     return (i: number) => {
         if (timer) {
