@@ -35,7 +35,6 @@ export async function getPosts(userId: number | string):Promise<Post[]> {
   
   const postsByUserID: Post[] = [];
   for(const res of resList){
-
     const commentsres:CommentResponse[] = await fetch(`${POST_URL}/${res.id}/comments`, {method: "GET"})
       .then((response) => response.json()) as CommentResponse[];
     
