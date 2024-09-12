@@ -65,6 +65,13 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  // 빈 결과를 반환할 때의 테스트
+  const noPosts = await getPosts(99999); // 존재하지 않는 userId
+  assert.deepStrictEqual(noPosts, []);
+
+  // 다른 userId에 대한 테스트
+  const otherUserPosts = await getPosts(3); // 다른 userId
+  assert.strictEqual(otherUserPosts.length, 10); // 예를 들어 10개의 게시글이 있어야 한다고 가정
 }
 
 test(1);

@@ -50,28 +50,6 @@
             /* 입력 필드 둥글게 */
         }
 
-        .button-register {
-            width: 60%;
-            /* 가로 크기 */
-            max-width: 150px;
-            /* 최대 가로 크기 */
-            height: 93%;
-            /* 세로 크기 */
-            max-height: 40px;
-            /* 최대 세로 크기 */
-            background-color: gray;
-            border-radius: 20px;
-            /* 둥근 모서리 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* 그림자 효과 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
         .button-add {
             background-color: black;
             color: white;
@@ -79,7 +57,7 @@
             padding: 10px;
             margin-left: 20px;
             margin-top: 25px;
-
+            box-shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.3);
         }
 
         .button-add:hover {
@@ -102,12 +80,15 @@
 <body class="flex flex-col h-screen">
     <!-- Header -->
     <header class="p-4 flex justify-between items-center">
-        <div class="left">image넣기</div>
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#61089c"><path d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/></svg>
+            <div class="left" style="color: rgb(97, 8, 156);font-weight:bold; font-size:x-large">BookMark</div>
+        </div>
         <div class="right flex items-center">
-            <button class="mr-4">Github Repo.</burron>
-                <button class="mr-2">SignUp</button>
-                <span>|</span>
-                <button class="ml-2">SignIn</button>
+            <button class="mr-4" onclick="location.href='https://github.com/codnscodns'">Github Repo.</button>
+            <button id="button-signup" class="mr-2">SignUp</button>
+            <span>|</span>
+            <button class="ml-2">SignIn</button>
         </div>
     </header>
 
@@ -117,13 +98,13 @@
             <div class="input-group">
                 <input placeholder="add url...">
             </div>
-            <div style="display: flex; flex-direction: row; background-color: yellow;">
-                <input type="checkbox">
-                <label style="font-size:x-small; text-align: center;">이동 시 자동 삭제</label>
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start; width: 85%; margin-top: 3px;">
+                <input type="checkbox" style="margin-right: 5px;">
+                <label style="font-size:x-small; text-align: left;">이동 시 자동 삭제</label>
             </div>
-            <div style="display: flex; flex-direction: row; justify-content: end;">
+            <div style="display: flex; flex-direction: row; justify-content: flex-end; width:85%; margin-top: 2px;">
                 <button class="button-first"
-                    style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px;border-style:solid; border-radius: 8px; border-width:1px; text-align: center;">
+                    style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px;border-style:solid; border-radius: 8px; border-width:1px; text-align: center; box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#5f6368">
                         <path
@@ -131,7 +112,7 @@
                     </svg>
                 </button>
                 <button class="button-second"
-                    style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; margin-left: 15px; border-style: solid; border-radius: 8px; border-width:1px; text-align: center;">
+                    style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; margin-left: 15px; border-style: solid; border-radius: 8px; border-width:1px; text-align: center; box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#5f6368">
                         <path
@@ -140,7 +121,7 @@
                 </button>
 
             </div>
-            <p style="margin-top: 5px; font-size: small;">There is no marks.</p>
+            <p style="margin-top: 25px; font-size: small;">There is no marks.</p>
         </div>
         <button class="button-add">
             + Add Book
@@ -151,6 +132,12 @@
     <footer class="text-center flex items-center justify-end mr-5">
         © Hanaro 2024
     </footer>
+
+    <script>
+        document.getElementById('button-signup').addEventListener('click', function () {
+            window.location.href = 'register.html'
+        })
+    </script>
 </body>
 
 </html>

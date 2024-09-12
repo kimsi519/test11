@@ -53,7 +53,7 @@
             /* 세로 크기 */
             max-height: 40px;
             /* 최대 세로 크기 */
-            background-color: gray;
+            background-color: rgb(183, 183, 185);
             border-radius: 20px;
             /* 둥근 모서리 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -65,15 +65,23 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+        .button-register:hover{
+            cursor: pointer;
+            background-color: rgb(203, 202, 202);
+        }
     </style>
 </head>
 
 <body class="flex flex-col h-screen">
     <!-- Header -->
     <header class="p-4 flex justify-between items-center">
-        <div class="left">image넣기</div>
+        <button id ="logo" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#61089c"><path d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/></svg>
+            <div class="left" style="color: rgb(97, 8, 156);font-weight:bold; font-size:x-large">BookMark</div>
+        </button>
         <div class="right flex items-center">
-            <button class="mr-4">Github Repo.</button>
+            <button class="mr-4" onclick="location.href='https://github.com/codnscodns'">Github Repo.</button>
             <button class="mr-2">SignUp</button>
             <span>|</span>
             <button class="ml-2">SignIn</button>
@@ -94,7 +102,7 @@
                 <label>Password Confirm</label>
                 <input style="border-color: gray;" placeholder="password confirm...">
             </div>
-            <button class="button-register">Register</button>
+            <button id="button-register" class="button-register">Register</button>
         </div>
         </div>
         </div>
@@ -104,6 +112,15 @@
     <footer class="text-center flex items-center justify-end mr-5">
         © Hanaro 2024
     </footer>
+
+    <script>
+        document.getElementById('button-register').addEventListener('click', function(){
+            window.location.href = 'index.html'
+        })
+        document.getElementById('logo').addEventListener('click', function(){
+            window.location.href = 'register.html'
+        })
+    </script>
 </body>
 
 </html>
