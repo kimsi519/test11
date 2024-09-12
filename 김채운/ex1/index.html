@@ -118,13 +118,13 @@
 <body class="flex flex-col h-screen">
   <!-- Header -->
   <header class="p-2 flex justify-between items-center">
-    <div id="logo" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+    <button id="logo" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#61089c">
         <path
           d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z" />
       </svg>
       <div class="left" style="color: rgb(97, 8, 156);font-weight:bold; font-size:x-large">BookMark</div>
-    </div>
+    </button>
     <div class="right flex items-center">
       <button class="mr-4" onclick="location.href='https://github.com/codnscodns'">Github Repo.</button>
       <button class="button-profile">
@@ -199,7 +199,7 @@
       </ul>
 
       <div style="display: flex; flex-direction: row; justify-content: end;">
-        <button class="button-add">
+        <button id ="button-add1" class="button-add">
           + Add Book
         </button>
       </div>
@@ -251,7 +251,7 @@
       </ul>
 
       <div style="display: flex; flex-direction: row; justify-content: end;">
-        <button class="button-add">
+        <button id="button-add2" class="button-add">
           + Add Mark
         </button>
       </div>
@@ -265,8 +265,15 @@
 
   <script>
     document.getElementById('logo').addEventListener('click', function () {
-      window.location.href = 'book-edit.html'
-    })
+      window.location.href = 'index.html'
+    });
+    document.getElementById('button-add1').addEventListener('click', function(){
+            window.location.href = 'book-edit.html'
+    });
+    document.getElementById('button-add2').addEventListener('click', function(){
+            window.location.href = 'book-edit.html'
+        });
+
   </script>
 </body>
 
