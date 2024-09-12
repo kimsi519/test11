@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookMark</title>
     <link href="output.css" rel="stylesheet" />
-    <style>
-      #main-contents-area {
-        height: 80vh; /* 80%의 화면 높이 */
-        overflow-y: auto; /* 콘텐츠가 넘칠 경우 스크롤 추가 */
-      }
-    </style>
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- 내브바 컴포넌트 -->
@@ -20,7 +14,11 @@
         id="bookmark-logo"
         class="flex justify-center bg-gray-100 rounded p-3"
       >
-        <img src="static/bookmark.svg" class="w-6 h-6 self-center" alt="" />
+        <img
+          src="static/bookmark.svg"
+          class="w-6 h-6 self-center icon-green"
+          alt=""
+        />
         <a
           href="javascript:location.reload()"
           class="font-semibold text-2xl self-center text-green-500"
@@ -103,7 +101,9 @@
     <!-- 메인 콘텐츠 영역 끝 -->
     <hr />
     <!-- 푸터 영역 -->
-    <footer></footer>
+    <footer>
+      <p class="text-center text-gray-500">ⓒ Hanaro 2024</p>
+    </footer>
     <!-- 푸터 영역 끝 -->
   </body>
 </html>
