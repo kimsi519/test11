@@ -6,35 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Tailwind CSS 적용 */
         .main-container {
-            height: calc(100vh - 10vh);
-            /* 전체 높이에서 footer 높이(10vh)를 제외한 값 */
+            height: calc(100vh - 7vh);
+            /* 전체 높이에서 footer 높이(7vh)를 제외한 값 */
             box-sizing: border-box;
-            background-color: plum;
-            /* background-color: rgb(226, 229, 231);
-            border-radius: 30%; */
+            background: linear-gradient(#bb64e6, #9198e5);
         }
 
         footer {
-            height: 10vh;
-            /* footer의 높이 */
+            height: 7vh;
+            color: rgb(62, 61, 61)
         }
 
         .rounded-box {
             width: 60%;
-            /* 가로 크기 */
             max-width: 500px;
-            /* 최대 가로 크기 */
             height: 90%;
-            /* 세로 크기 */
             max-height: 600px;
-            /* 최대 세로 크기 */
             background-color: white;
             border-radius: 20px;
-            /* 둥근 모서리 */
             box-shadow: 0 9px 20px rgba(0, 0, 0, 0.2);
-            /* 그림자 효과 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,6 +73,7 @@
     <header class="p-4 flex justify-between items-center">
         <div class="left">image넣기</div>
         <div class="right flex items-center">
+            <button class="mr-4">Github Repo.</button>
             <button class="mr-2">SignUp</button>
             <span>|</span>
             <button class="ml-2">SignIn</button>
@@ -109,8 +101,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center flex items-center justify-center">
-        footer
+    <footer class="text-center flex items-center justify-end mr-5">
+        © Hanaro 2024
     </footer>
 </body>
 
