@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+            src="https://kit.fontawesome.com/b238b55b06.js"
+            crossorigin="anonymous"
+    ></script>
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<!-- Container -->
+<div class="h-screen max-w-3xl mx-auto p-4">
+    <!-- Header -->
+    <header class="flex justify-between mb-6 border-b-2 border-gray-400 pb-4">
+        <div class="flex rounded-lg bg-gray-300">
+            <i class="mt-5 mr-3 ml-3 fa-solid fa-bookmark text-green-500"></i>
+            <h1 class="mt-2 mr-3 text-3xl font-bold text-green-500 mb-2">BookMark</h1>
+        </div>
+        <div class="flex mt-3 justify-between">
+            <a href="https://github.com/kkx7787" target="_blank" class="mr-4 text-gray-600 hover:text-black">
+                <i class="fa-brands fa-github text-2xl"></i>
+            </a>
+            <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mt-0.5">
+                <!-- Round User Icon -->
+                <i class="fa-solid fa-user text-xl text-gray-500"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Bookmark List -->
+    <!-- Bookmark & Study List -->
+    <section class="flex justify-between gap-2 bg-white rounded-lg shadow-md p-6">
+
+        <!-- Bookmark Section -->
+        <aside class="w-1/2 bg-gray-200 h-screen p-4">
+            <h2 class="text-xl font-bold mb-4">Bookmarks</h2>
+
+            <!-- Bookmark Items -->
+            <div class="space-y-4">
+                <!-- Bookmark 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="bookmark image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Bookmark 1</h3>
+                            <p class="text-sm text-gray-500">Description for bookmark 1</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i> <!-- 수정 아이콘 -->
+                    </button>
+                </div>
+                <!-- Bookmark 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="bookmark image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Bookmark 2</h3>
+                            <p class="text-sm text-gray-500">Description for bookmark 2</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- Bookmark 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="bookmark image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Bookmark 3</h3>
+                            <p class="text-sm text-gray-500">Description for bookmark 3</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- Bookmark 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="bookmark image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Bookmark 4</h3>
+                            <p class="text-sm text-gray-500">Description for bookmark 4</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- Add New Bookmark Button -->
+                <div class="mb-6">
+                    <button class="bg-green-500 text-white px-6 py-2 rounded-lg shadow hover:bg-green-600">
+                        + Add Mark
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Study Section -->
+        <aside class="w-1/2 bg-gray-200 h-screen p-4">
+            <h2 class="text-xl font-bold mb-4">Study</h2>
+
+            <!-- Study Items -->
+            <div class="space-y-4">
+                <!-- Study 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="study image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Study 1</h3>
+                            <p class="text-sm text-gray-500">Description for study 1</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- Study 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="study image" class="w-12 h-12 rounded mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Study 2</h3>
+                            <p class="text-sm text-gray-500">Description for study 2</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- Add New Bookmark Button -->
+                <div class="mb-6">
+                    <button class="bg-green-500 text-white px-6 py-2 rounded-lg shadow hover:bg-green-600">
+                        + Add Mark
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+    </section>
+    <footer class="flex justify-center mt-2">
+        ⓒ Hanaro 2024
+    </footer>
+</div>
+</body>
+</html>

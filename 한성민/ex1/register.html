@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+            src="https://kit.fontawesome.com/b238b55b06.js"
+            crossorigin="anonymous"
+    ></script>
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<!-- Container -->
+<div class="h-screen max-w-3xl mx-auto p-4">
+    <!-- Header -->
+    <header class="flex justify-between mb-6 border-b-2 border-gray-400 pb-4">
+        <div class="flex rounded-lg bg-gray-300">
+            <i class="mt-5 mr-3 ml-3 fa-solid fa-bookmark text-green-500"></i>
+            <h1 class="mt-2 mr-3 text-3xl font-bold text-green-500 mb-2">BookMark</h1>
+        </div>
+        <div class="flex mt-3 justify-between">
+            <a href="https://github.com/kkx7787" target="_blank" class="mr-4 text-gray-600 hover:text-black">
+                <i class="fa-brands fa-github text-2xl"></i>
+            </a>
+            <!-- Container -->
+            <!-- Container for Round Icon -->
+            <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mt-0.5">
+                <!-- Round User Icon -->
+                <i class="fa-solid fa-user text-xl text-gray-500"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Bookmark List -->
+    <!-- Bookmark & Study List -->
+    <section class="flex justify-center bg-white rounded-lg shadow-md p-6">
+        <div class="px-10 border border-4 border-green-500 rounded-lg solid;">
+            <!-- Title -->
+            <h2 class="font-mono text-5xl text-center font-bold text-gray-800 mb-8 mt-4 ">Sign Up</h2>
+
+            <!-- Email Input -->
+            <div class="mb-4">
+                <label for="nickname" class="block text-lg font-semibold text-gray-700 mb-2">Nickname</label>
+                <input id="nickname" type="email" placeholder="Enter your nickname" class="w-96 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <!-- Email Input -->
+            <div class="mb-4">
+                <label for="email" class="block text-lg font-semibold text-gray-700 mb-2">Email</label>
+                <input id="email" type="email" placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-6">
+                <label for="password" class="block text-lg font-semibold text-gray-700 mb-2">Password</label>
+                <input id="password" type="password" placeholder="Enter your password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <!-- Password Confirm Input -->
+            <div class="mb-6">
+                <label for="password_confirm" class="block text-lg font-semibold text-gray-700 mb-2">Password Confirm</label>
+                <input id="password_confirm" type="password" placeholder="Enter your password again" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <!-- Register Button -->
+            <div class="flex justify-center">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg w-1/4 mb-4 ">Login</button>
+            </div>
+        </div>
+    </section>
+    <footer class="flex justify-center mt-2">
+        ⓒ Hanaro 2024
+    </footer>
+</div>
+</body>
+</html>
