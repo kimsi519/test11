@@ -19,3 +19,5 @@ assert.deepStrictEqual(searchByKoreanInitialSound(s, 'ㅂㅁ'), [
 ]);
 assert.deepStrictEqual(searchByKoreanInitialSound(s, 'ㅍㅁ'), []);
 assert.deepStrictEqual(searchByKoreanInitialSound(s, 'ㄱ1ㅅ'), ['김1수']);
+
+console.log("ex5 test complete!");

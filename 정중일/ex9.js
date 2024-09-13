@@ -24,10 +24,10 @@ function bill(tableNo) {
       printLine();
       for (const item of ordered) {
         const { price, taxfree } = MENU[item];
-        console.log('*', item);
+        console.log("*", item);
         f`공급가액: ${price}원`;
         f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
-        printLine('-');
+        printLine("-");
       }
       f`주문합계: ${tot.price}원`;
       f`주문합계: ${tot.tax}원`;
@@ -37,29 +37,29 @@ function bill(tableNo) {
 }
 
 const table1 = bill(1);
-table1.order('짜장');
-table1.order('짬뽕');
+table1.order("짜장");
+table1.order("짬뽕");
 table1.printBill();
 
 const table2 = bill(2);
-table2.order('짜장');
+table2.order("짜장");
 table2.printBill();
 
-table1.order('탕슉');
+table1.order("탕슉");
 table1.printBill();
 
-table2.order('짬뽕');
+table2.order("짬뽕");
 table2.printBill();
 
 function f([label, unit], price) {
-  console.log(`${label.padEnd(LABEL_SIZE, ' ')} ${priceFmt(price)}`);
+  console.log(`${label.padEnd(LABEL_SIZE, " ")} ${priceFmt(price)}`);
 }
 
-function priceFmt(price, unit = '원') {
-  return price.toLocaleString().padStart(PRICE_SIZE, ' ') + unit;
+function priceFmt(price, unit = "원") {
+  return price.toLocaleString().padStart(PRICE_SIZE, " ") + unit;
 }
 
-function printLine(flag = '=') {
+function printLine(flag = "=") {
   console.log(flag.repeat(LABEL_SIZE * 2 + PRICE_SIZE + 2));
 }
 
