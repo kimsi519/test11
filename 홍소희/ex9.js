@@ -25,12 +25,12 @@ function bill(tableNo) {
       for (const item of ordered) {
         const { price, taxfree } = MENU[item];
         console.log('*', item);
-        f`공급가액: ${price}원`;
-        f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
+        f("공급가액:", price);
+        f("부가세액:", taxfree ? 0 : calcTax(price));
         printLine('-');
       }
-      f`주문합계: ${tot.price}원`;
-      f`주문합계: ${tot.tax}원`;
+      f("주문합계:", tot.price);
+      f("주문합계:", tot.tax);
       printLine();
     },
   };
@@ -51,7 +51,7 @@ table1.printBill();
 table2.order('짬뽕');
 table2.printBill();
 
-function f([label, unit], price) {
+function f(label, price) {
   console.log(`${label.padEnd(LABEL_SIZE, ' ')} ${priceFmt(price)}`);
 }
 
