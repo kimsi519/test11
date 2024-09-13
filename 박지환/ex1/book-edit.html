@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-hana_regular">
+    <header class="flex justify-between p-4 bg-white shadow-md border-b-4 border-hana-green">
+        <a href="index.html">
+        <div class="flex space-x-2 font-bold text-hana-green items-end">
+            <span><img class="w-8 h-8" src="src/img_hana.svg"></span>
+            <span class="text-3xl leading-none">BookMark </span>
+            <span class="font-hana_regular text-xs leading-none"> for Digital Hana路</span>
+        </div>
+        </a>
+        <div class="flex space-x-4 text-gray-600 font-semibold items-center">
+            <div class="hover:text-hana-green"><a href="https://github.com/parkjaaaaan">Github Repo.</a></div>
+            <div class="flex space-x-4">
+                <img src="src/img_alpaca.jpg" class="h-8 w-8 rounded-full">
+            </div>
+        </div>
+    </header>    
+
+    <main class="flex-1 flex justify-start p-5 space-x-5">
+        <div class="w-1/4 bg-white shadow-lg rounded-lg p-5 border-t-4 border-hana-green">
+            <h2 class="text-lg font-semibold mb-4 text-gray-700">Categories</h2>
+            <div class="space-y-3">
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_naver.png" alt="네이버" class="w-10 h-10 rounded-md">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">네이버</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">네이버 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_kakao.png" alt="Kakao" class="w-10 h-10 rounded-md">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">카카오</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">카카오 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_coupang.png" alt="Coupang" class="w-10 h-10 rounded-md bg-white">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">쿠팡</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">쿠팡 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_youtube.png" alt="Youtube" class="w-10 h-10 rounded-md">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">유튜브</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">유튜브 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+            </div>            
+            <button class="bg-hana-green text-white py-2 px-4 mt-4 rounded hover:bg-green-900 transition">+ Add Mark</button>
+        </div>
+        
+        <div class="w-1/4 bg-white shadow-lg rounded-lg p-5 border-t-4 border-hana-green">
+            <h2 class="text-lg font-semibold text-gray-700 mb-4">Study</h2>
+            <div class="space-y-3">
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_js.png" alt="js" class="w-10 h-10 rounded-md">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">JS</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">JS 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                    <img src="src/img_ts.png" alt="ts" class="w-10 h-10 rounded-md">
+                    <div class="flex flex-col ml-3 flex-1">
+                        <div class="font-bold">TS</div>
+                        <div class="text-sm text-gray-500 line-clamp-1">TS 북마크 설명이 길어질 경우에도 일정 길이까지만 표시됩니다.</div>
+                    </div>
+                    <div>⚙️</div>
+                </div>
+            </div>            
+            <button class="bg-hana-green text-white py-2 px-4 mt-4 rounded hover:bg-green-900 transition">+ Add Mark</button>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t-2 text-xs border-gray-300 shadow-md p-4 text-center text-gray-400">
+        <p>&copy; 2024 Digital Hana路. All rights reserved.</p>
+    </footer>
+</body>
+</html>
