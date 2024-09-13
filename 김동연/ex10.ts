@@ -61,11 +61,35 @@ class Collection<T> {
     return this instanceof Queue;
   }
 }
-
 class Stack<T> extends Collection<T> {}
 class Queue<T> extends Collection<T> {}
 
-// ArrayList 클래스를 작성하세요.
-class ArrayList<T> extends Collection<T> {}
 
-export { Stack, Queue, ArrayList };
+
+
+// ArrayList 클래스를 작성하세요.
+class ArrayList<T> extends Collection<T> {
+  add(value: T, index?: number): void {
+
+  }
+
+  // 특정 인덱스에 value 대입
+  set(index: number, value: T): void {
+    if (index >= this.length || index < 0) {
+      throw new Error("범위를 벗어났습니다.");
+    }
+    this._arr[index] = value;
+  }
+
+  // 특정 인덱스 값 가져오기
+  get(index: number): T {
+    if (index >= this.length || index < 0) {
+      throw new Error("범위를 벗어났습니다");
+    }
+    return this._arr[index];
+  }
+
+}
+
+
+

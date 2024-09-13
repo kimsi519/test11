@@ -66,6 +66,5 @@ function deepCopy(obj) {
   });
 
   return copy;
-
 }
 module.exports = { deepCopy };

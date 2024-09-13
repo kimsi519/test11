@@ -34,10 +34,10 @@ module.exports = {
   searchByKoreanInitialSound: (data, firstSounds) => {
     let result = []; // 결과값 저장소
 
-    // 각 데이터의 초성을 추출하여 비교
+    // 데이터의 초성을 추출&비교
     const initialsData = extractInitials(data); // 데이터를 초성으로 변환한 배열
 
-    // firstSounds로부터 정규표현식 생성
+    // 정규표현식 생성
     const pattern = firstSounds.split('').map(c => {
       if (/[ㄱ-ㅎ]/.test(c)) {
         return c; // 한글 초성일 경우 그대로 사용

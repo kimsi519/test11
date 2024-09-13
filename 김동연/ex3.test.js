@@ -1,4 +1,3 @@
-// 수정된 테스트 코드
 const assert = require('assert');
 require('./ex3');
 
