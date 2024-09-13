@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Demo</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure footer stays at the bottom */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid #e5e7eb; /* Light gray border for separation */
+        }
+
+        /* Custom styles */
+        .sidebar {
+            background-color: #f5f5f5; /* Light gray background */
+            padding: 1rem;
+        }
+
+        .main-content {
+            background-color: #ffffff; /* White background */
+        }
+
+        .add-book-btn {
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text */
+        }
+
+        /* Border styles */
+        .border-bottom {
+            border-bottom: 1px solid #e5e7eb; /* Light gray border for separation */
+        }
+
+        .border-top {
+            border-top: 1px solid #e5e7eb; /* Light gray border for separation */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="wrap">
+        <nav class="bg-white shadow-lg border-bottom">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between">
+                    <div class="flex space-x-4">
+                        <a href="#" class="py-5 px-3 text-green-600 bg-green-100 hover:text-green-800 rounded-md">BookMark</a>
+                    </div>
+                    <div class="flex space-x-4 ml-auto">
+                        <a href="https://github.com/gxxhxx0224?tab=repositories" class="py-5 px-3 text-gray-700 hover:text-gray-900">GitHub Repos</a>
+                        <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Sign Up</a>
+                        <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Rights</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="flex flex-grow border-bottom">
+            <div class="w-1/4 sidebar">
+                <input type="text" placeholder="Enter address" class="block w-full mb-4 p-2 border border-gray-300 rounded-md">
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="auto-delete" class="mr-2">
+                    <label for="auto-delete">이동 시 자동 삭제</label>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-md">새로 고침</button>
+                    <button class="bg-green-500 text-white py-2 px-4 rounded-md">저장</button>
+                </div>
+            </div>
+            <div class="w-3/4 main-content p-4">
+                <button class="add-book-btn mt-4 py-2 px-4 rounded-md">+Add Book</button>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Your Company</p>
+        </footer>
+    </div>
+</body>
+</html>
