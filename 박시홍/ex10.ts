@@ -50,7 +50,7 @@ class Collection<T> {
   }
 
   toArray() {
-    return this.isQueue() ? this.arr.toReversed() : this.arr;
+    return this.isQueue() ? this.arr.reverse() : this.arr;
   }
 
   print() {

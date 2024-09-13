@@ -11,45 +11,50 @@ function bill(tableNo) {
   const ordered = [];
   const tot = { price: 0, tax: 0 };
 
-  return {
-    order(item) {
-      ordered.push(item);
-      const { price, taxfree } = MENU[item];
-      tot.price += price;
-      tot.tax += taxfree ? 0 : calcTax(price);
-    },
+  // 상품 주문 -> price와 tax 업데이트 수행
+  function order(item) {
+    ordered.push(item);
+    const { price, taxfree } = MENU[item];
+    tot.price += price;
+    tot.tax += taxfree ? 0 : calcTax(price);
+  }
 
-    printBill() {
-      console.log(`\n\nTable. ${tableNo}`);
-      printLine();
-      for (const item of ordered) {
-        const { price, taxfree } = MENU[item];
-        console.log('*', item);
-        f`공급가액: ${price}원`;
-        f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
-        printLine('-');
-      }
-      f`주문합계: ${tot.price}원`;
-      f`주문합계: ${tot.tax}원`;
-      printLine();
-    },
+  // 출력 함수
+  function printBill() {
+    console.log(`\n\nTable. ${tableNo}`);
+    printLine();
+    for (const item of ordered) {
+      const { price, taxfree } = MENU[item];
+      console.log('*', item);
+      f`공급가액: ${price}원`;
+      f`부가세액: ${taxfree ? 0 : calcTax(price)}원`;
+      printLine('-');
+    }
+    f`주문합계: ${tot.price}원`;
+    f`주문합계: ${tot.tax}원`;
+    printLine();
+  }
+
+  return {
+    order,
+    printBill,
   };
 }
 
-const table1 = bill(1);
-table1.order('짜장');
-table1.order('짬뽕');
-table1.printBill();
+const table1 = bill(1); // oredered와 tot 변수 가진 클로저 생성
+table1.order('짜장'); // bill 함수 내부의 order 접근
+table1.order('짬뽕'); // bill 함수 내부의 order 접근
+table1.printBill(); // bill 함수 내부의 printBill 접근
 
-const table2 = bill(2);
-table2.order('짜장');
-table2.printBill();
+const table2 = bill(2); // oredered와 tot 변수 가진 클로저 생성
+table2.order('짜장'); // bill 함수 내부의 order 접근
+table2.printBill(); // bill 함수 내부의 printBill 접근
 
-table1.order('탕슉');
-table1.printBill();
+table1.order('탕슉'); // bill 함수 내부의 order 접근
+table1.printBill(); // bill 함수 내부의 printBill 접근
 
-table2.order('짬뽕');
-table2.printBill();
+table2.order('짬뽕'); // bill 함수 내부의 order 접근
+table2.printBill(); // bill 함수 내부의 printBill 접근
 
 function f([label, unit], price) {
   console.log(`${label.padEnd(LABEL_SIZE, ' ')} ${priceFmt(price)}`);
