@@ -8,7 +8,7 @@ import { promiseAllSettled, randTime } from './ex6';
   );
 })();
 
-(async function testWithReject() {
+(async function testWithReject() {  
   assert.deepStrictEqual(
     await promiseAllSettled([
       randTime(11),
@@ -22,3 +22,4 @@ import { promiseAllSettled, randTime } from './ex6';
     ])
   );
 })();
+
