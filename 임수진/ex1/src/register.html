@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet" />
+    <title>가입하기</title>
+    <style>
+        /* Custom style for the nav shadow */
+        .nav-shadow {
+            box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="absolute inset-x-0 top-0 z-50 nav-shadow">
+        <nav class="flex items-center justify-between p-4 lg:px-8" aria-label="Global">
+            <div class="px-5 py-2 rounded-lg bg-gray-100">
+                <a href="#" class="flex -m-1.5 p-1.5 items-center">
+                    <img class="h-8 w-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVR4nO1avUrEQBDeylyhvoGIlb2P4PnzBHaHO9opCPbZ4YrYOBuwEeRaSysrrdQEbKwVvFK9ykZEIXpwYWXRC3qC9yMhWZiBgUBm4Pt2ZnZ2lhWiR2q+ngGkhlS6BUgdQG0KUaXbgHpHDCOA4bJU9FoYaPypEul9YPB25csEHr50iNWnxjfmdxLD6kq9PiYKEBiFwGfOdwmEVVGgwIgRyAp2s74/nivCfAjozGnNp4VcEQ6BRYziZGsAMFx0qgagz25gYu9fmntfgLITwD59wQUC8FdKMYGYI2A4hYCL2ONdCHgbRW5khjsx8lFC82HO8GlU83Ha8EAT80RmeKQEHuo9vpWAnK9VOs3j2ciq/XbqXujtfOJ2d2/jpmsT6K1mcjZ5XU4CkZd0waRR5fn0cD4GpPS3LaX2n7XJCEReUjiBq6O5izSqPLVOpi63A3zsZ29trK31sb6FE4CSqGACyBEwOaUQdZwmIJEeXI9Aw2kCNfvUAPWLswSsrPq0VGYScpDHH+u+ngZFB6D0fakKW+m2VBT0Av4AEIy9r9ziq/EAAAAASUVORK5CYII=" alt="bookmark-image">
+                    <h1 class="font-extrabold text-3xl pl-1 text-blue-400">BookMark</h1>
+                </a>
+            </div>
+            <div class="flex items-center justify-center space-x-10">
+                <a href="https://github.com/suzinlim" class="text-sm font-semibold mt-2 text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Github Repo.</a>
+                <div class="flex items-center space-x-6">
+                    <a href="./register.html" class="text-sm font-semibold leading-6 text-gray-900">SignUp</a>
+                    <div class="border-l-2 border-black h-5"></div>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">SignIn</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sign up form -->
+    <main class="flex-1 mt-20 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-6" action="#" method="POST">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight text-gray-900 sm:text-5xl py-10">Sign up</h1>
+            </div>
+
+            <div>
+                <label for="nickname" class="block text-sm py-2 font-medium leading-6 text-gray-900">Nickname</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="text" name="nickname" id="nickname" class="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" placeholder="nickname..." required>
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" placeholder="email..." required>
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="password" name="password" id="password" class="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" placeholder="password..." required>
+                </div>
+            </div>
+
+            <div>
+                <label for="password-confirm" class="block text-sm font-medium leading-6 text-gray-900">Password Confirm</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="password" name="password-confirm" id="password-confirm" class="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" placeholder="password confirm..." required>
+                </div>
+            </div>
+
+            <!-- Centered Register Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="w-1/2 max-w-xs rounded-md bg-gray-200 px-10 py-2.5 mt-5 text-sm font-semibold leading-6 text-gray-950 shadow-sm hover:bg-blue-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Register</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100 p-4 text-center">
+        <p>&copy; Digital Hanaro 5기 임수진. All rights reserved.</p>
+    </footer>
+</body>
+</html>

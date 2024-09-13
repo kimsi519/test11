@@ -64,7 +64,56 @@ async function test(userId: string | number) {
     ],
   });
 
-  // 추가 테스트 코드를 작성하시오.
+  // 추가 테스트 코드
+  assert.strictEqual(posts?.at(0)?.title, 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit');
+  assert.strictEqual(posts?.at(2)?.comments[2].email,'Kariane@jadyn.tv');
+  assert.deepStrictEqual(posts[3].comments, [
+    {
+        postId: 4,
+        id: 16,
+        email: 'Christine@ayana.info',
+        body: 'iste ut laborum aliquid velit facere itaque\n' +
+          'quo ut soluta dicta voluptate\n' +
+          'error tempore aut et\n' +
+          'sequi reiciendis dignissimos expedita consequuntur libero sed fugiat facilis'
+      },
+      {
+        postId: 4,
+        id: 17,
+        email: 'Preston_Hudson@blaise.tv',
+        body: 'consequatur necessitatibus totam sed sit dolorum\n' +
+          'recusandae quae odio excepturi voluptatum harum voluptas\n' +
+          'quisquam sit ad eveniet delectus\n' +
+          'doloribus odio qui non labore'
+      },
+      {
+        postId: 4,
+        id: 18,
+        email: 'Vincenza_Klocko@albertha.name',
+        body: 'veritatis voluptates necessitatibus maiores corrupti\n' +
+          'neque et exercitationem amet sit et\n' +
+          'ullam velit sit magnam laborum\n' +
+          'magni ut molestias'
+      },
+      {
+        postId: 4,
+        id: 19,
+        email: 'Madelynn.Gorczany@darion.biz',
+        body: 'doloribus est illo sed minima aperiam\n' +
+          'ut dignissimos accusantium tempore atque et aut molestiae\n' +
+          'magni ut accusamus voluptatem quos ut voluptates\n' +
+          'quisquam porro sed architecto ut'
+      },
+      {
+        postId: 4,
+        id: 20,
+        email: 'Mariana_Orn@preston.org',
+        body: 'qui harum consequatur fugiat\n' +
+          'et eligendi perferendis at molestiae commodi ducimus\n' +
+          'doloremque asperiores numquam qui\n' +
+          'ut sit dignissimos reprehenderit tempore'
+      }
+  ]);
 }
 
 test(1);
