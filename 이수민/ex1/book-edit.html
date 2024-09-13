@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link href="output.css" rel="stylesheet" />
+    <meta property="og:image" content="static/ryan.jpg" />
+    <meta property="og:title" content="55BookMark BookMark BookMark" />
+    <meta
+      property="og:description"
+      content="55BookMark 나만의 북마크나만의 북마크"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- 내브바 컴포넌트 -->
+    <nav class="flex justify-between border-b-2 h-16 px-8 py-1">
+      <!-- 북마크 로고 -->
+      <div
+        id="bookmark-logo"
+        class="flex justify-center bg-gray-100 rounded p-3"
+      >
+        <img
+          src="static/bookmark.svg"
+          class="w-6 h-6 self-center icon-green"
+          alt=""
+        />
+        <a
+          href="javascript:location.reload()"
+          class="font-semibold text-2xl self-center text-green-500"
+          >BookMark</a
+        >
+      </div>
+      <!-- 북마크 로고 끝 -->
+      <div class="flex w-1/4 justify-between">
+        <!-- 깃허브 레포 -->
+        <div id="github-repo" class="self-center w-full">
+          <a href="http://www.github.com/suminjeff">Github Repo.</a>
+        </div>
+        <!-- 깃허브 레포 끝 -->
+        <!-- 회원가입/로그인 -->
+        <div class="flex gap-2">
+          <button id="sign-up" onclick="window.location.href='register.html'">
+            SignUp
+          </button>
+          <p class="self-center">|</p>
+          <button id="sign-in" onclick="window.location.href='register.html'">
+            SignIn
+          </button>
+        </div>
+        <!-- 회원가입/로그인 끝 -->
+      </div>
+    </nav>
+    <!-- 내브바 컴포넌트 끝 -->
+
+    <!-- 메인 콘텐츠 영역 -->
+    <div id="main-contents-area" class="grid grid-cols-5 gap-4 p-1">
+      <!-- 북마크 추가 창 -->
+      <div class="bg-gray-300 rounded p-3">
+        <!-- URL 입력창 -->
+        <div class="w-full max-w-xs">
+          <input
+            id="text-input"
+            type="text"
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="URL을 입력하세요."
+          />
+        </div>
+        <!-- URL 입력창 끝 -->
+        <!-- 자동 삭제 체크박스 -->
+        <div class="flex items-center my-3 cursor-pointer">
+          <input
+            id="auto-delete"
+            type="checkbox"
+            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+          />
+          <label
+            for="auto-delete"
+            class="ml-2 block text-sm font-bold text-gray-900"
+            >이동 시 자동 삭제</label
+          >
+        </div>
+        <!-- 자동 삭제 체크박스 끝 -->
+        <!-- 새로고침, 저장 아이콘 -->
+        <div class="flex justify-end">
+          <div
+            class="w-12 h-10 rounded p-2 bg-gray-50 mx-3 flex justify-center cursor-pointer"
+          >
+            <img src="static/reload.svg" alt="reload icon" />
+          </div>
+          <div
+            class="w-12 h-10 rounded p-2 bg-gray-50 mx-3 flex justify-center cursor-pointer"
+          >
+            <img src="static/save.svg" alt="save icon" />
+          </div>
+        </div>
+        <!-- 새로고침, 저장 아이콘 끝 -->
+        <div class="my-3">
+          <p class="text-center">There are no marks</p>
+        </div>
+      </div>
+      <!-- 북마크 추가 창 끝 -->
+      <!-- 북마크 추가 창 옆 -->
+      <div>
+        <button class="bg-gray-800 text-gray-50 p-3 rounded-lg w-1/2">
+          + Add Book
+        </button>
+      </div>
+      <!-- 북마크 추가 창 옆 끝 -->
+    </div>
+    <!-- 메인 콘텐츠 영역 끝 -->
+    <hr />
+    <!-- 푸터 영역 -->
+    <footer>
+      <p class="text-center text-gray-500">ⓒ Hanaro 2024</p>
+    </footer>
+    <!-- 푸터 영역 끝 -->
+  </body>
+</html>

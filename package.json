@@ -11,5 +11,12 @@
     "TS"
   ],
   "author": "indiflex",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.5.4",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  }
 }

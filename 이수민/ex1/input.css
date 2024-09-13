@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0%;
+  height: 100vh;
+}
+#main-contents-area {
+  height: 80vh; /* 80%의 화면 높이 */
+  overflow-y: auto; /* 콘텐츠가 넘칠 경우 스크롤 추가 */
+}
+.icon-green {
+  filter: invert(50%) sepia(100%) saturate(5300%) hue-rotate(90deg)
+    brightness(100%) contrast(100%);
+}
+#signup-card {
+  width: 30%;
+}
