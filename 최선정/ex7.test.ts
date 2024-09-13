@@ -63,8 +63,6 @@ async function test(userId: string | number) {
       },
     ],
   });
-
-  // 추가 테스트 코드를 작성하시오.
 }
 
 test(1);
