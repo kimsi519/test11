@@ -64,7 +64,13 @@ async function test(userId: string | number) {
     ],
   });
 
-  // 추가 테스트 코드를 작성하시오.
+  // 추가 테스트 코드. 해당 이메일을 가진 유저가 있는지
+  const emailToCheck = 'Nikita@garfield.biz';
+  const hasEmail = posts.some(post =>
+    post.comments.some(comment => comment.email === emailToCheck)
+  );
+
+  assert.strictEqual(hasEmail, true, `No comments found with email ${emailToCheck}`);
 }
 
 test(1);
