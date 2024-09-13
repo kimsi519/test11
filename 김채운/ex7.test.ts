@@ -71,7 +71,7 @@ async function test(userId: string | number) {
 
   // 다른 userId에 대한 테스트
   const otherUserPosts = await getPosts(3); // 다른 userId
-  assert.strictEqual(otherUserPosts.length, 10); // 예를 들어 10개의 게시글이 있어야 한다고 가정
+  assert.strictEqual(otherUserPosts.length, 10);
 }
 
 test(1);

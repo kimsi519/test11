@@ -26,17 +26,6 @@ class Collection<T> {
     this.arr.length = 0;
   }
 
-  // iterator() {
-  //   return this[Symbol.iterator]();
-  // }
-
-  // // [1, 2, 3]
-  // *[Symbol.iterator]() {
-  //   for (let i = this.length - 1; i >= 0; i -= 1) {
-  //     yield this.toArray()[i];
-  //   }
-  // }
-
   toArray() {
     return this.isQueue() ? this.arr.toReversed() : this.arr;
   }

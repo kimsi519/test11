@@ -29,7 +29,7 @@ export function promiseAll<T>(promises: Promise<T>[]): Promise<T[]> {
 }
 
 export function promiseAllSettled<T>(promises: Promise<T>[]): Promise<Array<{ status: 'fulfilled' | 'rejected'; value?: T; reason?: any }>> {
-  // 프로미스들을 처리하여 성공 및 실패 상태를 반환하는 프로미스 배열을 생성합니다.
+  //성공 or 실패 상태를 반환하는 프로미스 배열 생성
   const wrappedPromises = promises.map(promise =>
     promise
       .then(
@@ -38,6 +38,6 @@ export function promiseAllSettled<T>(promises: Promise<T>[]): Promise<Array<{ st
       )
   );
 
-  // 모든 프로미스가 완료될 때까지 기다리고 결과를 반환합니다.
+  // 모든 프로미스가 완료될 때까지 기다리고 결과 반환
   return promiseAll(wrappedPromises) as Promise<Array<{ status: 'fulfilled' | 'rejected'; value?: T; reason?: any }>>;
 }

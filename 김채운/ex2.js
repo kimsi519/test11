@@ -8,7 +8,7 @@ const range = (start, end, step = start > end ? -1 : 1) => {
         start = start < 0 ? start : 1; // 음수일 경우 그대로 사용하고, 양수일 경우 1부터 시작
     }
 
-    // step이 0인 경우: 무한 루프 방지 위해 [start]만 반환
+    // step이 0인 경우, [start]만 반환
     if (step === 0) {
         return [start];
     }

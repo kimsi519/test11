@@ -45,8 +45,8 @@ function deepCopy(obj) {
         newObj[symbol] = deepCopy(obj[symbol]);
     });
 
-    const methodKeys = Object.getOwnPropertyNames(obj).filter(key => typeof obj[key] === 'function');
-    methodKeys.forEach(key => {
+    const methods = Object.getOwnPropertyNames(obj).filter(key => typeof obj[key] === 'function');
+    methods.forEach(key => {
         newObj[key] = obj[key];
     });
 
