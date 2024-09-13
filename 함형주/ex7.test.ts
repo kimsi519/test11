@@ -65,6 +65,10 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts?.at(1)?.comments?.length, 5);
+  assert.strictEqual(posts?.at(0)?.title, 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit');
+
+
 }
 
 test(1);

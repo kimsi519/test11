@@ -1,3 +1,7 @@
+type ListNode = {
+  value: number;
+  rest?: ListNode | null; 
+};
 class Collection<T> {
   private readonly arr = Array<T>();
 
@@ -66,6 +70,68 @@ class Stack<T> extends Collection<T> {}
 class Queue<T> extends Collection<T> {}
 
 // ArrayList 클래스를 작성하세요.
-class ArrayList<T> extends Collection<T> {}
+class ArrayList<T> extends Collection<T> {
+  private head: ListNode | null = null;
+
+  constructor(values: number[] = []) {
+    values.forEach((value) => this.add(value));
+  }
+
+  // 연결 리스트에 값을 추가
+  add(value: number): void {
+    if (this.head === null) {
+      this.head = { value, rest: null };
+    } else {
+      let current = this.head;
+      while (current.rest !== null) {
+        current = current.rest;
+      }
+      current.rest = { value, rest: null };
+    }
+  }
+  get(index: number): T | undefined {
+
+  }
+
+  listToArray(): T[] {
+
+  }
+
+
+  arrayToList(array: T[]): void {
+  
+  }
+
+  removeByIndex(index: number): void {
+    
+  }
+
+
+  set(index: number, value: T): void {
+  }
+
+
+  indexOf(value: T): number {
+  }
+
+
+  contains(value: T): boolean {
+  }
+
+  get size(): number {
+
+  }
+
+  toString(): string {
+
+  }
+
+
+  
+}
 
 export { Stack, Queue, ArrayList };
+
+const alist:any= new ArrayList([1,2]);
+alist.add(3);
+console.log(ArrayList.listToArray({value:1,rest:{value}}));
