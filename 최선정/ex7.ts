@@ -12,7 +12,7 @@ export async function getPosts(userId: number | string) {
     const posts = await postsResponse.json();
     
     if (!Array.isArray(posts)) {
-      throw new Error('Posts is not an array');
+      throw new Error('Posts is not array');
     }
 
     const postsWithComments = await Promise.all(
@@ -27,7 +27,7 @@ export async function getPosts(userId: number | string) {
           const comments = await commentsResponse.json();
 
           if (!Array.isArray(comments)) {
-            throw new Error('Comments is not an array');
+            throw new Error('it iss not an array');
           }
 
           return {
@@ -41,7 +41,7 @@ export async function getPosts(userId: number | string) {
             })),
           };
         } catch (error) {
-          console.error(`Error fetching comments for post ${post.id}:`, error);
+          console.error(`Error ${post.id}:`, error);
           return { postId: post.id, title: post.title, comments: [] }; 
         }
       })

@@ -108,7 +108,6 @@ class ArrayList<T> extends Collection<T> {
     return node ? node.value : null;
   }
 
-  // Rename to avoid conflict with Collection class
   removeValue(value: T): void {
     this.list = this._remove(this.list, value);
   }
@@ -156,7 +155,6 @@ class ArrayList<T> extends Collection<T> {
     return ArrayList.listToArray(this.list);
   }
 
-  // Rename to avoid conflict with Collection class
   isEmptyList(): boolean {
     return this.size() === 0;
   }
