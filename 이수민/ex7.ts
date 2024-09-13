@@ -27,7 +27,7 @@ export async function getPosts(userId: number | string): Promise<Post[]> {
       const commentsResponse = await fetch(`${COMMENTS_URL}?postId=${post.id}`);
       const comments = (await commentsResponse.json()) as Comment[];
 
-      // 필요한 필드만 선택해서 반환
+      // 인터페이스에 있는 선택해서 반환
       const filteredComments: Comment[] = comments.map((comment) => ({
         postId: comment.postId,
         id: comment.id,
