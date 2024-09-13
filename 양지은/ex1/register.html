@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="output.css" rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/a41ebeca25.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Register</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<nav class="flex justify-between border-b-2 h-16 px-8 py-2">
+			<!-- 로고 -->
+			<div
+				id="bookmark-logo"
+				class="flex justify-center bg-gray-100 rounded p-3"
+			>
+				<i
+					class="fa-solid fa-book-bookmark text-green-500 self-center mr-2"
+				></i>
+				<a href="" class="font-bold text-2xl self-center text-green-500"
+					>BookMark</a
+				>
+			</div>
+
+			<!-- 글씨들 -->
+			<div class="flex w-1/4 justify-between">
+				<!-- 깃허브 레포 -->
+				<div id="github-repo" class="self-center w-full">
+					<a href="http://www.github.com/suminjeff">Github Repo.</a>
+				</div>
+
+				<!-- 회원가입/로그인 -->
+				<div class="flex gap-2">
+					<button
+						id="sign-up"
+						onclick="window.location.href='register.html'"
+					>
+						SignUp
+					</button>
+					<p class="self-center">|</p>
+					<button
+						id="sign-in"
+						onclick="window.location.href='register.html'"
+					>
+						SignIn
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<div id="main" class="flex justify-center items-center">
+			<!-- 회원가입 화면 -->
+			<div id="signup" class="flex flex-col gap-3 w-1/2 px-48">
+				<p class="text-center text-3xl font-semibold mt-4">Sign Up</p>
+				<div>
+					<label for="text-input"> Nickname </label>
+					<input
+						id="text-input"
+						type="text"
+						class="block w-full px-3 py-2 border border-gray-300 rounded-md sm:text-sm"
+						placeholder="nickname..."
+					/>
+				</div>
+				<div>
+					<label for="text-input"> Email </label>
+					<input
+						id="text-input"
+						type="text"
+						class="block w-full px-3 py-2 border border-gray-300 rounded-md sm:text-sm"
+						placeholder="email..."
+					/>
+				</div>
+				<div>
+					<label for="text-input"> Password </label>
+					<input
+						id="text-input"
+						type="password"
+						class="block w-full px-3 py-2 border border-gray-300 rounded-md sm:text-sm"
+						placeholder="password..."
+					/>
+				</div>
+				<div>
+					<label for="text-input"> Password Confirm </label>
+					<input
+						id="text-input"
+						type="password"
+						class="block w-full px-3 py-2 border border-gray-300 rounded-md sm:text-sm"
+						placeholder="password confirm..."
+					/>
+				</div>
+				<!-- Register Button -->
+				<button
+					class="w-1/2 font-semibold rounded-lg bg-gray-200 self-center p-2 mt-4 mb-8"
+					onclick=""
+				>
+					Register
+				</button>
+			</div>
+		</div>
+
+		<!-- 푸터 -->
+		<footer class="border-t-2">
+			<p class="text-center text-gray-500">ⓒ Hanaro 2024</p>
+		</footer>
+	</body>
+</html>

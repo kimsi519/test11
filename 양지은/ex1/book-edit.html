@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="output.css" rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/a41ebeca25.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Book-Edit</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<nav class="flex justify-between border-b-2 h-16 px-8 py-2">
+			<!-- 로고 -->
+			<div
+				id="bookmark-logo"
+				class="flex justify-center bg-gray-100 rounded p-3"
+			>
+				<i
+					class="fa-solid fa-book-bookmark text-green-500 self-center mr-2"
+				></i>
+				<a href="" class="font-bold text-2xl self-center text-green-500"
+					>BookMark</a
+				>
+			</div>
+
+			<!-- 글씨들 -->
+			<div class="flex w-1/4 justify-between">
+				<!-- 깃허브 레포 -->
+				<div id="github-repo" class="self-center w-full">
+					<a href="http://www.github.com/suminjeff">Github Repo.</a>
+				</div>
+
+				<!-- 회원가입/로그인 -->
+				<div class="flex gap-2">
+					<button
+						id="sign-up"
+						onclick="window.location.href='register.html'"
+					>
+						SignUp
+					</button>
+					<p class="self-center">|</p>
+					<button
+						id="sign-in"
+						onclick="window.location.href='register.html'"
+					>
+						SignIn
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<div id="main" class="grid grid-cols-5 gap-4 p-1 h-1/2">
+			<!-- 북마크 추가 창 -->
+			<div class="bg-gray-300 rounded p-3 h-screen">
+				<!-- URL 입력창 -->
+				<div class="w-full max-w-xs">
+					<input
+						id="text-input"
+						type="text"
+						class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+						placeholder="URL을 입력하세요."
+					/>
+				</div>
+
+				<!-- 삭제 체크박스 -->
+				<div class="flex items-center mt-3 mb-6 ml-1">
+					<input
+						id="delete-check"
+						type="checkbox"
+						class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+					/>
+					<label
+						for="delete-check"
+						class="ml-2 block text-sm font-bold text-gray-900"
+						>이동 시 자동 삭제</label
+					>
+				</div>
+
+				<!-- 아이콘 -->
+				<div class="flex justify-end">
+					<div
+						class="w-12 h-10 rounded p-2 bg-gray-50 mx-3 flex justify-center cursor-pointer"
+					>
+						<!-- 새로 고침 -->
+						<i class="fa-solid fa-rotate-left text-2xl"></i>
+					</div>
+					<div
+						class="w-12 h-10 rounded p-2 bg-gray-50 mx-3 flex justify-center cursor-pointer"
+					>
+						<!-- 저장 -->
+						<i class="fa-regular fa-floppy-disk text-2xl"></i>
+					</div>
+				</div>
+
+				<div class="my-3">
+					<p class="text-center">There are no marks.</p>
+				</div>
+			</div>
+
+			<!-- Add Book 버튼 -->
+			<div class="mt-2">
+				<button
+					class="bg-gray-800 text-gray-50 p-3 rounded-lg w-1/2 pr-8"
+				>
+					+ Add Book
+				</button>
+			</div>
+		</div>
+		<!-- 푸터 -->
+		<footer class="border-t-2">
+			<p class="text-center text-gray-500">ⓒ Hanaro 2024</p>
+		</footer>
+	</body>
+</html>

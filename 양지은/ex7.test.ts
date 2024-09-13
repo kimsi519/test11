@@ -65,6 +65,8 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts[0].comments.length, 5);
+  assert.deepStrictEqual(Object.keys(posts[0].comments[0]), [ 'postId', 'id', 'email', 'body' ]);
 }
 
 test(1);
