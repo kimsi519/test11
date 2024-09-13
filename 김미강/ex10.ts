@@ -1,71 +1,214 @@
 class Collection<T> {
-  private readonly arr = Array<T>();
+  protected size: number = 0;
 
-  constructor(...args: T[]) {
-    this.arr.push(...args);
+  // Convert the structure to an array
+  toArray(): T[] {
+    return [];
   }
 
-  get _arr() {
-    return this.arr;
-  }
-
-  push(...args: T[]) {
-    this.arr.push(...args);
-    return this.arr;
-  }
-
-  get peek(): T | undefined {
-    return this.isQueue() ? this.arr[0] : this.arr.at(-1);
-  }
-
-  get poll(): T | undefined {
-    return this.isQueue() ? this.arr.shift() : this.arr.pop();
-  }
-
-  remove() {
-    return this.poll;
-  }
-
-  get length() {
-    return this.arr.length;
-  }
-
-  get isEmpty() {
-    return !this.arr.length;
+  // Other basic collection methods, like size or clear, can be extended
+  getSize(): number {
+    return this.size;
   }
 
   clear() {
-    this.arr.length = 0;
+    this.size = 0;
   }
 
-  iterator() {
-    return this[Symbol.iterator]();
-  }
-
-  // [1, 2, 3]
-  *[Symbol.iterator]() {
-    for (let i = this.length - 1; i >= 0; i -= 1) {
-      yield this.toArray()[i];
-    }
-  }
-
-  toArray() {
-    return this.isQueue() ? this.arr.toReversed() : this.arr;
-  }
-
-  print() {
-    console.log(`<${this.constructor.name}: [${this.toArray()}]>`);
-  }
-
-  private isQueue() {
-    return this instanceof Queue;
+  toString() {
+    return `<${this.constructor.name}: [${this.toArray()}]>`;
   }
 }
 
-class Stack<T> extends Collection<T> {}
-class Queue<T> extends Collection<T> {}
+interface ListNode<T> {
+  value: T;
+  rest: ListNode<T> | null;
+}
 
-// ArrayList 클래스를 작성하세요.
-class ArrayList<T> extends Collection<T> {}
+class ArrayList<T> extends Collection<T> {
+  private head: ListNode<T> | null = null;
 
-export { Stack, Queue, ArrayList };
+  constructor(values: T[] = []) {
+    super();
+    this.size = values.length;
+    this.head = ArrayList.arrayToList(values);
+  }
+
+  // Static method to convert a linked list to an array
+  static listToArray<T>(node: ListNode<T> | null): T[] {
+    const result: T[] = [];
+    while (node) {
+      result.push(node.value);
+      node = node.rest;
+    }
+    return result;
+  }
+
+  // Static method to convert an array to a linked list
+  static arrayToList<T>(arr: T[]): ListNode<T> | null {
+    if (arr.length === 0) return null;
+    const [first, ...rest] = arr;
+    return { value: first, rest: ArrayList.arrayToList(rest) };
+  }
+
+  // Add a value to the end of the list
+  add(value: T): void {
+    this.addAt(this.head, value, this.size);
+    this.size++;
+  }
+
+  // Add a value at a specified index
+  addAtIndex(value: T, index: number): void {
+    if (index < 0 || index > this.size)
+      throw new RangeError("Index out of bounds");
+
+    this.head = this.addAt(this.head, value, index);
+    this.size++;
+  }
+
+  private addAt(
+    node: ListNode<T> | null,
+    value: T,
+    index: number
+  ): ListNode<T> {
+    if (index === 0) return { value, rest: node };
+    if (!node) throw new Error("Invalid state");
+    node.rest = this.addAt(node.rest, value, index - 1);
+    return node;
+  }
+
+  // Remove a value at a specified index
+  removeByIndex(index: number): void {
+    if (index < 0 || index >= this.size)
+      throw new RangeError("Index out of bounds");
+
+    this.head = this.removeAt(this.head, index);
+    this.size--;
+  }
+
+  private removeAt(
+    node: ListNode<T> | null,
+    index: number
+  ): ListNode<T> | null {
+    if (index === 0 && node) return node.rest;
+    if (!node) throw new Error("Invalid state");
+    node.rest = this.removeAt(node.rest, index - 1);
+    return node;
+  }
+
+  // Remove the first occurrence of a value
+  remove(value: T): void {
+    let current: ListNode<T> | null = this.head;
+    let previous: ListNode<T> | null = null;
+
+    while (current) {
+      if (current.value === value) {
+        if (previous) {
+          previous.rest = current.rest;
+        } else {
+          this.head = current.rest;
+        }
+        this.size--;
+        return;
+      }
+      previous = current;
+      current = current.rest;
+    }
+  }
+
+  // Set a value at a specific index
+  set(index: number, value: T): void {
+    if (index < 0 || index >= this.size)
+      throw new RangeError("Index out of bounds");
+
+    let node = this.head;
+    for (let i = 0; i < index; i++) {
+      node = node?.rest ?? null;
+    }
+    if (node) {
+      node.value = value;
+    }
+  }
+
+  // Get a value at a specific index
+  get(index: number): T | undefined {
+    if (index < 0 || index >= this.size)
+      throw new RangeError("Index out of bounds");
+
+    let node = this.head;
+    for (let i = 0; i < index; i++) {
+      node = node?.rest ?? null;
+    }
+    return node?.value;
+  }
+
+  // Check if a value is contained in the list
+  contains(value: T): boolean {
+    let node = this.head;
+    while (node) {
+      if (node.value === value) return true;
+      node = node.rest;
+    }
+    return false;
+  }
+
+  // Convert to array
+  toArray(): T[] {
+    return ArrayList.listToArray(this.head);
+  }
+
+  // Find index of a specific value
+  indexOf(value: T): number {
+    let node = this.head;
+    let index = 0;
+    while (node) {
+      if (node.value === value) return index;
+      node = node.rest;
+      index++;
+    }
+    return -1;
+  }
+
+  // Peek at the last value
+  get peek(): T | undefined {
+    return this.get(this.size - 1);
+  }
+
+  // Check if the list is empty
+  get isEmpty(): boolean {
+    return this.size === 0;
+  }
+
+  // Clear the list
+  clear(): void {
+    this.head = null;
+    this.size = 0;
+  }
+
+  // Print the list
+  print(): void {
+    console.log(this.toString());
+  }
+
+  // Iterator
+  iterator(): Iterator<T> {
+    let node = this.head;
+    return {
+      next(): IteratorResult<T> {
+        if (node) {
+          const value = node.value;
+          node = node.rest;
+          return { value, done: false };
+        } else {
+          return { value: undefined as any, done: true };
+        }
+      },
+    };
+  }
+
+  toString() {
+    return `ArrayList(${this.size}) ${JSON.stringify(this.head)}`;
+  }
+}
+
+export { ArrayList };
