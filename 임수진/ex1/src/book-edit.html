@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>북마크 편집</title>
+    <style>
+      /* Custom style for the nav shadow */
+      .nav-shadow {
+        box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="absolute inset-x-0 top-0 z-50 nav-shadow">
+      <nav
+        class="flex items-center justify-between p-4 lg:px-8 h-20"
+        aria-label="Global"
+      >
+        <div class="px-5 py-2 rounded-lg bg-gray-100">
+          <a href="#" class="flex -m-1.5 p-1.5 items-center">
+            <img class="h-8 w-8"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVR4nO1avUrEQBDeylyhvoGIlb2P4PnzBHaHO9opCPbZ4YrYOBuwEeRaSysrrdQEbKwVvFK9ykZEIXpwYWXRC3qC9yMhWZiBgUBm4Pt2ZnZ2lhWiR2q+ngGkhlS6BUgdQG0KUaXbgHpHDCOA4bJU9FoYaPypEul9YPB25csEHr50iNWnxjfmdxLD6kq9PiYKEBiFwGfOdwmEVVGgwIgRyAp2s74/nivCfAjozGnNp4VcEQ6BRYziZGsAMFx0qgagz25gYu9fmntfgLITwD59wQUC8FdKMYGYI2A4hYCL2ONdCHgbRW5khjsx8lFC82HO8GlU83Ha8EAT80RmeKQEHuo9vpWAnK9VOs3j2ciq/XbqXujtfOJ2d2/jpmsT6K1mcjZ5XU4CkZd0waRR5fn0cD4GpPS3LaX2n7XJCEReUjiBq6O5izSqPLVOpi63A3zsZ29trK31sb6FE4CSqGACyBEwOaUQdZwmIJEeXI9Aw2kCNfvUAPWLswSsrPq0VGYScpDHH+u+ngZFB6D0fakKW+m2VBT0Av4AEIy9r9ziq/EAAAAASUVORK5CYII="
+              alt="bookmark-image"/>
+            <h1 class="font-extrabold text-3xl pl-1 text-blue-400">BookMark</h1>
+          </a>
+        </div>
+        <div class="flex items-center justify-center space-x-10">
+          <a href="https://github.com/suzinlim" class="text-sm font-semibold mt-2 text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Github Repo.</a>
+          <div class="flex items-center space-x-6">
+            <a href="./register.html" class="text-sm font-semibold leading-6 text-gray-900">SignUp</a>
+            <div class="border-l-2 border-black h-5"></div>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">SignIn</a>
+          </div>
+        </div>
+      </nav>
+      <div class="border-t border-gray-200 shadow-md"></div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-1 pt-24 pl-6 flex">
+      <!-- 회색 배경 공간 -->
+      <section class="bg-gray-200 w-max max-w-md p-6 mb-10 rounded-lg">
+        <!-- 링크 입력 -->
+        <div class="mb-4">
+          <input
+            type="text"
+            placeholder="링크 입력"
+            class="p-4 bg-white rounded-md h-10 w-full"
+          />
+        </div>
+
+        <!-- 체크박스 안내 -->
+        <div class="flex items-center mb-4">
+          <input type="checkbox" class="mr-2" />
+          <label class="font-semibold text-black">이동 시 자동 삭제</label>
+        </div>
+
+        <!-- 새로고침, 저장하기 버튼 -->
+        <div class="flex justify-end space-x-4 mt-4">
+          <button class="bg-white p-2 rounded">
+            <img
+              width="24"
+              height="24"
+              src="https://img.icons8.com/glyph-neue/64/reboot--v1.png"
+              alt="refresh"
+            />
+          </button>
+          <button class="bg-white p-2 rounded">
+            <img
+              width="24"
+              height="24"
+              src="https://img.icons8.com/windows/64/save-all.png"
+              alt="save"
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- 오른쪽 + Add Book 버튼 -->
+      <div class="ml-6 flex items-start">
+        <button class="bg-black text-white rounded-lg px-6 py-2">
+          + Add Book
+        </button>
+      </div>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-gray-100 p-4 text-center">
+      <p>&copy; Digital Hanaro 5기 임수진. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -11,5 +11,14 @@
     "TS"
   ],
   "author": "indiflex",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "@types/node": "^22.5.4",
+    "package.json": "^2.0.1"
+  }
 }
