@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark List</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        .button-custom {
+            background-color: black !important;
+            border-color: black !important;
+            color: white !important;
+            font-size: 0.875rem; /* 텍스트 크기 (기본값보다 작은 크기, 14px 정도) */
+            padding: 10px 20px;  /* 버튼의 패딩을 늘려서 크기를 키움 */
+            width: 120px; /* 버튼의 고정 너비 */
+            height: 50px; /* 버튼의 고정 높이 */
+        }
+        .settings-icon {
+            margin-left: auto; /* 오른쪽으로 보내는 속성 */
+            color: gray;
+            cursor: pointer;
+        }
+        .bookmark-item{
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen bg-gray-100">
+    
+    <!-- 상단 로고와 버튼들 -->
+    <header class="flex justify-between items-center bg-white shadow-md p-4">
+        <div class="text-2xl font-bold text-blue-600">BookMarK</div>
+        <div class="space-x-4">
+            <a href="https://github.com/kiminyoung0628" target="_blank" 
+               class="bg-transparent text-black px-4 py-2 rounded hover:bg-gray-100">GitHub Repo.</a>
+            <button class="w-8 h-8 rounded-full border-2 border-gray-300 overflow-hidden">
+                <img src="/Users/kim-in-young/Downloads/카톡프사.jpeg" alt="Profile Picture" class="w-full h-full object-cover">
+            </button>
+        </div>
+    </header>
+
+    <!-- 북마크 리스트 -->
+    <main class="flex-grow flex gap-8">
+        <!-- 왼쪽: 대표 북마크 -->
+        <section class="w-1/2 bg-gray-300 p-8 rounded-lg shadow-md flex flex-col">
+            <h1 class="text-2xl font-bold text-blue-500 mb-6 text-center">Representative Bookmark</h1>
+            <ul class="space-y-6 flex-grow">
+                <!-- 예시 북마크들 -->
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Naver_Logotype.svg/300px-Naver_Logotype.svg.png" alt="Naver" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://www.naver.com" target="_blank" class="text-blue-500 hover:underline">Naver</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">네이버(영어: NAVER)는 1999년 6월에 출시된 대한민국의 포털사이트이다.</p>
+                </li>
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/400px-Google_2015_logo.svg.png" alt="Google" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://www.google.com" target="_blank" class="text-blue-500 hover:underline">Google</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">구글(영어: Google LLC)은 구글 검색을 중심으로 스마트폰 운영체제인 안드로이드와 유튜브 사업, 클라우드 사업을 하는 미국의 기업이다.</p>
+                </li>
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kakao_CI_yellow.svg/440px-Kakao_CI_yellow.svg.png" alt="KakaoTalk" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://www.kakaocorp.com" target="_blank" class="text-blue-500 hover:underline">KakaoTalk</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">카카오에서 2010년부터 서비스 중인 모바일 메신저 앱이다. 명실상부 국민 메신저이며 카카오를 거대기업으로 만들어놓은 주인공이다.</p>
+                </li>
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/YouTube_2024.svg/500px-YouTube_2024.svg.png" alt="YouTube" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://www.youtube.com" target="_blank" class="text-blue-500 hover:underline">YouTube</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">YouTube (YT) is an American online video sharing platform owned by Google.</p>
+                </li>
+                <div class="flex justify-end mt-6">
+                    <button class="rounded-lg w-30 h-10 button-custom">+ Add Mark</button>
+                </div>
+            </ul>
+        </section>
+
+        <!-- 오른쪽: 패션 북마크 -->
+        <section class="w-1/2 bg-gray-300 p-8 rounded-lg shadow-md flex flex-col">
+            <h1 class="text-2xl font-bold text-blue-500 mb-6 text-center">Fashion Bookmark</h1>
+            <ul class="space-y-6 flex-grow">
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://mylibrary01.cafe24.com/Photo/ABOUT%20PHOTO%20V2.jpg" alt="Mylibrary" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://mylibrary.kr" target="_blank" class="text-blue-500 hover:underline">Mylibrary</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">살아오면서 경험했던 것들은 하나의 이야기가 되고, 이 이야기는 한 권의 책처럼 이쁘게 꽂혀서 나라는 사람을 만들어주고 있었습니다.</p>
+                </li>
+                <li class="p-4 bg-white rounded-lg shadow flex flex-col items-start">
+                    <div class="flex items-center w-full bookmark-item">
+                        <button class="w-10 h-10 rounded-lg border-2 border-gray-300 overflow-hidden">
+                            <img src="https://intheraw.co.kr/web/product/medium/202408/73ea44ea7f1de598d770528a736809c7.jpg" alt="INTHERAW" class="w-full h-full object-cover">
+                        </button>
+                        <a href="https://intheraw.co.kr" target="_blank" class="text-blue-500 hover:underline">INTHERAW</a>
+                        <span class="settings-icon">⚙️</span>
+                    </div>
+                    <p class="mt-2 text-gray-600">INTHERAW is a leading Korean fashion brand.</p>
+                </li>
+                <div class="flex justify-end mt-12">
+                    <button class="rounded-lg w-30 h-10 button-custom">+ Add Mark</button>
+                </div>
+            </ul>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="mt-auto bg-gray-200 text-gray-600 py-4 text-center w-full">
+        <p>&copy; Hanaro 2024</p>
+    </footer>
+</body>
+</html>

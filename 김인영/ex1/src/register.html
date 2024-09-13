@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Edit Page</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="flex flex-col h-screen bg-gray-100">
+    
+    <!-- 상단 로고와 버튼들 -->
+    <header class="flex justify-between items-center bg-white shadow-md p-4">
+        <div class="text-2xl font-bold text-blue-600">BookMarK</div>
+        <div class="space-x-4">
+            <a href="https://github.com/kiminyoung0628" target="_blank" 
+               class="bg-transparent text-black px-4 py-2 rounded hover:bg-gray-100">GitHub Repo.</a>
+            <button onclick="window.location.href='register.html'" 
+                    class="bg-transparent text-black px-4 py-2 rounded hover:bg-gray-100">SignUp</button>
+            <span class="text-black">|</span> <!-- 구분선 추가 -->
+            <button onclick="window.location.href='login.html'" 
+                    class="bg-transparent text-black px-4 py-2 rounded hover:bg-gray-100">SignIn</button>
+        </div>
+    </header>
+    
+
+    <!-- 중단 부분: 회원가입 폼 -->
+    <main class="flex flex-grow items-center justify-center p-6">
+        <section class="flex flex-col bg-gray-200 p-4 rounded-lg shadow-md w-full max-w-lg">
+            <h2 class="text-xl font-bold text-gray-700 mb-4 text-center">회원가입</h2>
+            <form id="signupForm" class="space-y-4">
+                <!-- 사용자 이름 입력 -->
+                <div>
+                    <label for="signupUsername" class="block text-gray-700 font-bold">닉네임</label>
+                    <input type="text" id="signupUsername" name="username" placeholder="닉네임..." class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+
+                <!-- 이메일 입력 -->
+                <div>
+                    <label for="signupEmail" class="block text-gray-700 font-bold">이메일</label>
+                    <input type="email" id="signupEmail" name="email" placeholder="이메일..." class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+
+                <!-- 비밀번호 입력 -->
+                <div>
+                    <label for="signupPassword" class="block text-gray-700 font-bold">비밀번호</label>
+                    <input type="password" id="signupPassword" name="password" placeholder="비밀번호..." class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+
+                <!-- 비밀번호 확인 입력 -->
+                <div>
+                    <label for="signupPasswordConfirm" class="block text-gray-700 font-bold">비밀번호 확인</label>
+                    <input type="password" id="signupPasswordConfirm" name="passwordConfirm" placeholder="비밀번호 확인..." class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+
+                <!-- 제출 버튼 -->
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">회원가입</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-gray-200 text-gray-600 py-4 text-center">
+        <p>&copy; Hanaro 2024</p>
+    </footer>
+
+    <!-- 회원가입 기능 스크립트 -->
+    <script>
+        // 회원가입 폼 제출 처리
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const passwordConfirm = document.getElementById('signupPasswordConfirm').value;
+            
+            if (password !== passwordConfirm) {
+                alert('비밀번호가 일치하지 않습니다.');
+                return;
+            }
+
+            // 회원가입 성공 시 처리
+            alert('회원가입 성공');
+            window.location.href = 'index.html'; // 회원가입 후 리디렉션
+        });
+    </script>
+</body>
+</html>
