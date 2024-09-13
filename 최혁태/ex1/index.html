@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BookMark App - Main Page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							"toss-blue": "#3182f6",
+							"toss-gray": "#f9fafb",
+						},
+						fontFamily: {
+							sans: ["Pretendard", "Arial", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+		</style>
+	</head>
+	<body class="bg-white flex flex-col min-h-screen font-sans">
+		<header class="bg-white border-b border-gray-200">
+			<div
+				class="container mx-auto px-4 py-4 flex justify-between items-center"
+			>
+				<div class="flex items-center">
+					<svg
+						class="w-8 h-8 text-toss-blue mr-2"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"
+						></path>
+					</svg>
+					<h1 class="text-2xl font-bold text-gray-900">BookMark</h1>
+				</div>
+				<nav class="flex items-center">
+					<a
+						href="https://github.com/htchoi1006"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-gray-600 hover:text-toss-blue px-3 py-2 text-sm font-medium transition-colors"
+						>Github Repo</a
+					>
+					<div
+						class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white font-medium ml-4"
+					>
+						<img src="snoopy-profileicon.png" class="w-full" />
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main class="flex-grow container mx-auto px-4 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-2xl shadow-lg p-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">
+						나의 북마크
+					</h2>
+					<div class="space-y-4">
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full flex items-center justify-center mr-4 overflow-hidden"
+								>
+									<img
+										src="apple-Logo.jpg"
+										alt="Apple Logo"
+										class="w-full h-full object-cover"
+									/>
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										Apple
+									</h3>
+									<p class="text-sm text-gray-600">
+										새롭게 선보이는 iPhone 16 Pro 및 iPhone
+										16.
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full flex items-center justify-center mr-4 overflow-hidden"
+								>
+									<img
+										src="naver-logo.jpg"
+										alt="Naver Logo"
+										class="w-full h-full object-cover"
+									/>
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										네이버
+									</h3>
+									<p class="text-sm text-gray-600">
+										대한민국 대표 포털사이트 네이버에 오신
+										것을 환영합니다.
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full flex items-center justify-center mr-4 overflow-hidden"
+								>
+									<img
+										src="logo-kakao.png"
+										alt="Kakao Logo"
+										class="w-full h-full object-cover"
+									/>
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										Kakao
+									</h3>
+									<p class="text-sm text-gray-600">
+										기술과 사람으로 더 나은 세상을 만드는
+										카카오
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full flex items-center justify-center mr-4 overflow-hidden"
+								>
+									<img
+										src="youtube-logo.png"
+										alt="Youtube Logo"
+										class="w-full h-full object-cover"
+									/>
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										YouTube
+									</h3>
+									<p class="text-sm text-gray-600">
+										YouTube에서 마음에 드는 동영상과 음악을
+										감상하고 ...
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button
+						class="mt-6 w-full bg-toss-blue text-white py-3 rounded-md hover:bg-blue-600 transition-colors text-sm font-medium"
+					>
+						+ 북마크 추가하기
+					</button>
+				</div>
+
+				<div class="bg-white rounded-2xl shadow-lg p-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">
+						공부할 것
+					</h2>
+					<div class="space-y-4">
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-sm font-medium mr-4"
+								>
+									TW
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										Tailwind CSS
+									</h3>
+									<p class="text-sm text-gray-600">
+										Tailwind CSS is a utility-first CSS
+										framework for rapidly building ...
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="bg-toss-gray p-4 rounded-lg flex items-center justify-between"
+						>
+							<div class="flex items-center">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white text-sm font-medium mr-4"
+								>
+									R
+								</div>
+								<div>
+									<h3 class="font-semibold text-gray-900">
+										React
+									</h3>
+									<p class="text-sm text-gray-600">
+										사용자 인터페이스를 만들기 위한
+										JavaScript 라이브러리
+									</p>
+								</div>
+							</div>
+							<button class="text-gray-400 hover:text-gray-600">
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+									></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button
+						class="mt-6 w-full bg-toss-blue text-white py-3 rounded-md hover:bg-blue-600 transition-colors text-sm font-medium"
+					>
+						+ 북마크 추가하기
+					</button>
+				</div>
+			</div>
+		</main>
+
+		<footer class="bg-toss-gray text-center py-6">
+			<p class="text-sm text-gray-600">&copy; Hanaro 2024</p>
+		</footer>
+	</body>
+</html>
