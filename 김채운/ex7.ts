@@ -20,18 +20,16 @@ async function fetchJson<T>(url: string): Promise<T> {
   if (!response.ok) {
     throw new Error(`Failed to fetch: ${response.statusText}`);
   }
-  // Explicitly cast to type T to ensure type safety
   return response.json() as Promise<T>;
 }
 
 export async function getPosts(userId: number | string): Promise<Post[]> {
-    // 게시글 목록을 가져옵니다.
+    //게시글 목록 받아오기
     const posts = await fetchJson<{ userId: number; id: number; title: string }[]>(`${POST_URL}?userId=${userId}`);
   
-    // 각 게시글에 대한 댓글을 가져옵니다.
     const postsWithComments = await Promise.all(
       posts.map(async (post) => {
-        // 댓글 URL을 올바르게 설정하여 각 게시글의 댓글을 가져옵니다.
+        // 댓글url 
         const comments = await fetchJson<Comment[]>(`${COMMENTS_URL}?postId=${post.id}`);
         return {
           postId: post.id,

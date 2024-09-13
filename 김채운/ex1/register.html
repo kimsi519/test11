@@ -36,7 +36,7 @@
             margin-bottom: 10px;
             /* 입력 필드와 다음 레이블 사이의 간격 */
             padding: 7px;
-            border: 1px solid gray;
+            border: 1px solid rgb(167, 146, 182);
             border-radius: 5px;
             display: flex;
             flex-direction: column;
@@ -53,7 +53,7 @@
             /* 세로 크기 */
             max-height: 40px;
             /* 최대 세로 크기 */
-            background-color: rgb(183, 183, 185);
+            background-color: rgb(181, 181, 181);
             border-radius: 20px;
             /* 둥근 모서리 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -64,11 +64,12 @@
             flex-direction: column;
             margin-top: 20px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         .button-register:hover{
             cursor: pointer;
-            background-color: rgb(203, 202, 202);
+            background-color: #9198e5;
         }
     </style>
 </head>
@@ -93,13 +94,13 @@
         <div class="rounded-box">
             <h1 class="text-3xl font-bold text-center py-10">Sign Up</h1>
             <div class="input-group">
-                <label>Nickname</label>
+                <label style="font-weight: bold;">Nickname</label>
                 <input style="border-color: gray;" placeholder="nickname...">
-                <label>Email</label>
+                <label style="font-weight: bold;">Email</label>
                 <input style="border-color: gray;" placeholder="email...">
-                <label>Password</label>
+                <label style="font-weight: bold;">Password</label>
                 <input style="border-color: gray;" placeholder="password...">
-                <label>Password Confirm</label>
+                <label style="font-weight: bold;">Password Confirm</label>
                 <input style="border-color: gray;" placeholder="password confirm...">
             </div>
             <button id="button-register" class="button-register">Register</button>
