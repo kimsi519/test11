@@ -56,15 +56,22 @@ export async function getPosts(userId: number | string): Promise<PostWithComment
         comments.push(...uc);
     }
 
-    // const userPosts = posts.filter(post => post.userId === Number(userId));
-
     const result: PostWithComments[] = posts.map(post => {
         const postComments = comments.filter(comment => comment.postId === post.id);
-        
+        const postCommentsFiltered = new Array();
+        for (let postcomment of postComments) {
+            const {postId, id, email, body, ...etc} = postcomment;
+            postCommentsFiltered.push({
+                postId: postId,
+                id: id,
+                email: email,
+                body: body
+            });
+        }
         return {
             postId: post.id,
             title: post.title,
-            comments: postComments
+            comments: postCommentsFiltered
         };
     });
 
