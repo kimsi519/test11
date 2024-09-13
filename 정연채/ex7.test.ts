@@ -65,6 +65,10 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+
+  const emptyPosts = await getPosts(999);
+  assert.strictEqual(emptyPosts.length, 0);
 }
 
 test(1);
+

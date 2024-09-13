@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+    <header class="bg-white p-4 shadow-md flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="bookmark_logo.png" alt="BookMark Logo" class="w-8 h-8 mr-2"> 
+            <h1 class="text-2xl font-bold cursor-pointer text-green-600">BookMark</h1>
+        </div>
+        <nav class="ml-auto flex items-center space-x-6">
+            <a href="https://github.com/yeonchae115/test11" class="text-gray-600 hover:text-gray-800 font-bold">GitHub Repo.</a>
+            <img src="profile.png" alt="Profile" class="w-8 h-8 rounded-full">
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex items-center justify-center flex-grow">
+        <div class="max-w-xl w-full bg-white  rounded-lg p-8">
+            <div class="mb-6 text-center">
+                <h1 class="text-5xl font-bold mb-4">Sign Up</h1>
+            </div>
+            <form id="registerForm">
+                <div class="mb-4">
+                    <label for="nickname" class="block text-gray-700 font-medium mb-1 font-bold">Nickname</label>
+                    <input type="text" id="nickname" placeholder="nickname..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-medium mb-1 font-bold">Email</label>
+                    <input type="email" id="email" placeholder="email..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 font-medium mb-1 font-bold">Password</label>
+                    <input type="password" id="password" placeholder="password..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-6">
+                    <label for="passwordConfirm" class="block text-gray-700 font-medium mb-1 font-bold">Password Confirm</label>
+                    <input type="password" id="passwordConfirm" placeholder="password confirm..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="flex justify-center">
+                    <button type="button" onclick="Register()" class="w-1/2 bg-gray-100 py-2 text-gray-700 font-bold rounded-lg hover:bg-gray-200">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function Register() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function goToSignUp() {
+            window.location.href = 'register.html'; // Sign Up 클릭 시 이동
+        }
+
+        function clearInput() {
+            const urlInput = document.querySelector('#bookmark-url');
+            urlInput.value = '';  // 입력 필드 내용 지우기
+        }
+    </script>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+    <header class="bg-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-2xl font-bold cursor-pointer text-green-600 flex items-center">
+            <img src="bookmark_logo.png" alt="BookMark Logo" class="w-8 h-8 mr-2"> <!-- 로고 이미지 -->
+            BookMark
+        </h1>
+        <nav class="ml-auto flex items-center space-x-6">
+            <a href="https://github.com/yeonchae115/test11" class="text-gray-600 hover:text-gray-800 font-bold">GitHub Repo.</a>
+            <button onclick="goToSignUp()" class="text-gray-600 hover:text-gray-800 font-bold">Sign up</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="" class="text-gray-600 hover:text-gray-800 font-bold">Sign in</button>
+        </nav>
+    </header>
+
+    <main class="flex-1 flex">
+        <div class="w-1/4 bg-gray-200 p-6 flex flex-col justify-between rounded mt-2 mb-2">
+            <div>
+                <div class="border-2 border-blue-300 p-2 rounded">
+                    <div class="mb-2">
+                        <input id="bookmark-url" type="url" placeholder="https://naver.com" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="autoMove" class="mr-2">
+                        <label for="autoMove" class="text-gray-700 font-bold">이동 시 자동 삭제</label>
+                    </div>
+                    
+                    <div class="flex justify-end space-x-8">
+                        <div class="bg-gray-100 border border-gray-200 p-2 px-4 rounded">
+                            <img src="undo.png" alt="Undo Icon" class="w-6 h-6 cursor-pointer" onclick="clearInput()">
+                        </div>
+                        <div class="bg-gray-100 border border-gray-200 p-2 px-4 rounded">
+                            <img src="save2.png" alt="Save Icon" class="w-6 h-6 cursor-pointer" onclick=""> 
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-600 text-center font-bold mt-0">There is no marks.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white p-3 text-center text-gray-500 shadow-inner w-full border-t border-gray-300">
+        &copy; Hanaro 2024
+    </footer>
+
+</body>
+</html>
