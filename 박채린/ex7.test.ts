@@ -4,8 +4,9 @@ import { getPosts } from './ex7';
 async function test(userId: string | number) {
   const posts = await getPosts(userId);
 
-  assert.strictEqual(posts?.length, 10);
-  assert.strictEqual(posts?.at(-1)?.comments?.length, 5);
+  assert.strictEqual(posts?.length, 10); 
+  assert.strictEqual(posts?.at(-1)?.comments?.length, 5); 
+
   assert.deepStrictEqual(posts[0], {
     postId: 1,
     title:
@@ -64,7 +65,10 @@ async function test(userId: string | number) {
     ],
   });
 
-  // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts[1].postId, 2); 
+  assert.strictEqual(posts[1].comments.length, 5); 
+
+  console.log('All tests passed!');
 }
 
 test(1);
