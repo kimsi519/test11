@@ -6,39 +6,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* 사이드바의 스타일 */
+
     #default-sidebar {
-      min-height: calc(100vh - 4rem); /* 헤더와 푸터의 높이를 제외한 높이 */
-      max-height: calc(100vh - 4rem); /* 헤더와 푸터의 높이를 제외한 최대 높이 */
-      overflow-y: auto; /* 사이드바 내용이 넘치면 스크롤이 생기도록 설정 */
-      position: fixed; /* 사이드바를 화면에 고정 */
-      top: 4rem; /* 헤더 아래에 고정 */
-      bottom: 4rem; /* 푸터 위에 고정 */
-      left: 0; /* 화면 왼쪽에 고정 */
-      width: 16rem; /* 사이드바 너비 설정 */
-      z-index: 30; /* 사이드바의 z-index 설정 */
+      min-height: calc(100vh - 4rem); 
+      max-height: calc(100vh - 4rem); 
+      overflow-y: auto; 
+      position: fixed; 
+      top: 4rem; 
+      bottom: 4rem; 
+      left: 0; 
+      width: 16rem; 
+      z-index: 30; 
     }
     header {
       z-index: 40;
       width: 100%;
-      position: fixed; /* 헤더를 화면에 고정 */
-      top: 0; /* 화면 상단에 고정 */
-      left: 0; /* 화면 왼쪽에 고정 */
-      height: 4rem; /* 헤더의 높이 설정 */
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      height: 4rem;
     }
     footer {
       z-index: 40;
       width: 100%;
-      position: fixed; /* 푸터를 화면에 고정 */
-      bottom: 0; /* 화면 하단에 고정 */
-      left: 0; /* 화면 왼쪽에 고정 */
-      height: 4rem; /* 푸터의 높이 설정 */
+      position: fixed; 
+      bottom: 0; 
+      left: 0; 
+      height: 4rem; 
     }
     .main-content {
-      margin-left: 16rem; /* 사이드바 너비만큼 왼쪽 여백을 추가 */
-      padding-top: 4rem; /* 헤더의 높이만큼 위쪽 여백을 추가 */
-      padding-bottom: 4rem; /* 푸터의 높이만큼 아래쪽 여백을 추가 */
-      flex-grow: 1; /* 메인 콘텐츠 영역이 남은 공간을 차지하도록 설정 */
+      margin-left: 16rem; 
+      padding-top: 4rem;
+      padding-bottom: 4rem; 
+      flex-grow: 1; 
     }
   </style>
 </head>
@@ -83,7 +83,7 @@
 
     <aside id="default-sidebar" class="fixed top-4 bottom-4 left-0 z-30 w-64 bg-gray-200" aria-label="Sidebar">
         <div class="h-full px-3 py-4 overflow-y-auto">
-            <!-- 검색 입력 필드 -->
+            <!-- 검색 입력 -->
             <div class="mb-4">
                 <label for="search" class="sr-only">Search</label>
                 <input type="text" id="search" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Search...">
