@@ -65,6 +65,7 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.deepStrictEqual(posts[0].title, 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit');
+  assert.deepStrictEqual(posts[0].postId, userId);
 }
-
 test(1);
