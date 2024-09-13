@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .main-container {
+            height: calc(100vh - 7vh);
+            /* 전체 높이에서 footer 높이(7vh)를 제외한 값 */
+            box-sizing: border-box;
+            background: linear-gradient(#bb64e6, #9198e5);
+        }
+
+        footer {
+            height: 7vh;
+            color: rgb(62, 61, 61)
+        }
+
+        .rounded-box {
+            width: 60%;
+            max-width: 500px;
+            height: 90%;
+            max-height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 9px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .input-group input {
+            margin-bottom: 10px;
+            padding: 7px;
+            border: 1px solid rgb(167, 146, 182);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .div-button button:hover{
+            cursor: pointer;
+            background-color: #edeef093;
+        }
+        .div-button button{
+            padding:5px;
+            border-radius: 10px;
+        }
+
+        .button-register {
+            width: 60%;
+            max-width: 150px;
+            height: 90%;
+            max-height: 40px;
+            background-color: rgb(181, 181, 181);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .button-register:hover{
+            cursor: pointer;
+            background-color: #9198e5;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="p-4 flex justify-between items-center">
+        <button id ="logo" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#61089c"><path d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/></svg>
+            <div class="left" style="color: rgb(97, 8, 156);font-weight:bold; font-size:x-large">BookMark</div>
+        </button>
+        <div class="div-button right flex items-center">
+            <button class="mr-4" onclick="location.href='https://github.com/codnscodns'">Github Repo.</button>
+            <button class="mr-2">SignUp</button>
+            <span>|</span>
+            <button class="ml-2">SignIn</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container flex items-center justify-center">
+        <div class="rounded-box">
+            <h1 class="text-3xl font-bold text-center py-9">🔮Sign Up🌠</h1>
+            <div class="input-group">
+                <label style="font-weight: bold;">Nickname</label>
+                <input style="border-color: gray;" placeholder="nickname...">
+                <label style="font-weight: bold;">Email</label>
+                <input style="border-color: gray;" placeholder="email...">
+                <label style="font-weight: bold;">Password</label>
+                <input style="border-color: gray;" placeholder="password...">
+                <label style="font-weight: bold;">Password Confirm</label>
+                <input style="border-color: gray;" placeholder="password confirm...">
+            </div>
+            <button id="button-register" class="button-register">Register</button>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center flex items-center justify-end mr-5">
+        © Hanaro 2024
+    </footer>
+
+    <script>
+        document.getElementById('button-register').addEventListener('click', function(){
+            window.location.href = 'index.html'
+        })
+        document.getElementById('logo').addEventListener('click', function(){
+            window.location.href = 'register.html'
+        })
+    </script>
+</body>
+
+</html>
