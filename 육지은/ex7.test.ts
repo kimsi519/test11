@@ -65,6 +65,20 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+
+  // 추가 테스트: 게시글에 댓글이 존재하는지 검증, email 유효성 검증
+  posts.forEach(post => {
+    assert.strictEqual(post.comments.length >= 0, true, `Post with ID ${post.postId} should have comments`);
+
+    post.comments.forEach(comment => {
+      assert.strictEqual(comment.body.length > 0, true, `Comment ID ${comment.id} should have a non-empty body`);
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      assert.strictEqual(emailRegex.test(comment.email), true, `Comment ID ${comment.id} should have a valid email`);
+    });
+  });
+
+  
 }
 
 test(1);
