@@ -65,8 +65,15 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts[0].comments[0].postId, 1);
+  
+  const emailRegex = new RegExp(
+    /^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  );
+  assert.strictEqual(emailRegex.test(posts[0].comments[0].email), true);
+
+  console.log("ex7 test complete!");
 }
 
 test(1);
 
-console.log("ex7 test complete!");
