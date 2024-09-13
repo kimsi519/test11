@@ -30,7 +30,7 @@ function runTests() {
     'ArrayList(3) {"value":1,"rest":{"value":2,"rest":{"value":3,"rest":null}}}'
   );
 
-  alist.addAtIndex(5, 1);
+  alist.add(5, 1);
   assert.deepStrictEqual(
     alist.toString(),
     'ArrayList(4) {"value":1,"rest":{"value":5,"rest":{"value":2,"rest":{"value":3,"rest":null}}}}'
@@ -42,13 +42,13 @@ function runTests() {
     'ArrayList(3) {"value":1,"rest":{"value":5,"rest":{"value":3,"rest":null}}}'
   );
 
-  alist.addAtIndex(22, 1);
+  alist.add(22, 1);
   assert.deepStrictEqual(
     alist.toString(),
     'ArrayList(4) {"value":1,"rest":{"value":22,"rest":{"value":5,"rest":{"value":3,"rest":null}}}}'
   );
 
-  alist.addAtIndex(33, 1);
+  alist.add(33, 1);
   assert.deepStrictEqual(
     alist.toString(),
     'ArrayList(5) {"value":1,"rest":{"value":33,"rest":{"value":22,"rest":{"value":5,"rest":{"value":3,"rest":null}}}}}'

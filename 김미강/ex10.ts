@@ -51,18 +51,22 @@ class ArrayList<T> extends Collection<T> {
     return { value: first, rest: ArrayList.arrayToList(rest) };
   }
 
-  // Add a value to the end of the list
-  add(value: T): void {
-    this.addAt(this.head, value, this.size);
-    this.size++;
-  }
+  // Overloading signatures
+  add(value: T): void;
+  add(value: T, index: number): void;
 
-  // Add a value at a specified index
-  addAtIndex(value: T, index: number): void {
-    if (index < 0 || index > this.size)
-      throw new RangeError("Index out of bounds");
-
-    this.head = this.addAt(this.head, value, index);
+  // Implementation
+  add(value: T, index?: number): void {
+    if (index === undefined) {
+      // Add value at the end of the list
+      this.addAt(this.head, value, this.size);
+    } else {
+      // Add value at a specified index
+      if (index < 0 || index > this.size) {
+        throw new RangeError("Index out of bounds");
+      }
+      this.head = this.addAt(this.head, value, index);
+    }
     this.size++;
   }
 
@@ -74,25 +78,6 @@ class ArrayList<T> extends Collection<T> {
     if (index === 0) return { value, rest: node };
     if (!node) throw new Error("Invalid state");
     node.rest = this.addAt(node.rest, value, index - 1);
-    return node;
-  }
-
-  // Remove a value at a specified index
-  removeByIndex(index: number): void {
-    if (index < 0 || index >= this.size)
-      throw new RangeError("Index out of bounds");
-
-    this.head = this.removeAt(this.head, index);
-    this.size--;
-  }
-
-  private removeAt(
-    node: ListNode<T> | null,
-    index: number
-  ): ListNode<T> | null {
-    if (index === 0 && node) return node.rest;
-    if (!node) throw new Error("Invalid state");
-    node.rest = this.removeAt(node.rest, index - 1);
     return node;
   }
 
@@ -114,6 +99,25 @@ class ArrayList<T> extends Collection<T> {
       previous = current;
       current = current.rest;
     }
+  }
+
+  // Remove a value at a specified index
+  removeByIndex(index: number): void {
+    if (index < 0 || index >= this.size)
+      throw new RangeError("Index out of bounds");
+
+    this.head = this.removeAt(this.head, index);
+    this.size--;
+  }
+
+  private removeAt(
+    node: ListNode<T> | null,
+    index: number
+  ): ListNode<T> | null {
+    if (index === 0 && node) return node.rest;
+    if (!node) throw new Error("Invalid state");
+    node.rest = this.removeAt(node.rest, index - 1);
+    return node;
   }
 
   // Set a value at a specific index
