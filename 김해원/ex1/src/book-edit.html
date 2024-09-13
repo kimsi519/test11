@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/b238b55b06.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="h-dvh flex flex-col">
+    <header
+      class="h-14 flex justify-between items-center px-4 border-b-2 border-gray-200"
+    >
+      <div class="flex items-center space-x-1">
+        <i class="text-xl fa-solid fa-book"></i>
+        <span class="font-extrabold text-xl">BookMark</span>
+      </div>
+      <div class="flex space-x-4">
+        <span
+          ><a href="https://github.com/heon-kim/test11">Github Repo.</a>
+        </span>
+        <div class="flex space-x-2">
+          <span><a href="./register.html">SignUp</a></span
+          ><span>|</span><span>SignIn</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex h-full">
+      <aside class="w-64 bg-gray-200 mx-4 my-2 p-2">
+        <article
+          class="border-2 border-indigo-300 bg-indigo-100 rounded-md p-2"
+        >
+          <div class="w-full p-2 bg-white rounded-md">https://naver.com</div>
+          <div>
+            <label for="autoRemove">
+              <input type="checkbox" name="autoRemove" id="autoRemove" />
+              <span>이동 시 자동 삭제</span>
+            </label>
+          </div>
+          <div class="flex justify-between">
+            <div></div>
+            <div class="flex space-x-4">
+              <i class="text-xl fa-solid fa-arrows-rotate"></i>
+              <i class="text-xl fa-regular fa-floppy-disk"></i>
+            </div>
+          </div>
+        </article>
+
+        <p class="text-center">there is no marks.</p>
+      </aside>
+      <section class="p-2">
+        <button
+          class="rounded-md bg-gray-300 font-bold font-gray px-8 py-3 shadow-sm hover:bg-gray-400 active:bg-gray-500"
+        >
+          + Add Book
+        </button>
+      </section>
+    </main>
+
+    <footer class="h-14 border-t p-3 text-center">&copy Hanaro 2024</footer>
+  </body>
+</html>
