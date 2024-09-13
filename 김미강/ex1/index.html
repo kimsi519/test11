@@ -35,7 +35,7 @@
       </div>
       <nav class="ml-auto flex items-center space-x-4">
         <a
-          href="https://github.com/"
+          href="https://github.com/mkngkm?tab=repositories"
           class="text-gray-600 hover:text-gray-800 font-bold"
           >GitHub Repo.</a
         >
@@ -49,56 +49,95 @@
     </header>
     <main class="flex-1 flex">
       <div class="flex-grow flex items-center justify-center">
-        <div class="flex items-center p-4 space-x-4" style="height: 95%">
+        <div class="flex items-center w-1/2 p-4 space-x-4" style="height: 95%">
           <!-- Left Column: Bookmarks -->
           <div
             class="w-1/2 bg-green-50 p-4 rounded-lg shadow-lg"
             style="height: 100%"
           >
-            <h2 class="text-xl font-bold mb-4 text-green-600 text-center">
-              BookMark
+            <h2
+              class="text-xl font-bold mb-4 text-green-600 text-center truncate p-2"
+            >
+              BookMark BookMark BookMark BookMark BookMark
             </h2>
 
             <!-- Bookmark Item -->
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
-              onclick="window.location.href='https://indiflex.kr/';"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              onclick="window.location.href='https://www.youtube.com/?app=desktop&hl=ko&gl=KR';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzc0V6lldp6kDNznJTDtDKEg5mCv281G-0-g&s"
                   alt="Icon"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    55BookMark Bookmark
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        55BookMark Bookmark BookMark BookMark BookMark BookMark
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
+                    55만의 북마크만의 스타일
                   </p>
-                  <p class="text-gray-500 text-xs">55만의 북마크만의 스타일</p>
                 </div>
               </div>
             </div>
 
-            <!-- More Bookmark Items (Repeat as necessary) -->
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
               onclick="window.location.href='https://www.naver.com';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://littledeep.com/wp-content/uploads/2020/09/naver-icon-style.png"
                   alt="Naver"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    네이버
-                  </p>
-                  <p class="text-gray-500 text-xs">
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        네이버
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
                     네이버 메인에서 다양한 정보
                   </p>
                 </div>
@@ -106,58 +145,95 @@
             </div>
 
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
               onclick="window.location.href='https://www.kakaocorp.com/page/';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://cs.kakao.com/images/icon/img_kakaocs.png"
-                  alt="Naver"
+                  alt="kakao"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    KAKAO
-                  </p>
-                  <p class="text-gray-500 text-xs">
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        KAKAO
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
                     더 나은 세상을 만드는 카카오 서비스
                   </p>
                 </div>
               </div>
             </div>
-
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
               onclick="window.location.href='https://www.youtube.com/?app=desktop&hl=ko&gl=KR';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
                   alt="Youtube_logo"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    Youtube
-                  </p>
-                  <p class="text-gray-500 text-xs">
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        Youtube
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
                     친구, 가족을 비롯해 전 세계 사람들과 동영상 공유.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Add Mark Button -->
-            <button
-              class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
-              onclick="window.location.href='book-edit.html';"
-            >
-              + Add Mark
-            </button>
+            <div class="flex justify-end">
+              <!-- Add Mark Button -->
+              <button
+                class="w-1/2 bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
+                onclick="window.location.href='book-edit.html';"
+              >
+                + Add Mark
+              </button>
+            </div>
           </div>
 
           <!-- Right Column: Study -->
@@ -165,29 +241,50 @@
             class="w-1/2 bg-green-50 p-4 rounded-lg shadow-lg"
             style="height: 100%"
           >
-            <h2 class="text-xl font-bold mb-4 text-green-600 text-center">
+            <h2
+              class="text-xl font-bold mb-4 text-green-600 text-center truncate p-2"
+            >
               Study
             </h2>
 
             <!-- Study Item -->
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
               onclick="window.location.href='https://tailwindcss.com/';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://www.drupal.org/files/project-images/screenshot_361.png"
                   alt="Tailwind CSS"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    Tailwind CSS
-                  </p>
-                  <p class="text-gray-500 text-xs">
-                    Tailwind CSS is a utility-first framework...
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        Tailwind CSS
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
+                    Tailwind CSS is a utility-first CSS framework for rapidly
+                    building modern websites without ever leaving your HTML.
                   </p>
                 </div>
               </div>
@@ -195,35 +292,56 @@
 
             <!-- More Study Items (Repeat as necessary) -->
             <div
-              class="bg-white p-4 flex justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
+              class="bg-white p-4 flex w-full justify-between items-center rounded-lg shadow-md mb-4 cursor-pointer"
               onclick="window.location.href='https://nextjs.org/';"
             >
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center w-full space-x-3">
                 <img
                   src="https://velog.velcdn.com/images/wish/post/07d03513-209f-4eab-99cb-658bf6e02fab/image.png"
                   alt="Next.js"
                   class="w-10 h-10 rounded-full"
                 />
-                <div>
-                  <p
-                    class="font-bold text-sm text-gray-600 hover:text-gray-700"
-                  >
-                    Create Next App
-                  </p>
-                  <p class="text-gray-500 text-xs">
-                    Generated by create next app...
+                <div class="flex-1 truncate">
+                  <div class="flex justify-between">
+                    <div class="w-2/3 truncate">
+                      <p
+                        class="font-bold text-sm text-gray-600 hover:text-gray-700 truncate"
+                      >
+                        Create Next App
+                      </p>
+                    </div>
+
+                    <!-- 환경설정 아이콘 -->
+                    <div
+                      class="text-right text-gray-500 hover:text-gray-700"
+                      onclick="event.stopPropagation();"
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=555555"
+                        alt="settings-icon"
+                        class="w-5 h-5 cursor-pointer"
+                      />
+                      <!-- 환경설정 아이콘 -->
+                    </div>
+                  </div>
+
+                  <p class="text-gray-500 text-xs truncate">
+                    Next.js enables you to create high-quality web applications
+                    with the power of React components.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Add Mark Button -->
-            <button
-              class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
-              onclick="window.location.href='book-edit.html';"
-            >
-              + Add Mark
-            </button>
+            <div class="flex justify-end">
+              <!-- Add Mark Button -->
+              <button
+                class="w-1/2 bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
+                onclick="window.location.href='book-edit.html';"
+              >
+                + Add Mark
+              </button>
+            </div>
           </div>
         </div>
       </div>
