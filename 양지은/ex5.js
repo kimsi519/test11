@@ -25,6 +25,7 @@ module.exports = {
 		const patterns = new Array(); // 각 초성 별 정규표현식을 담기 위한 배열
 		for (let s of firstSounds) {
 			if (isNaN(s)) {
+				// s가 숫자가 아니면 true가 나옴
 				const [start, end] = consonants.get(s);
 				patterns.push(`[${start}-${end}]`);
 			} else {
