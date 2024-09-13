@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>CREATE ACCOUNT</title>
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <nav class="bg-white border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="./book-edit.html" class="flex items-center space-x-1 rounded">
+        <img src="https://www.hanafn.com:8002/assets/img/ko/info/img-hana-symbol.png" class="h-9 pt-2" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold px-3 py-3 text-black-500">Digital-Hana</span>
+      </a>
+      <div class="flex space-x-8 items-center">
+        <a href="https://github.com/commaengddongyeon/test11" class="text-gray-900 hover:text-blue-700">GitHub Repo</a>
+        <a href="../ex1/register.html" class="text-gray-900 hover:text-blue-700">SignUp</a>
+        <span class="text-gray-900">|</span>
+        <a href="#" class="text-gray-900 hover:text-blue-700">SignIn</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 가입 섹터 -->
+  <section class="bg-gray-50 shadow-lg ">
+    <div class="flex flex-col items-center justify-center px-6 py-8 ">
+        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+            <img class="w-8 h-8 mr-2" src="https://www.hanafn.com:8002/assets/img/ko/info/img-hana-symbol.png" alt="logo">
+            Create account    
+        </a>
+        <!-- 가입폼 -->
+        <div class="w-full bg-white rounded-md shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <form class="space-y-4 md:space-y-6" action="#">
+                  <div>
+                    <label for="nickName" class="block mb-2 text-sm font-semibold text-gray-900">Your NickName</label>
+                    <input type="nickName" name="nickName" id="nickName"  placeholder="nickname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                  </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-semibold text-gray-900">Your email</label>
+                        <input type="email" name="email" id="email" placeholder="@hanaro.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-semibold text-gray-900">Password</label>
+                        <input type="password" name="password" id="password" placeholder="********" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                    </div>
+                    <div>
+                        <label for="confirm-password" class="block mb-2 text-sm font-semibold text-gray-900">Confirm password</label>
+                        <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="********" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"required="">
+                    </div>
+
+                    <!-- 등록버튼 -->
+                    <button class="bg-gray-100 text-gray-700 font-semibold py-2 px-6 rounded-md hover:bg-gray-200">
+                      <a href="../ex1/index.html">Register </a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
