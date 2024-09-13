@@ -65,6 +65,58 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.deepStrictEqual(posts[1], {
+    postId: 2,
+    title: 'qui est esse',
+    comments: [
+      {
+        postId: 2,
+        id: 6,
+        email: 'Presley.Mueller@myrl.com',
+        body: 'doloribus at sed quis culpa deserunt consectetur qui praesentium\n' +
+          'accusamus fugiat dicta\n' +
+          'voluptatem rerum ut voluptate autem\n' +
+          'voluptatem repellendus aspernatur dolorem in'
+      },
+      {
+        postId: 2,
+        id: 7,
+        email: 'Dallas@ole.me',
+        body: 'maiores sed dolores similique labore et inventore et\n' +
+          'quasi temporibus esse sunt id et\n' +
+          'eos voluptatem aliquam\n' +
+          'aliquid ratione corporis molestiae mollitia quia et magnam dolor'
+      },
+      {
+        postId: 2,
+        id: 8,
+        email: 'Mallory_Kunze@marie.org',
+        body: 'ut voluptatem corrupti velit\n' +
+          'ad voluptatem maiores\n' +
+          'et nisi velit vero accusamus maiores\n' +
+          'voluptates quia aliquid ullam eaque'
+      },
+      {
+        postId: 2,
+        id: 9,
+        email: 'Meghan_Littel@rene.us',
+        body: 'sapiente assumenda molestiae atque\n' +
+          'adipisci laborum distinctio aperiam et ab ut omnis\n' +
+          'et occaecati aspernatur odit sit rem expedita\n' +
+          'quas enim ipsam minus'
+      },
+      {
+        postId: 2,
+        id: 10,
+        email: 'Carmen_Keeling@caroline.name',
+        body: 'voluptate iusto quis nobis reprehenderit ipsum amet nulla\n' +
+          'quia quas dolores velit et non\n' +
+          'aut quia necessitatibus\n' +
+          'nostrum quaerat nulla et accusamus nisi facilis'
+      }
+    ]
+  });
+
 }
 
 test(1);

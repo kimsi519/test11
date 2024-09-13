@@ -6,6 +6,7 @@ console.log('🚀  ArrayList:', ArrayList);
 // instance
 const arrLst = new ArrayList([1])
 assert.deepStrictEqual(arrLst.toArray(), [1]);
+assert.deepStrictEqual(arrLst.size(), 1);
 assert.deepStrictEqual(arrLst.add(3), {value: 1, rest: {value: 3}});
 assert.deepStrictEqual(arrLst.add(2,1), {value: 1, rest: {value: 2, rest: {value: 3}}});
 assert.deepStrictEqual(arrLst.peek(), 3);

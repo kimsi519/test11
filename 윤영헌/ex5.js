@@ -1,9 +1,9 @@
 module.exports = {
-  searchByKoreanInitialSound: (data, firstSounds) => {
-      return data.filter((str) => str.match(getRegExp(firstSounds)));
+  searchByKoreanInitialSound: (obj, firstSounds) => {
+      return obj.filter((str) => str.match(getRegExp(firstSounds)));
   },
 };
-const INITIAL = [
+const initial = [
   "ㄱ",
   "ㄲ",
   "ㄴ",
@@ -24,7 +24,7 @@ const INITIAL = [
   "ㅍ",
   "ㅎ",
 ];
-const INITIAL_RANGE = [
+const initialRange = [
   "가-깋",
   "까-낗",
   "나-닣",
@@ -48,18 +48,11 @@ const INITIAL_RANGE = [
 
 const initialMap = new Map();
 
-for (let i = 0; i < INITIAL.length; i++) {
-  initialMap.set(INITIAL[i], INITIAL_RANGE[i]);
-}
+for (let i = 0; i < initial.length; i++) { initialMap.set(initial[i], initialRange[i]);}
 
 function getRegExp(initials) {
   return initials
-      .split("")
-      .map(
-          (initial) =>
-              "[" +
-              (initialMap.has(initial) ? initialMap.get(initial) : initial) +
-              "]"
-      )
-      .join("");
+    .split("")
+    .map((initial) => "[" + (initialMap.has(initial) ? initialMap.get(initial) : initial) + "]")
+    .join("");
 }

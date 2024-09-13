@@ -2,13 +2,13 @@
 
 let timer: number | NodeJS.Timeout;
 timer=0;
-const debouncing = (cb: any, delay: number) => (i: number) => {
+const debouncing = (cb: any, delay: number) => (i: any) => {
     clearTimeout(timer);
     timer = setTimeout(()=>cb(i), delay);
 };
 
 let isCalled: Boolean;
-const throttling = (cb: any, delay: number) => (i: number) => {
+const throttling = (cb: any, delay: number) => (i: any) => {
     if(!isCalled){
         cb(i);
         isCalled = true;

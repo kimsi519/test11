@@ -33,7 +33,7 @@ export async function getPosts(userId: number | string):Promise<Post[]> {
   
   const postsByUserID: Post[] = [];
   for(const res of resList){
-    const commentsres:CommentResponse[] = await fetch(`${POST_URL}/${res.postId}/comments`, {method: "GET"})
+    const commentsres:CommentResponse[] = await fetch(`${POST_URL}/${res.id}/comments`, {method: "GET"})
       .then((response) => response.json()) as CommentResponse[];
     
     const comments:Comment[] = commentsres.map((res)=>{return {
@@ -59,9 +59,7 @@ export async function getPosts(userId: number | string):Promise<Post[]> {
 const userId = 1;
 async function print(){
 const posts = await getPosts(userId);
-  console.log(posts.length);
-  console.log(posts?.at(-1)?.comments?.length);
-  console.log(posts[0]);
+  console.log(posts[1]);
 };
 
-// print();
+print();
