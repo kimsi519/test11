@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "hana-regular";
+    src: url("Hana2.0_TTF/Hana2-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+    font-family: "hana-bold";
+    src: url("Hana2.0_TTF/Hana2-Bold.ttf")
+    format("truetype");
+}

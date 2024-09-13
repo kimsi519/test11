@@ -1,4 +1,4 @@
-import assert from 'assert';
+import * as assert from 'assert';
 import { getPosts } from './ex7';
 
 async function test(userId: string | number) {
@@ -65,6 +65,11 @@ async function test(userId: string | number) {
   });
 
   // 추가 테스트 코드를 작성하시오.
+  assert.strictEqual(posts[1].postId, 2); //두 번째 게시물은 postId 2를 가져야 함
+  assert.strictEqual(posts[1].title, 'qui est esse'); //두 번째 게시물은 해당 제목을 가져야 함
+
+  assert.strictEqual(posts[2].postId, 3, 'The third post should have postId 3'); //세 번째 게시물은 postId 3를 가져야 함
+  assert.ok(posts[2].comments.length > 0, 'The third post should have some comments'); //세 번째 게시물은 해당 제목을 가져야 함
 }
 
 test(1);

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-hana_regular">
+    <header class="flex justify-between p-4 bg-white shadow-md border-b-4 border-hana-green">
+        <div class="flex space-x-2 font-bold text-hana-green items-end">
+            <div><img class="w-8 h-8" src="src/img_hana.svg"></div>
+            <div class="text-3xl leading-none">BookMark</div>
+            <div class="font-hana_regular text-xs"> for Digital Hana路</div>
+        </div>
+        <div class="flex space-x-4 text-gray-600 font-semibold items-center">
+            <div class="hover:text-hana-green"><a href="https://github.com/parkjaaaaan">Github Repo.</a></div>
+            <div class="flex space-x-4">
+                <div class="hover:text-hana-green"><a href="register.html">SignUp</a></div>
+                <div>|</div>
+                <div class="hover:text-hana-green">SignIn</div>
+            </div>
+        </div>
+    </header>    
+
+    <main class="flex-1 flex justify-start p-5 space-x-5">
+        <div class="w-1/4 bg-white shadow-lg rounded-lg p-5 border-t-4 border-hana-green">
+            <form class="space-y-4 p-4 border border-gray-300 rounded-lg bg-white">
+                <div>
+                    <label for="bookmark-title" class="block text-sm font-medium text-gray-700">Title</label>
+                    <input type="text" id="bookmark-title" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-hana-green focus:border-hana-green" placeholder="Enter title">
+                </div>
+                <div>
+                    <label for="bookmark-url" class="block text-sm font-medium text-gray-700">URL</label>
+                    <input type="url" id="bookmark-url" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-hana-green focus:border-hana-green" placeholder="Enter URL">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="auto-delete" class="h-4 w-4 text-hana-green border-gray-300 rounded focus:ring-hana-green">
+                    <label for="auto-delete" class="ml-2 block text-sm text-gray-700">이동 시 자동 삭제</label>
+                </div>
+                <div class="flex space-x-2">
+                    <button type="button" class="flex items-center justify-center w-1/2 bg-gray-200 text-gray-700 py-2 px-4 rounded-md shadow-sm hover:bg-gray-300">
+                        <img class="h-5 w-5" src="src/img_reset.png">
+                    </button>
+                    <button type="button" class="flex items-center justify-center w-1/2 bg-gray-200 text-gray-700 py-2 px-4 rounded-md shadow-sm hover:bg-gray-300">
+                        <img class="h-5 w-5" src="src/img_save.png">
+                    </button>
+                </div>
+                <button type="submit" class="w-full bg-hana-green text-white py-2 px-4 rounded-md shadow-sm hover:bg-green-900">Add Bookmark</button>
+            </form>
+            <p class="mt-2 text-sm text-gray-500 text-center">There is no marks.</p>
+        </div>
+    </main>
+    
+    <footer class="bg-white border-t-2 text-xs border-gray-300 shadow-md p-4 text-center text-gray-400">
+        <p>&copy; 2024 Digital Hana路. All rights reserved.</p>
+    </footer>
+</body>
+</html>
