@@ -11,5 +11,13 @@
     "TS"
   ],
   "author": "indiflex",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/assert": "^1.5.10",
+    "@types/node": "^22.5.4",
+    "assert": "^2.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
 }
