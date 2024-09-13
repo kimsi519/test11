@@ -1,24 +1,29 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
-  <title>Navbar with Tailwind CSS</title>
+  <title>index</title>
 </head>
-<body class="bg-gray-100 h-screen flex flex-col">
-  <!-- Navbar -->
+
+<body class="h-screen flex flex-col">
+
+  <!-- 네비게이션 바 -->
   <nav class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <!-- Left side (Logo) -->
-        <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-bold text-gray-900">BookMark</a>
+        <!-- 로고 -->
+        <div class="flex items-center space-x-4">
+          <img class="h-10 w-10" src="./icon.png" alt="Icon">
+          <a href="index.html" class="text-2xl font-bold text-gray-900">BookMark</a>
         </div>
-        
-        <!-- Right side (Profile) -->
+
+        <!-- 깃허브 링크, 프로필 사진 -->
         <div class="ml-auto flex items-center space-x-4">
-          <a href="#" class="text-gray-900 hover:text-gray-700">Github Repo.</a>          
+          <strong><a href="https://github.com/Fresh-hongsi" class="text-gray-900 hover:text-gray-700">Github
+              Repo.</a></strong>
           <div class="relative">
             <img class="h-10 w-10 rounded-full" src="./photo.png" alt="User Profile">
           </div>
@@ -27,29 +32,123 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- 메인 화면 -->
   <main class="flex-grow flex">
     <div class="flex w-full">
-      <!-- Left gray area -->
-      <div class="bg-gray-300 w-1/2 h-full p-4 mr-4"> <!-- Added mr-4 for margin-right -->
-        <h2 class="text-xl font-semibold">BookMark Area</h2>
-        <p>This is the left area.</p>
+
+      <!-- 왼쪽 북마크 영역 -->
+      <div class="bg-gray-300 w-1/2 h-full p-4 mr-4">
+        <h2 class="text-xl font-bold text-center">BookMark</h2>
+        <div>&nbsp;</div>
+
+        <!-- 카드 그룹 영역 -->
+        <div class="grid grid-cols-2 gap-4">
+
+          <!-- 카드 1 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="./유튜브2.png" alt="Image 1">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Youtube</h3>
+              <p>친구, 가족을 비롯해 전 세계 사람들과 동영상 공유.</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+          <div>&nbsp</div>
+
+          <!-- 카드 2 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="./인스타그램1.png" alt="Image 2">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Instagram</h3>
+              <p>Share Everyday Moments — Share the beauty of everyday moments with friends on Instagram.</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+          <div>&nbsp</div>
+
+          <!-- 카드 3 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="./카카오톡.png" alt="Image 3">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Kakao Talk</h3>
+              <p>사람과 세상을 향한 모든 연결의 시작, 카카오톡</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+          <div>&nbsp</div>
+
+          <!-- 카드 4 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="./페이스북.png" alt="Image 4">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Facebook</h3>
+              <p>친구, 가족, 아는 사람들과 사진과 동영상을 공유하고 메시지를 보내며 서로의 소식을 확인할 수 있습니다.</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+        </div>
+        <div>&nbsp</div>
+
+        <!-- 하단 버튼 -->
+        <div class="flex justify-end" style="color: azure; justify-content: end;">
+          <strong style="background-color: black; padding:10px; cursor: pointer; border-radius: 10px;">
+            + Add Mark
+          </strong>
+        </div>
+
+
       </div>
 
-      <!-- Right gray area -->
+      <!-- 오른쪽 스터디 영역 -->
       <div class="bg-gray-300 w-1/2 h-full p-4">
-        <h2 class="text-xl font-semibold">Study Area</h2>
-        <p>This is the right area.</p>
+        <h1 class="text-xl font-bold text-center">Study</h1>
+        <div>&nbsp;</div>
+
+        <!-- 카드 그룹 영격 -->
+        <div class="grid grid-cols-2 gap-4">
+
+          <!-- 카드 1 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="./트위터1.png" alt="Image 1">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Twitter</h3>
+              <p>뉴스 속보와 엔터테인먼트부터 스포츠와 정치까지, 실시간 코멘터리와 함께 이야기의 전말을 확인해 보세요.</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+          <div>&nbsp</div>
+
+          <!-- 카드 2 -->
+          <div class="relative bg-gray-100 shadow flex border-4 p-4">
+            <img class="w-16 h-16 mr-4" src="네이버밴드.png" alt="Image 2">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg">Naver Band</h3>
+              <p>BAND는 모바일과 PC에서 모두 이용할 수 있어요. BAND 앱 다운로드..
+                ...</p>
+            </div>
+            <img class="h-10 w-10" src="./setting.png" alt="Settings">
+          </div>
+          <div>&nbsp</div>
+        </div>
+
+        <!-- 하단 버튼 -->
+        <div class="flex justify-end" style="color: azure; justify-content: end;">
+          <strong style="background-color: black; padding:10px; cursor: pointer; border-radius: 10px;">
+            + Add Mark
+          </strong>
+        </div>
+
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-2 text-sm fixed bottom-0 w-full">
+  <!-- 푸터 -->
+  <footer class=" bg-gray-800 text-white py-2 text-sm fixed bottom-0 w-full">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p>&copy; Hanaro 2024</p>
     </div>
   </footer>
-  
+
 </body>
+
 </html>

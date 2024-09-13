@@ -8,9 +8,10 @@ const LABEL_SIZE = 6;
 const PRICE_SIZE = 7;
 
 function bill(tableNo) {
-  let ordered = [];
-  let tot = { price: 0, tax: 0 };
+  const ordered = [];
+  const tot = { price: 0, tax: 0 };
 
+  // 상품 주문 -> price와 tax 업데이트 수행
   function order(item) {
     ordered.push(item);
     const { price, taxfree } = MENU[item];
@@ -18,6 +19,7 @@ function bill(tableNo) {
     tot.tax += taxfree ? 0 : calcTax(price);
   }
 
+  // 출력 함수
   function printBill() {
     console.log(`\n\nTable. ${tableNo}`);
     printLine();
@@ -39,20 +41,20 @@ function bill(tableNo) {
   };
 }
 
-const table1 = bill(1);
-table1.order('짜장');
-table1.order('짬뽕');
-table1.printBill();
+const table1 = bill(1); // oredered와 tot 변수 가진 클로저 생성
+table1.order('짜장'); // bill 함수 내부의 order 접근
+table1.order('짬뽕'); // bill 함수 내부의 order 접근
+table1.printBill(); // bill 함수 내부의 printBill 접근
 
-const table2 = bill(2);
-table2.order('짜장');
-table2.printBill();
+const table2 = bill(2); // oredered와 tot 변수 가진 클로저 생성
+table2.order('짜장'); // bill 함수 내부의 order 접근
+table2.printBill(); // bill 함수 내부의 printBill 접근
 
-table1.order('탕슉');
-table1.printBill();
+table1.order('탕슉'); // bill 함수 내부의 order 접근
+table1.printBill(); // bill 함수 내부의 printBill 접근
 
-table2.order('짬뽕');
-table2.printBill();
+table2.order('짬뽕'); // bill 함수 내부의 order 접근
+table2.printBill(); // bill 함수 내부의 printBill 접근
 
 function f([label, unit], price) {
   console.log(`${label.padEnd(LABEL_SIZE, ' ')} ${priceFmt(price)}`);

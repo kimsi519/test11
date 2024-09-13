@@ -1,50 +1,45 @@
-// range 함수를 작성하세요.
-// const range = (start, end, step = start > end ? -1 : 1) => { };
-
-// module.exports = { range };
-
-
-function range(s, e, step) {
+function range(start, end, step) {
     let result = [];
   
-    // Step 기본값 설정
+    // Step 기본값 설정 
     if (step === undefined) {
-      step = s > e ? -1 : 1;
+      step = start > end ? -1 : 1;
     }
   
-    // e가 없을 때 처리
-    if (e === undefined) {
-      if (s > 0) {
-        e = s;
-        s = 1;
-      } else if (s < 0) {
-        e = -1;
-      } else {
-        return [0];  // s === 0인 경우
+    // end가 없을 때 처리
+    if (end === undefined) {
+      if (start > 0) { 
+        end = start; // 가상의 end를 만들어주고
+        start = 1; // start를 1로 설정
+        
+      } else if (start < 0) { // start가 음수라면 비정상 예외처리 수행
+        end = -1;
+      } else { // start === 0인 경우, 0으로 된 배열 반환
+        return [0];  
       }
     }
   
-    // step이 0이거나 시작과 끝이 같으면 [s] 반환
-    if (step === 0 || s === e) {
-      return [s];
+    // step이 0이거나 시작과 끝이 같으면 [start] 반환
+    if (step === 0 || start === end) {
+      return [start];
     }
   
-    // 비정상(예외) 처리: (s - e) * step > 0
-    if ((s - e) * step > 0) {
+    // 비정상 예외들 처리 ==> (start - end) * step > 0
+    if ((start - end) * step > 0) {
       return [];
     }
   
-    // 소수점을 다루기 위해 부동소수점 문제 방지
+    // js의 오차 문제를 해결하기 위한 부동소수점 문제 해결
     const precision = 10; // 소수점 처리를 위한 자리수
   
     // 범위 생성
     if (step > 0) {
-      for (let i = s; i <= e + 1e-9; i += step) {
-        result.push(Number(i.toFixed(precision)));  // 부동소수점 문제 해결
+      for (let i = start; i <= end + 1e-9; i += step) {
+        result.push(Number(i.toFixed(precision)));  // 부동소수점 처리
       }
     } else {
-      for (let i = s; i >= e - 1e-9; i += step) {
-        result.push(Number(i.toFixed(precision)));
+      for (let i = start; i >= end - 1e-9; i += step) {
+        result.push(Number(i.toFixed(precision))); // 부동소수점 처리
       }
     }
   
