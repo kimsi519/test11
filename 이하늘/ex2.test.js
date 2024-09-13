@@ -44,3 +44,5 @@ assert.deepStrictEqual(
 );
 
 console.log(range(1, 2, 0.1));
+
+//node ex1.test.js

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+  <!-- og 기능 -->
+  <meta property="og:title" content="BookMark - Your Reading Companion">
+  <meta property="og:description" content="BookMark is your ultimate companion for keeping track of your reading materials. Explore and organize your books with ease.">
+  <meta property="og:image" content="img/인스타그램.jpg">
+  <meta property="og:url" content="https://www.instagram.com/">
+
+  <title>BookMark</title>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header>
+    <nav class="border-gray-200 bg-gray-50">
+        <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <i class="fa-solid fa-book-open"></i>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-500">BookMark</span>
+            </a>
+            <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto">
+                <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="https://github.com/hani-i" class="block py-2 px-3 mt-4 md:p-0 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700">Github Repo.</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700">
+                          <img src="img/포차코.png" alt="Profile Picture" class="w-16 h-16 rounded-full border-1">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow flex">
+    <section class="flex-1 p-4 m-2 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-start">
+      <h2 class="text-3xl font-bold mb-3 text-center">BookMark</h2>
+
+      <div class="flex flex-col gap-3 w-full">
+        <!-- Card 1 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+      
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/인스타그램.jpg" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">instagram</h3>
+            <p class="text-gray-500">Share Everyday Moments — Share the beauty of everyday moments with friends on Instagram. </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/카카오.png" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">kakao</h3>
+            <p class="text-gray-500">사람과 세상을 향한 모든 연결의 시작, 카카오톡</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/네이버.jpg" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">NAVER</h3>
+            <p class="text-gray-500">네이버 모바일 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/유튜브.png" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">YouTube</h3>
+            <p class="text-gray-500">YouTube에서 마음에 드는 동영상과 음악을 감상하고, 직접 만든 콘텐츠를 업로드하여 친구, 가족뿐 아니라 전 세계 사람들과 콘텐츠를 공유할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="m-2 ml-80 px-8 py-2 text-white bg-black rounded-lg hover:bg-gray-500">+Add Book</button>
+    </section>
+    
+    <!-- Second section: Study -->
+    <section class="flex-1 p-4 m-2 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-start">
+      <h2 class="text-3xl font-bold mb-3 text-center">Study</h2>
+      <div class="flex flex-col gap-3 w-full">
+
+        <!-- Card 1 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+        
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/tailwind.png" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">tailwind </h3>
+            <p class="text-gray-500">Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative flex items-center p-4 bg-white rounded-lg shadow-md border border-gray-300 w-full">
+          <span class="absolute top-2 right-2 text-2xl"><i class="fa-solid fa-gear"></i></span>
+          
+          <img class="w-20 h-20 rounded-lg mr-4" src="img/python.jpg" alt="Profile Picture">
+          <div>
+            <h3 class="text-lg font-semibold">python</h3>
+            <p class="text-gray-500">The official home of the Python Programming Language.</p>
+          </div>
+        </div>
+      </div>
+      <button class="m-2 ml-80 px-8 py-2 text-white bg-black rounded-lg hover:bg-gray-500">+Add Book</button>
+    </section>
+  </main>
+
+</body>
+</html>

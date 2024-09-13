@@ -23,6 +23,7 @@ const kim = {
   zm: new Map([[hong, arr]]),
   zwm: new WeakMap([[hong, arr]]),
 };
+
 const newKim = deepCopy(kim);
 assert.deepStrictEqual(newKim, kim, 'deepCopy equal fail!');
 newKim.addr = 'Daegu';
