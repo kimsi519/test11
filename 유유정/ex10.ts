@@ -1,5 +1,10 @@
+type LinkedNode<T> = {
+  value: T;
+  rest: LinkedNode<T> | null;
+};
+
 class Collection<T> {
-  private readonly arr = Array<T>();
+  readonly arr = Array<T>();
 
   constructor(...args: T[]) {
     this.arr.push(...args);
@@ -9,21 +14,14 @@ class Collection<T> {
     return this.arr;
   }
 
-  push(...args: T[]) {
+  add(...args: T[]): T[] {
     this.arr.push(...args);
     return this.arr;
   }
 
-  get peek(): T | undefined {
-    return this.isQueue() ? this.arr[0] : this.arr.at(-1);
-  }
-
-  get poll(): T | undefined {
-    return this.isQueue() ? this.arr.shift() : this.arr.pop();
-  }
-
-  remove() {
-    return this.poll;
+  push(...args: T[]) {
+    this.arr.push(...args);
+    return this.arr;
   }
 
   get length() {
@@ -67,62 +65,85 @@ class Queue<T> extends Collection<T> {}
 
 // ArrayList 클래스를 작성하세요.
 class ArrayList<T> extends Collection<T> {
-  add(value: T, index?: number): void {
+  private _size: number = 0;
+
+  constructor(...args: T[]) {
+    super(); 
+    this.arr.push(...args); 
+    this._size = args.length;
+  }
+
+  add(value: T): T[];
+  add(value: T, index: number): T[];
+  add(value: T, index?: number): T[] {
     if (index === undefined) {
-      this.push(value);
+      this._size++;
+      return super.add(value);
     } else {
-      if (index < 0 || index > this.length) {
+      if (index < 0 || index > this.arr.length) {
         throw new Error("Index out of bounds");
       }
-      this._arr.splice(index, 0, value);
+      this.arr.splice(index, 0, value);
+      this._size++;
+      return this.arr;
     }
   }
 
-  get(index: number): T {
-    if (index < 0 || index >= this.length) {
+  remove(index: number): void {
+    if (index < 0 || index >= this._size) {
       throw new Error("Index out of bounds");
     }
-    return this._arr[index];
-  }
 
-  // remove(value: T): boolean {
-  //   const index = this.indexOf(value);
-  //   if (index !== -1) {
-  //     this.removeByIndex(index);
-  //     return true;
-  //   }
-  //   return false;
-  // }
-
-  removeByIndex(index: number): void {
-    if (index < 0 || index >= this.length) {
-      throw new Error("Index out of bounds");
-    }
-    this._arr.splice(index, 1);
+    this.arr.splice(index, 1);
+    this._size--;
   }
 
   set(index: number, value: T): void {
-    if (index < 0 || index >= this.length) {
+    if (index < 0 || index >= this._size) {
       throw new Error("Index out of bounds");
     }
-    this._arr[index] = value;
+    this.arr[index] = value;
+  }
+
+  get(index: number): T | undefined {
+    if (index < 0 || index >= this._size) {
+      return undefined;
+    }
+    return this.arr[index];
+  }
+
+  indexOf(value: T): number {
+    return this.arr.indexOf(value);
   }
 
   contains(value: T): boolean {
     return this.indexOf(value) !== -1;
   }
 
-  indexOf(value: T): number {
-    return this._arr.indexOf(value);
+  get size(): number {
+    return this._size;
   }
 
-  size(): number {
-    return this.length;
+  get peek(): T | undefined {
+    return this.arr[this._size - 1];
   }
 
-  toString(): string {
-    return `<ArrayList: [${this.toArray()}]>`;
+  toArray(): T[] {
+    return [...this.arr];
+  }
+
+  clear(): void {
+    this.arr.length = 0;
+    this._size = 0;
+  }
+
+  *[Symbol.iterator]() {
+    for (let i = 0; i < this._size; i++) {
+      yield this.arr[i];
+    }
   }
 }
+
+
 
 export { Stack, Queue, ArrayList };
