@@ -1,0 +1,51 @@
+/* Custom styles to ensure footer stays at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Custom styles */
+.sidebar {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 1rem; /* Same as ml-3 */
+}
+
+.main-content {
+  background-color: #ffffff; /* White background */
+}
+
+.add-book-btn {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+.bookmark-menu {
+  background-color: #d9f7be; /* Light green background */
+}
+
+.bookmark-menu a {
+  color: #00bfae; /* Green text */
+}
+<nav class="bg-white shadow-lg border-bottom">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <div class="flex space-x-4">
+                <a href="#" class="py-5 px-3 text-green-600 bg-green-100 hover:text-green-800 rounded-md">BookMark</a>
+            </div>
+            <div class="flex items-center space-x-4 ml-auto">
+                <a href="https://github.com/gxxhxx0224?tab=repositories" class="py-5 px-3 text-gray-700 hover:text-gray-900">GitHub Repos</a>
+                <img src="https://via.placeholder.com/150" alt="User Image" class="w-10 h-10 rounded-full"> <!-- Replace with actual image URL -->
+            </div>
+        </div>
+    </div>
+</nav>

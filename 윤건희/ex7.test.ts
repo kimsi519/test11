@@ -64,7 +64,24 @@ async function test(userId: string | number) {
     ],
   });
 
-  // 추가 테스트 코드를 작성하시오.
+  // 추가 테스트 코드 작성
+// 1. 첫 번째 댓글의 이메일과 첫 번째 게시글의 댓글 수
+assert.strictEqual(posts[0].comments?.[0].email, 'Eliseo@gardner.biz');
+assert.strictEqual(posts[0].comments?.length, 5);
+
+// 2. 두번째 댓글의 이메일,, 두번째 게시글의 댓글 수
+assert.strictEqual(posts[1].comments?.[1].email, 'Jayne_Kuhic@sydney.com');
+assert.strictEqual(posts[1].comments?.length, 5);
+
+
+//3. 마지막 게시글의 제목과 댓글 수
+assert.strictEqual(posts[9].title, 'qui eius qui autem sed');
+assert.strictEqual(posts[9].comments?.length, 5);
+
+//4. userId가 0일 때 게시글이 비어 있는지
+const emptyPosts = await getPosts(0);
+assert.strictEqual(emptyPosts.length, 0);
+
 }
 
 test(1);
