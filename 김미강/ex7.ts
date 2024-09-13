@@ -1,4 +1,8 @@
-// 게시글과 댓글에 대한 타입 정의
+const POST_URL = "https://jsonplaceholder.typicode.com/posts";
+const COMMENT_URL = (postId: number) =>
+  `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
+
+// 게시글과 댓글 타입
 interface Comment {
   postId: number;
   id: number;
@@ -13,30 +17,25 @@ interface Post {
   body: string;
 }
 
-const POST_URL = "https://jsonplaceholder.typicode.com/posts";
-const COMMENT_URL = (postId: number) =>
-  `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
-
-// Helper function to fetch comments for a post
+//comment
 async function fetchComments(postId: number): Promise<Comment[]> {
-  const response = await fetch(COMMENT_URL(postId));
-  if (!response.ok) {
+  const commentRes = await fetch(COMMENT_URL(postId));
+  if (!commentRes.ok) {
     throw new Error(`Failed to fetch comments for postId: ${postId}`);
   }
-  return (await response.json()) as Comment[]; // 타입 캐스팅
+  return (await commentRes.json()) as Comment[]; // 타입 캐스팅
 }
 
-// Main function to fetch posts and comments
+//getpost
 export async function getPosts(
   userId: number | string
 ): Promise<{ postId: number; title: string; comments: Comment[] }[]> {
-  const response = await fetch(`${POST_URL}?userId=${userId}`);
-  if (!response.ok) {
+  const postRes = await fetch(`${POST_URL}?userId=${userId}`);
+  if (!postRes.ok) {
     throw new Error("Failed to fetch posts");
   }
 
-  // posts의 타입을 명시적으로 Post[]로 캐스팅
-  const posts = (await response.json()) as Post[];
+  const posts = (await postRes.json()) as Post[]; //타입 캐스팅
 
   const postsWithComments = await Promise.all(
     posts.map(async (post: Post) => {

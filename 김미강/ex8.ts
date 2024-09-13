@@ -2,25 +2,27 @@ function debounce<T extends (...args: any[]) => void>(
   cb: T,
   delay: number
 ): (...args: Parameters<T>) => void {
-  let timeoutId: NodeJS.Timeout | null = null;
+  let timer: NodeJS.Timeout | null = null;
 
   return (...args: Parameters<T>): void => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
+    if (timer !== null) {
+      clearTimeout(timer);
     }
-    timeoutId = setTimeout(() => cb(...args), delay);
+    timer = setTimeout(() => {
+      cb(...args);
+    }, delay);
   };
 }
 
 // function throttle...
 
 function throttle<T>(cb: (arg: T) => void, delay: number): (arg: T) => void {
-  let lastCalled = 0;
+  let lastCall = 0;
 
   return (arg: T): void => {
     const now = Date.now();
-    if (now - lastCalled >= delay) {
-      lastCalled = now;
+    if (now - lastCall >= delay) {
+      lastCall = now;
       cb(arg);
     }
   };

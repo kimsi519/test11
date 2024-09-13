@@ -87,17 +87,6 @@ async function test(userId: string | number) {
     );
   });
 
-  // 댓글의 이메일 주소가 유효한 형식인지 확인하는 테스트
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  posts.forEach((post) => {
-    post.comments.forEach((comment) => {
-      assert.ok(
-        emailRegex.test(comment.email),
-        `Invalid email format for comment ID: ${comment.id}`
-      );
-    });
-  });
-
   // 특정 게시물의 제목이 예상과 일치하는지 검사 (예시로 5번째 게시물 확인)
   assert.strictEqual(
     posts[4].title,

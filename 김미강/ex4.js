@@ -1,58 +1,47 @@
-function deepCopy(obj, hash = new WeakMap()) {
+function deepCopy(obj, ref = new WeakMap()) {
   // 기본 타입 (null, undefined, number, string, boolean 등) 처리
   if (obj === null || typeof obj !== "object") return obj;
 
   // 순환 참조 처리
-  if (hash.has(obj)) return hash.get(obj);
+  if (ref.has(obj)) return ref.get(obj);
 
-  // 배열 복사
+  // 새로운 객체 생성
+  let copy;
   if (Array.isArray(obj)) {
-    const arrCopy = [];
-    hash.set(obj, arrCopy);
+    //배열
+    copy = [];
     obj.forEach((item, index) => {
-      arrCopy[index] = deepCopy(item, hash);
+      copy[index] = deepCopy(item, ref);
     });
-    return arrCopy;
-  }
-
-  // Set 복사
-  if (obj instanceof Set) {
-    const setCopy = new Set();
-    hash.set(obj, setCopy);
+  } else if (obj instanceof Set) {
+    //Set
+    copy = new Set();
     obj.forEach((value) => {
-      setCopy.add(deepCopy(value, hash));
+      copy.add(deepCopy(value, ref));
     });
-    return setCopy;
-  }
-
-  // Map 복사
-  if (obj instanceof Map) {
-    const mapCopy = new Map();
-    hash.set(obj, mapCopy);
+  } else if (obj instanceof Map) {
+    //Map
+    copy = new Map();
     obj.forEach((value, key) => {
-      mapCopy.set(deepCopy(key, hash), deepCopy(value, hash));
+      copy.set(deepCopy(key, ref), deepCopy(value, ref));
     });
-    return mapCopy;
-  }
-
-  // WeakSet과 WeakMap은 복사하지 않고 그대로 반환
-  if (obj instanceof WeakSet || obj instanceof WeakMap) {
+  } else if (obj instanceof WeakSet || obj instanceof WeakMap) {
+    // WeakSet과 WeakMap
     return obj;
+  } else {
+    // 일반 객체 (함수 포함)
+    copy = Object.create(Object.getPrototypeOf(obj));
+    Object.getOwnPropertyNames(obj).forEach((key) => {
+      copy[key] = deepCopy(obj[key], ref);
+    });
+    Object.getOwnPropertySymbols(obj).forEach((sym) => {
+      copy[sym] = deepCopy(obj[sym], ref);
+    });
   }
 
-  // 일반 객체 복사 (함수 포함)
-  const objCopy = Object.create(Object.getPrototypeOf(obj));
-  hash.set(obj, objCopy);
-
-  // 객체의 속성 (심볼 포함) 복사
-  Object.getOwnPropertyNames(obj).forEach((key) => {
-    objCopy[key] = deepCopy(obj[key], hash);
-  });
-  Object.getOwnPropertySymbols(obj).forEach((sym) => {
-    objCopy[sym] = deepCopy(obj[sym], hash);
-  });
-
-  return objCopy;
+  // 순환 참조 처리
+  ref.set(obj, copy);
+  return copy;
 }
 
 module.exports = { deepCopy };

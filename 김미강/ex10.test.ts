@@ -18,6 +18,7 @@ function runTests() {
 
   // Test ArrayList functionality
   const alist = new ArrayList<number>([1, 2]);
+
   assert.deepStrictEqual(
     alist.toString(),
     'ArrayList(2) {"value":1,"rest":{"value":2,"rest":null}}'
@@ -60,7 +61,7 @@ function runTests() {
   );
 
   assert.strictEqual(alist.get(2), 22);
-  assert.strictEqual(alist.getSize(), 5);
+  assert.strictEqual(alist.listSize, 5);
 
   assert.strictEqual(alist.indexOf(300), 1);
   assert.strictEqual(alist.contains(300), true);
@@ -76,7 +77,7 @@ function runTests() {
 
   alist.clear();
   assert.strictEqual(alist.isEmpty, true);
-  //console.log("all test passed");
+  console.log("all test passed");
 }
 
 runTests();

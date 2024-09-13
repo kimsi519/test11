@@ -168,6 +168,10 @@ class ArrayList<T> extends Collection<T> {
     }
     return -1;
   }
+  // Getter를 추가하여 size에 접근 가능하도록
+  get listSize(): number {
+    return this.size;
+  }
 
   // Peek at the last value
   get peek(): T | undefined {
