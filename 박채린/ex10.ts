@@ -1,5 +1,5 @@
 class Collection<T> {
-  private readonly arr = Array<T>();
+  private readonly arr: T[] = [];
 
   constructor(...args: T[]) {
     this.arr.push(...args);
@@ -22,10 +22,6 @@ class Collection<T> {
     return this.isQueue() ? this.arr.shift() : this.arr.pop();
   }
 
-  remove() {
-    return this.poll;
-  }
-
   get length() {
     return this.arr.length;
   }
@@ -42,10 +38,9 @@ class Collection<T> {
     return this[Symbol.iterator]();
   }
 
-  // [1, 2, 3]
   *[Symbol.iterator]() {
     for (let i = this.length - 1; i >= 0; i -= 1) {
-      yield this.toArray()[i];
+      yield this.arr[i];
     }
   }
 
@@ -65,7 +60,70 @@ class Collection<T> {
 class Stack<T> extends Collection<T> {}
 class Queue<T> extends Collection<T> {}
 
-// ArrayList 클래스를 작성하세요.
-class ArrayList<T> extends Collection<T> {}
+class ArrayList<T> extends Collection<T> {
+  constructor(items: T[] = []) {
+    super(...items);
+  }
+
+  static listToArray(list: { value: number; rest?: any }): number[] {
+    const array: number[] = [];
+    let current: any = list;
+    while (current) {
+      array.push(current.value);
+      current = current.rest;
+    }
+    return array;
+  }
+
+  static arrayToList(array: number[]): { value: number; rest?: any } {
+    const reversed = array.reverse();
+    let list: any = null;
+    for (const value of reversed) {
+      list = { value, rest: list };
+    }
+    return list;
+  }
+
+  add(value: T, index?: number): void {
+    if (index !== undefined) {
+      this._arr.splice(index, 0, value);
+    } else {
+      this._arr.push(value);
+    }
+  }
+
+  remove(value: T): void {
+    const index = this._arr.indexOf(value);
+    if (index !== -1) {
+      this._arr.splice(index, 1);
+    }
+  }
+
+  set(index: number, value: T): void {
+    if (index >= 0 && index < this.length) {
+      this._arr[index] = value;
+    }
+  }
+
+  get(index: number): T | undefined {
+    return this._arr[index];
+  }
+
+  indexOf(value: T): number {
+    return this._arr.indexOf(value);
+  }
+
+  contains(value: T): boolean {
+    return this.indexOf(value) !== -1;
+  }
+
+  toString(): string {
+    return JSON.stringify(this.toArray(), null, 2);
+  }
+
+  toArray(): T[] {
+    return this._arr;
+  }
+}
 
 export { Stack, Queue, ArrayList };
