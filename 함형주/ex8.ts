@@ -1,6 +1,22 @@
 // dummy(mock)입니다. 올바르게 수정하세요.
-const debounce = (cb: any, delay: number) => (i: number) => {};
-const throttle = (cb: any, delay: number) => (i: number) => {};
+const debounce = (cb: any, delay: number) => {
+    let timer: NodeJS.Timeout | null;
+    return (i: number) => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => cb(i), delay);
+    }
+};
+
+const throttle = (cb: any, delay: number) => {
+    let timer2: NodeJS.Timeout | null; 
+    return (i: number) => {
+        if (timer2) return;
+        timer2 = setTimeout(() => {
+            cb(i);
+            timer2 = null;
+        }, delay);
+    }
+};
 
 // function throttle...
 

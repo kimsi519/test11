@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>register</title>
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 via-blue-300 to-purple-400 h-screen flex flex-col">
+    <!-- Header -->
+    <header class=" text-white p-4 flex items-center">
+        <a href = "./book-edit.html" class="text-2xl font-bold px-4 py-2 text-white  hover:bg-blue-300 rounded">📗BookMark</a>
+        <div class="ml-auto pr-5">
+            <a href="https://github.com/xzhhj01?tab=repositories" class="text-white hover:underline">Github Repo.</a>
+        </div>
+        <div class="flex">
+            <a href="#" class="ml-4 hover:underline text-white">SignUp</a>
+            <p class="ml-4 text-white">|</p>
+            <a href="#" class="ml-4 hover:underline text-white">SignIn</a>
+        </div>
+    </header>
+
+    <div class="flex-1 flex items-center">
+        <div class="bg-white p-12 rounded-lg shadow-lg w-full max-w-lg mx-auto">
+            <h2 class=" text-center text-3xl font-bold font-mono mt-4 mb-12 ">Sign Up</h2>
+            <form action="#" method="POST">
+                
+                <div class=" mb-4">
+                    <label for="nickname" class=" text-gray-700 font-bold mb-8">Nickname</label>
+                    <input type="text" id="nickname" name="nickname" placeholder="Nickname..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class=" text-gray-700 font-bold mb-8">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="password" class="text-gray-700 font-bold mb-2">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password-confirm" class="text-gray-700 font-bold mb-2">Password Confirm</label>
+                    <input type="password" id="password" name="password" placeholder="Password Confirm..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-4 flex justify-center">
+                    <button type="submit" onclick = "window.location.href='./index.html';" class="w-64 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-600 transition duration-300">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
