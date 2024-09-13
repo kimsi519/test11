@@ -1,5 +1,5 @@
-const assert = require('assert');
-const { range } = require('./ex2');
+const assert = require("assert");
+const { range } = require("./ex2");
 
 assert.deepStrictEqual(range(1, 10, 1), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 assert.deepStrictEqual(range(1, 10, 2), [1, 3, 5, 7, 9]);
@@ -38,9 +38,6 @@ assert.deepStrictEqual(
   Array.from({ length: 50 }, (_, i) => i * 3 + 1)
 );
 
-assert.deepStrictEqual(
-  range(1, 2, 0.1),
-  [1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2]
-);
+assert.deepStrictEqual(range(1, 2, 0.1), [1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2]);
 
 console.log(range(1, 2, 0.1));

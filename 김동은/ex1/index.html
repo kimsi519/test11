@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // 샘플 데이터
+      const frontendItems = [
+        {
+          image: "assets/리액트.png",
+          title: "React 공식문서",
+          description: "React is a JavaScript library for building user interfaces.",
+        },
+        {
+          image: "assets/뷰.jpg",
+          title: "Vue를 활용하여 웹사이트 만들기",
+          description: "Vue.js is a progressive JavaScript framework for building user interfaces.",
+        },
+        {
+          image: "assets/앵귤러.png",
+          title: "Angular 정복",
+          description: "Angular is a TypeScript-based open-source web application framework.",
+        },
+      ];
+
+      const backendItems = [
+        {
+          image: "assets/노드.png",
+          title: "Node.js",
+          description: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+        },
+        {
+          image: "assets/익스프레스.png",
+          title: "Express",
+          description: "Express.js is a minimal and flexible Node.js web application framework.",
+        },
+      ];
+
+      // 아이템 렌더링
+      function renderItems(items, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = "";
+        items.forEach((item) => {
+          const itemElement = document.createElement("div");
+          itemElement.className = "border border-gray-300 rounded-lg shadow-md p-4 mb-4 flex items-center";
+          itemElement.innerHTML = `
+          <img src="${item.image}" alt="Image" class="w-16 h-16 mr-4">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+            <p class="text-gray-600">${item.description}</p>
+          </div>
+          <img
+            src="assets/설정.png"
+            alt="Gear"
+            class="w-8 h-8 ml-4 cursor-pointer"
+            onclick="window.location.href='book-edit.html?title=${item.title}&description=${item.description}';"
+          />
+          `;
+          container.appendChild(itemElement); // 아이템 컨테이너에 추가
+        });
+      }
+
+      // 페이지 로드 시 아이템 렌더링
+      document.addEventListener("DOMContentLoaded", () => {
+        renderItems(frontendItems, "frontend-container");
+        renderItems(backendItems, "backend-container");
+      });
+    </script>
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <!-- 헤더 섹션 -->
+    <header class="bg-white text-green-500 shadow-md">
+      <div class="w-full flex justify-between items-center py-4 px-6">
+        <!-- 로고 및 제목 -->
+        <a href="book-edit.html" class="flex items-center space-x-2 ml-4 bg-gray-100 p-2 rounded">
+          <img src="assets/하나.png" alt="Logo" class="w-8 h-8" />
+          <span class="text-2xl font-bold">BookMark</span>
+        </a>
+
+        <!-- Github, 마이 페이지 -->
+        <div class="flex space-x-8">
+          <a
+            href="https://github.com/DongExxn/hanabank-assignment1"
+            target="_self"
+            class="bg-slate-600 hover:bg-slate-400 text-white font-semibold py-2 px-4 rounded"
+          >
+            Github Repo.
+          </a>
+          <a href="index.html">
+            <img src="assets/마이.png" alt="My Page" class="w-10 h-10" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 영역 -->
+    <main class="flex-grow flex justify-center bg-gray-100 py-6">
+      <div class="w-full max-w-screen-xl px-4 flex space-x-8">
+        <div
+          class="w-1/2 flex flex-col items-center border-r border-gray-300 bg-white rounded-lg shadow-md p-6 relative"
+        >
+          <h2 class="text-2xl font-bold mb-4">BookMark</h2>
+          <div id="frontend-container" class="w-full mb-12"></div>
+          <button
+            class="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded absolute bottom-6 right-6"
+            onclick="window.location.href='book-edit.html';"
+          >
+            + Add Mark
+          </button>
+        </div>
+
+        <div class="w-1/2 flex flex-col items-center bg-white rounded-lg shadow-md p-6 relative">
+          <h2 class="text-2xl font-bold mb-4">Study</h2>
+          <div id="backend-container" class="w-full mb-12"></div>
+          <button
+            class="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded absolute bottom-6 right-6"
+            onclick="window.location.href='book-edit.html';"
+          >
+            + Add Mark
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 푸터 섹션 -->
+    <footer class="bg-gray-800 text-white py-4 mt-auto">
+      <div class="container mx-auto text-center">@Hanaro 2024</div>
+    </footer>
+  </body>
+</html>
