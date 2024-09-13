@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bookmark App</title>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">BookMark</h1>
+            <div class="flex items-center">
+                <span class="text-gray-600">Github Repo.</span>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAAD09PT4+Pjt7e38/PzIyMjl5eWtra339/e+vr6zs7Pf39+np6fw8PDBwcFOTk54eHgVFRUhISHY2Nhra2tjY2MmJiZTU1OCgoIZGRlFRUWPj49eXl6cnJw+Pj4zMzN6enouLi6fn5+GhoaUlJTR0dEODg5BQUFhYWE0skWYAAAFmElEQVR4nO2daVPjMAyGca5elN4nvVJKgf//B5dsKZDESWxZiRRGz8fdnR29Y8fW6T48CIIgCIIgCIIgCIIgCIIgCIIgCIIgCIKgJ/RCahNqIugfFkf1xXa8GV7/ktJgMNmqPM+7q09tGgZhf69R98V5M6e2z5nDrFjfbSX71Ca64B8q5P1n2l6Ng6r1+17HiNpUEEHJ95dj0sIzZ2ChL9mqrVvGjZ3AT3bUJlvhra0FKvXRIh/AO1br0XD0qA03JTA9Q7NsA2rTzfBWQIFKzVohMXwGC1Tq1IaNunQQqNSY2vxqjBy1EibUAqq4OgpUakAtoZwQfsp806EWUYq9K5OH9afovkcThtQyShijKFR8r4w+jkC1oRZSiC7fBIKra4O1hErF1FIKcHHXMvBcxDmeQPVCLUZLjKjwyDEa7k0RFSqOmeIIUyDLrE2MqnBGLUcDqkCO/ncHWSG/IMoyA1wJv0g4RlZ4phaUA5YiLYHdjYgtUD1SK8qAfdAoxa1Ug+mU3hhRS8qA69EkdKklZRihK+QWXuArfKWWlAH7wuenEC+Dcefv71JuWVP8s5Rblw1Otvs33G58fJ+GXR4DXSG7hCJCWS3FllpQjgmywjW1oBxdZIUHakE5sIOLK7WgPMgKqeVowP0QF9RyNOD6bdzi3wQf2s2mY9qjlqMDow/jzoVajBbM05Rbou0Lm8bucvbUUgrAW0SmS4i3iByvihtYIRS7sOKHHYpAbvmL3/hnBIHP1CpKwUhm8Kv+pnh1Fsiv+JvB9Tzl27V3x3crlS6p7TcAPE+SMGZX+dURvIEF8j5Gfwigebd1K1YwIYD1YS5aI/DhIYQMzvDLrpViPTrzxq1OUUlkd6QunqgNNuAp3Vvg2STfMqW0LsfoItrnruvI1A/fZY6Yz6/4g9mm9YY3Mdl2u6HJVr1kN+ji/x+vhnwGS4LX7zs+G533uqdyeedDbkMu7n/3tuOxWf1U2Ju/tK+LvK47kyj3z8PUGPiF/iWCMHstzDThXRRrvJzTTvepdbL7+kDsBgw0pmsDvOD6Eu/Hx9VqdX5eLy+Dq/520LTlzCgDxo7+YYG4MCUfep5Xkq8PY+3/tyZLLhbmnbawo35UOBlGM5vwWHbbre2TLZ2y7MCZoDPjpcSehI2dxk5VXadpv9wzSMdMzD+fRwMPb99owc2wQrE2Owb7hi+hNLhTLfouNlG57+VFsfl/1ljb8MXcpk+my+FVr7I3Hy7tBt4aKpyWeGGFKt8n3dH8R6c3H3Un74Cx4SaqUr7jRLrjlOK4dkcV+HwQHnU/RORXBEMNcKp1FXv0Aj8l1ngx+ojz6A6817eKkDfK6qC2zkzsFlI4NY1f4hTpcaglnMKfinGhhsD/kVpTBvy4H/XFBATQO90BzmjNILuo2H3qGKDGUvgTMRhgNt4gvXCFDOKzZ0NqLQWgNcA9USspBKusyu8cvYN0nuIPT+KBU0eljurLeMcQyMsfzYLhn8J7uJpg6i6wqj5BjfuNwc3jzuK8iBwd0jSO7mnIIblWzsmt0I//VAI+boN8eKNM9eE0JMUzasriEkXZ1dGocEm8UdtuCFwgZ5/7N3D/m2/YlAYcROG+uVoj4LnotmxS+DaNqQ03Bjgs1QKP7Q7Qc2vHdX8DdulzzSHqgAUYfAqi1cBKpmi/A9AAoKej+eaBdUC6bPDfCawTSJDIPQWVBvLK4ge10VZA5ocxH9SpH8hRQ22zJfYC2+TRJNh7Ne0JLG7YhxdtyCP+xv664J/sTmPvmXLqYjPBPuHWJr87wf4notx+irJ57LNRXLplTbHP7bdNoX3fMM82qGLsG6T+vsKY2mRL7M9S/J/kqBfA6J77q11NAvolhX6LMsLgR/i9dgCVJwiCIAiCIAiCIAiCIAiCIAiCIAiCIAjM+AcgQGQRhEXiawAAAABJRU5ErkJggg==" alt="Logo" class="ml-2 w-8 h-8 rounded"/>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <!-- Bookmark Section -->
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">BookMark BookMark...</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="https://lh5.googleusercontent.com/proxy/T6Ys_ylf1hecToiBDyxEpPvBPTPzAW6LlTar0PagcvfC4wIsfqawjYdvCU0Cq-GqPnQqg5-5Gop73fVZqmneCAevf6x6rDFgy3Q" alt="55BookMark" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">하나은행</div>
+                            <div class="text-gray-500">디지털 하나로...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="https://i.pinimg.com/originals/fb/71/04/fb71048e03a5ada757f70d61b583d0bf.png" alt="네이버" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">네이버</div>
+                            <div class="text-gray-500">네이버 메인...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMMBNm8wfpKW6UoibpgWGKMqHOqvUT0XIdEQ&s" alt="Kakao" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">Kakao</div>
+                            <div class="text-gray-500">기술과 사람...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFC5wF8ARwItgUmfk90wQx_oIjaIxVq4BUFw&s" alt="YouTube" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">YouTube</div>
+                            <div class="text-gray-500">구독 좋아요 알림설정...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                        + Add Mark
+                    </button>
+                </div>
+            </div>
+            <!-- Study Section -->
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Study</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="data:image/png;base64,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" alt="Tailwind CSS" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">Tailwind CSS - ..</div>
+                            <div class="text-gray-500">Tailwind CSS Page...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAABUVFSvr6+pqanq6uqcnJzz8/N7e3v39/deXl4WFhagoKB4eHj7+/tNTU3Jyck8PDzV1dWlpaXo6OjMzMw2NjZERETZ2dlvb2/BwcEPDw8gICDh4eFmZma9vb0oKCiCgoKLi4uTk5O1tbX5357eAAAC50lEQVR4nO3ZaVOrMBiG4UDBFrWL3Su2Vuv//42WvGELodsMhnHu68shIYk8BZK0RykAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf2g18X0FXXtdOyKepmEYlsV4EzZt5nJymLUNn60Rtlnt9Esf7xy9M9P3biJZomCdNCrHwVlZjAOXmTn7rku72gBJqiuHuvDm7H426CpUTRQEH0O7cnRPQvWqi0/VATa6alktOPx0Faomyv7U3qq8L6E66PLK6h98mpL/e3g2r1e6Em6e68JKH8kQ18c85cXvsTYajaZZ/Xgk5fGu8pl0KLJvSMaV8NIHPtRjrE1prkv23JPRz/NfT94mYfFIaa6E0aVRJNRBHyf6+Ohq9pSdabz1HcsT1hLcnVAN9Bh6trEe2Sq/Ccv35pGE6iufbcauF9vwnDAYF5UPJDRrQizjLdxt/CU0MYtV+5GEyYd+/azPqs5fwuFWIuY7tXvnUm1fPAxvbU38JYzzy9vIVO5KmL5UpY7F4N0ETJvbQMNnQrWUqzvqv3/DniZ0jPUkp+wdktXAV0IVf8gNyI7/Z0KVyCyR7m9KOG0ONTOnXlp3LZ4TFlvkuTPhbvFa1fxeMCzSuzZsmveE6lmucPbtSHh1Lq18hTi1NPGfMI/45kh4bT2UvcxK/pm52/QgodqVN6Jsc0vCn/zmrYP2GH1IqL4eSyjraZg3bln0e5Ewn/LvSzjRS40s9bLwj1zN+pGw2IuXNddnGnl/t1I4BW3te5LQvFKNezhJ6io9JFNxl/WPFa6Fvy8JzXNWlq/9EiVL/aEoy7d8x8Lfm4RqdVdCWeqPlf5tv9T0J6GeGsvSlYSy1C+r/R0/oWa8JFw0rk5bppWEy4sJZY3/rPc/WA+yOPlIuI0Gg8jxhS5+KY+Tc5uGyNz4eJGVrIB5F6t2nvXrzX8F/fVHDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA//YL9y0aChdNT4cAAAAASUVORK5CYII=" alt="Create Next App" class="w-10 h-10 rounded">
+                        <div class="flex-grow ml-2">
+                            <div class="font-medium">Create Next App</div>
+                            <div class="text-gray-500">Generated by create...</div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                        + Add Mark
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
