@@ -7,31 +7,21 @@ export function promiseAllSettled<T>(promises: Promise<T>[]): Promise<{ status: 
     const results: { status: string, value?: T, reason?: any }[] = [];
     let completedPromises = 0;
 
-    promises.forEach((promise, index)=>{
+    promises.forEach((promise, idx)=>{ // 프로미스를 돌면서
       promise
-        .then((value)=>{
-          results[index] = {status: 'fulfilled', value: value};
+        .then((value)=>{ // 성공했으면
+          results[idx] = {status: 'fulfilled', value: value};
         })
-        .catch((reason)=>{
-          results[index] = {status: 'rejected', reason: reason};
+        .catch((reason)=>{ // 실패했으면
+          results[idx] = {status: 'rejected', reason: reason};
         })
-        .finally(()=>{
+        .finally(()=>{ // 마지막엔
           completedPromises += 1;
   
-          if(completedPromises == promises.length){
+          if(completedPromises == promises.length){ // 다 완료되었으면
             resolve(results);
           }
         })
     })
   })
 }
-
-async function printPromise(){
-  const a = await Promise.allSettled([randTime(1), randTime(2), randTime(3)]);
-  const b = await promiseAllSettled([randTime(1), randTime(2), randTime(3)]);
-  console.log(a);
-  console.log("--------------------------------");
-  console.log(b);
-}
-
-printPromise();

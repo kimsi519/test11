@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { ArrayList } from './ex10';
-//console.log('🚀  ArrayList:', ArrayList);
+console.log('🚀  ArrayList:', ArrayList);
 
 const al = new ArrayList([1]);
 al.add(2);
@@ -16,11 +16,9 @@ assert.deepStrictEqual(al.toString(), {value : 1, rest : {value : 5, rest : {val
 assert.deepStrictEqual(al.get(1), 5); // 인덱스가 1인 요소 = 5
 assert.deepStrictEqual(al.indexOf(3), 3); // 값이 3인 요소의 인덱스 = 3
 assert.deepStrictEqual(al.size(), 4); // 현재 리스트의 크기 = 4
-al.newremove(5)
+al.newremove(5) // 값이 5인 요소 삭제 -> [1, 4, 3]
 assert.deepStrictEqual(al.toString(), {value : 1, rest : {value : 4, rest : {value : 3}}});
-//al.remove(2);
-//console.log(al.toString());
-//assert.deepStrictEqual(al.toString(), {value : 1, rest : {value : 3}});
-
-
-// 여기에 테스트코드를 작성하세요.
+assert.deepStrictEqual(al.contains(4), true); // 요소로 4를 가지고 있나? true
+al.clear(); // 리스트 초기화
+assert.deepStrictEqual(al, new ArrayList()); // 리스트가 비워짐
+assert.deepStrictEqual(al.isEmpty, true); // 비어있으니까 true

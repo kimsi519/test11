@@ -123,21 +123,15 @@ class ArrayList<T> extends Collection<T>{
       }
     } 
     
-    else {
+    else { // 인덱스가 지정되었으면 그 위치에 원소를 추가해야함
       let node = this.list;
-      //console.log(node);
       let i = 0;
       while (i < index - 1 && node?.rest) {
           node = node.rest;
-          //console.log(node.rest);
           i++;
       }
       if (node) {
           node.rest = { value, rest : node.rest};
-          // while(node?.rest) {
-          //   node = node.rest;
-          //   node.rest = 
-          // }
       }
     }
 }
@@ -154,6 +148,9 @@ class ArrayList<T> extends Collection<T>{
         }
         if (node?.rest) {
             node.rest = node.rest.rest;
+        }
+        else {
+
         }
     }
   }
