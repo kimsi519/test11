@@ -290,30 +290,5 @@ class ArrayList<T> extends Collection<T> {
 }
 
 const arrLst = new ArrayList<Number>([1,2,3,4]);
-console.log(arrLst.toString())
-// console.log(arrLst.add(3))
-// console.log(arrLst.add(5))
-// console.log(arrLst.add(2, 1))
-// console.log(arrLst.add(4, 3))
-// console.log(arrLst.toString())
-// console.log(arrLst.get(2))
-// console.log(arrLst.indexOf(3))
-// console.log(arrLst.remove(1))
-// console.log(arrLst.removeByIndex(0))
-// console.log(arrLst.toString())
-// console.log(arrLst.set(0, 300))
-// console.log(arrLst.contains(300))
-// console.log(arrLst.contains(301))
-// console.log(arrLst.toString())
-// console.log(arrLst.iterator().next())
-// console.log(arrLst.toArray())
-// console.log(arrLst.toString())
-// arrLst.clear();
-// console.log(arrLst.isEmpty())
-// console.log(arrLst.add(1))
-// console.log(arrLst.isEmpty())
-
-console.log(ArrayList.listToArray({ value: 1, rest: { value: 2, rest: { value: 3 } } }))
-console.log(ArrayList.arrayToList([1,2,3,]));
 
 export { Stack, Queue, ArrayList };
